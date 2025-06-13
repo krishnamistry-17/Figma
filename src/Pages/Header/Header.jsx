@@ -14,11 +14,18 @@ const Header = () => {
 
   const navigate = useNavigate();
 
-  const handleRiders = () => {
-    navigate("/riders");
-  };
+  const [selectedMenu, setSelectedMenu] = useState("Customers");
+
   const handleVendores = () => {
+    setSelectedMenu("Vendores");
     navigate("/vendores");
+    setIsOpen(false);
+  };
+
+  const handleRiders = () => {
+    setSelectedMenu("Riders");
+    navigate("/riders");
+    setIsOpen(false);
   };
 
   return (
@@ -70,33 +77,30 @@ const Header = () => {
         </nav>
 
         {/* Right Side */}
-        <div className="flex items-center gap-6">
-          <div className="flex items-center">
-            <button
-              onClick={handleOption}
-              className="text-black text-[16px] sm:pl-0 pl-[5px] flex font-semibold"
-            >
-              Customers
-              <img src={dropdown} alt="dropdown" className="pl-[5px]" />
-            </button>
-            {isopen && (
-              <div className="mt-5  absolute top-18   flex flex-col gap-3">
-                <button
-                  onClick={handleVendores}
-                  className="bg-white rounded-r-4xl rounded-l-4xl shadow-md px-6  py-4"
-                >
-                  Vendores
-                </button>
-                <button
-                  onClick={handleRiders}
-                  className="bg-white rounded-r-4xl rounded-l-4xl shadow-md px-2  py-3"
-                >
-                  Riders
-                </button>
-              </div>
-            )}
-          </div>
-          <img src={cart} alt="cart" />
+        <div className="relative flex items-center">
+          <button
+            onClick={handleOption}
+            className="text-black text-[16px] sm:pl-0 pl-[5px] flex font-semibold"
+          >
+            {selectedMenu}
+            <img src={dropdown} alt="dropdown" className="pl-[5px]" />
+          </button>
+          {isopen && (
+            <div className="absolute top-12 right-0 bg-white rounded-lg shadow-md mt-2 flex flex-col z-50">
+              <button
+                onClick={handleVendores}
+                className="px-6 py-4 hover:bg-gray-100 text-left"
+              >
+                Vendores
+              </button>
+              <button
+                onClick={handleRiders}
+                className="px-6 py-4 hover:bg-gray-100 text-left"
+              >
+                Riders
+              </button>
+            </div>
+          )}
         </div>
 
         {/* Mobile Menu Button */}
@@ -116,6 +120,7 @@ const Header = () => {
             <a
               key={label}
               href={`/${label.toLowerCase()}`}
+              onClick={() => setIsMenuOpen(false)} // closes menu
               className="text-black text-sm font-medium hover:text-green-bg"
             >
               {label}

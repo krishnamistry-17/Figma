@@ -4,6 +4,11 @@ import Header from "./Pages/Header/Header";
 import Footer from "./Pages/Footer/Footer";
 import Vendore from "./Pages/Vendore/Vendore";
 import Rider from "./Pages/Rider/Rider";
+import "./index.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+AOS.init();
 
 function App() {
   return (

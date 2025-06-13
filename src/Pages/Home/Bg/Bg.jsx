@@ -7,13 +7,17 @@ import scooty from "../../../assets/svg/scooty.svg";
 const Bg = () => {
   return (
     <>
-      <div>
-        <p
+      <div data-aos="fade-up" data-aos-delay="0">
+        <h1
           className="text-black md:text-[112px] text-[55px] 
-        text-center md:pt-[57px] pt-[40px] font-roboto leading-tight"
+        text-center md:pt-[57px] pt-[40px] font-roboto leading-tight tracking-tighter"
         >
-          Se o ti jeun?
-        </p>
+          <span className=" animate__animated hidden">Se o ti jeun?</span>
+          <span className=" animate__animated hidden">You don chow?</span>
+          <span className=" animate__animated hidden">I riela nri?</span>
+          <span className=" animate__animated hidden">Kun ci abinci?</span>
+          <span className=" animate__animated ">Have you eaten?</span>
+        </h1>
         <div
           className="flex flex-col md:flex-row justify-center
          items-center gap-4 mt-6"

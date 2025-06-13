@@ -3,22 +3,31 @@ import vendore from "../../assets/svg/vendorebg.svg";
 import playstore from "../..//assets/svg/playstore.svg";
 import appstore from "../../assets/svg/appstore.svg";
 import BgAnimate from "./BgAnimate";
+
 const Bg = () => {
   return (
     <div>
-      <div className=" relative">
-        <img src={vendore} alt="vndr" className="w-screen relative " />
-        <div className="absolute md:mt-20 xl:pl-[100px] sm:pl-[50px] pl-[20px] top-5">
-          <p className="xl:text-[112px] md:text-[60px] text-[31px] text-black  font-bold  lg:max-w-[750px] sm:max-w-[300px]">
+      <div className="relative sm:min-h-[300px] min-h-[464px] overflow-hidden">
+        <img
+          src={vendore}
+          alt="vndr"
+          className="w-screen object-cover"
+          data-aos="fade-down"
+          data-aos-delay="300"
+        />
+        <div className="absolute top-5 left-0 px-4 max-w-full sm:left-[50px] md:top-20 md:left-[100px] md:max-w-[750px]">
+          <p className="xl:text-[112px] md:text-[60px] text-[31px] text-black font-bold lg:max-w-[750px] sm:max-w-[300px]">
             Grow your Food Business
           </p>
-          <p className="text-[18px] w-[50%] mb-10 mt-8 lg:mt-0  sm:text-left text-center text-black font-medium">
+          <p className="text-[18px] max-w-full sm:max-w-[300px] md:max-w-[500px] mb-10 mt-8 text-center sm:text-left text-black font-medium">
             Join over 3,000+ businesses selling daily on Chowdeck. Enjoy a boost
             in menu item sales, growth in business value, and increased brand
             awareness. Download our Vendor app to get started.
           </p>
+          {/* Buttons stay as they are */}
           <div className="w-fit mx-0">
             <div className="flex flex-col md:flex-row md:items-center md:space-x-4 w-fit space-y-4 md:space-y-0">
+              {/* buttons */}
               <div>
                 <button
                   className="bg-black text-white 
@@ -47,7 +56,7 @@ const Bg = () => {
           </div>
         </div>
       </div>
-      <div>
+      <div className="">
         <BgAnimate />
       </div>
     </div>
@@ -55,15 +64,3 @@ const Bg = () => {
 };
 
 export default Bg;
-// git remote add origin https://github.com/krishnamistry-17/Figma.git
-// git branch -M main
-// git push -u origin main
-
-
-// echo "# Figma" >> README.md
-// git init
-// git add README.md
-// git commit -m "first commit"
-// git branch -M main
-// git remote add origin https://github.com/krishnamistry-17/Figma.git
-// git push -u origin main

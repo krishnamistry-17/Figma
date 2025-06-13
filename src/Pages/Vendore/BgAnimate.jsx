@@ -11,9 +11,86 @@ const BgAnimate = () => {
   return (
     <div>
       {/*Animate */}
-      <div className=" relative">
-        <div className="flex overflow-auto will-change-transform pb-5">
-          <div className=" animate-marquee-normal min-w-fit"></div>
+      <div className=" relative flex overflow-x-hidden">
+        {/*marquee-1 */}
+        <div className=" animate-marquee py-12 whitespace-nowrap">
+          <div className=" flex">
+            <div className="min-w-max mx-2 md:mx-6">
+              <span className="w-[292px] md:w-[416px] h-[495px] md:h-[720px] block relative">
+                <span className=" overflow-hidden block box-border p-0 m-0 border-0 absolute ">
+                  <img src={image1} alt="i1" className=" " />
+                </span>
+              </span>
+            </div>
+            <div className="min-w-max mx-2 md:mx-6">
+              <span className="w-[292px] md:w-[416px] h-[495px] md:h-[720px] block relative">
+                <span className=" overflow-hidden block box-border p-0 m-0 border-0 absolute">
+                  <img src={image2} alt="i2" />
+                </span>
+              </span>
+            </div>
+            <div className="min-w-max mx-2 md:mx-6">
+              <span className="w-[292px] md:w-[416px] h-[495px] md:h-[720px] block relative">
+                <span className=" overflow-hidden block box-border p-0 m-0 border-0 absolute">
+                  <img src={image3} alt="i3" />
+                </span>
+              </span>
+            </div>
+            <div className="min-w-max mx-2 md:mx-6">
+              <span className="w-[292px] md:w-[416px] h-[495px] md:h-[720px] block relative">
+                <span className=" overflow-hidden block box-border p-0 m-0 border-0 absolute">
+                  <img src={image4} alt="i4" />
+                </span>
+              </span>
+            </div>
+            <div className="min-w-max mx-2 md:mx-6">
+              <span className="w-[292px] md:w-[416px] h-[495px] md:h-[720px] block relative">
+                <span className=" overflow-hidden block box-border p-0 m-0 border-0 absolute">
+                  <img src={image5} alt="i5" />
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+        {/*marquee-2 */}
+        <div className=" absolute top-0 animate-marquee2 py-12 whitespace-nowrap">
+          <div className=" flex">
+            <div className="min-w-max mx-2 md:mx-6">
+              <span className="w-[292px] md:w-[416px] h-[495px] md:h-[720px] block relative">
+                <span className=" overflow-hidden block box-border p-0 m-0 border-0 absolute ">
+                  <img src={image1} alt="i1" className=" " />
+                </span>
+              </span>
+            </div>
+            <div className="min-w-max mx-2 md:mx-6">
+              <span className="w-[292px] md:w-[416px] h-[495px] md:h-[720px] block relative">
+                <span className=" overflow-hidden block box-border p-0 m-0 border-0 absolute">
+                  <img src={image2} alt="i2" />
+                </span>
+              </span>
+            </div>
+            <div className="min-w-max mx-2 md:mx-6">
+              <span className="w-[292px] md:w-[416px] h-[495px] md:h-[720px] block relative">
+                <span className=" overflow-hidden block box-border p-0 m-0 border-0 absolute">
+                  <img src={image3} alt="i3" />
+                </span>
+              </span>
+            </div>
+            <div className="min-w-max mx-2 md:mx-6">
+              <span className="w-[292px] md:w-[416px] h-[495px] md:h-[720px] block relative">
+                <span className=" overflow-hidden block box-border p-0 m-0 border-0 absolute">
+                  <img src={image4} alt="i4" />
+                </span>
+              </span>
+            </div>
+            <div className="min-w-max mx-2 md:mx-6">
+              <span className="w-[292px] md:w-[416px] h-[495px] md:h-[720px] block relative">
+                <span className=" overflow-hidden block box-border p-0 m-0 border-0 absolute">
+                  <img src={image5} alt="i5" />
+                </span>
+              </span>
+            </div>
+          </div>
         </div>
       </div>
       {/*Downlaod */}
