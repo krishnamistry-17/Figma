@@ -28,6 +28,12 @@ const Header = () => {
     setIsOpen(false);
   };
 
+  const handleCustomres = () => {
+    setSelectedMenu("Customer");
+    navigate("/");
+    setIsOpen(false);
+  };
+
   return (
     <header className="w-full bg-white shadow-sm px-4 py-3 sm:px-10 sm:py-5 relative z-50">
       <div className="flex justify-between items-center">
@@ -85,20 +91,33 @@ const Header = () => {
             {selectedMenu}
             <img src={dropdown} alt="dropdown" className="pl-[5px]" />
           </button>
+
           {isopen && (
             <div className="absolute top-12 right-0 bg-white rounded-lg shadow-md mt-2 flex flex-col z-50">
-              <button
-                onClick={handleVendores}
-                className="px-6 py-4 hover:bg-gray-100 text-left"
-              >
-                Vendores
-              </button>
-              <button
-                onClick={handleRiders}
-                className="px-6 py-4 hover:bg-gray-100 text-left"
-              >
-                Riders
-              </button>
+              {selectedMenu !== "Customer" && (
+                <button
+                  onClick={handleCustomres}
+                  className="px-6 py-4 hover:bg-gray-100 text-left"
+                >
+                  Customer
+                </button>
+              )}
+              {selectedMenu !== "Vendores" && (
+                <button
+                  onClick={handleVendores}
+                  className="px-6 py-4 hover:bg-gray-100 text-left"
+                >
+                  Vendores
+                </button>
+              )}
+              {selectedMenu !== "Riders" && (
+                <button
+                  onClick={handleRiders}
+                  className="px-6 py-4 hover:bg-gray-100 text-left"
+                >
+                  Riders
+                </button>
+              )}
             </div>
           )}
         </div>

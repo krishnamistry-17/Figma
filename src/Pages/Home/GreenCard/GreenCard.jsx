@@ -50,6 +50,43 @@ const GreenCard = () => {
             <div className=" relative flex overflow-x-hidden">
               {/*marquee-1 */}
               <div className="flex animate-marquee py-12  px-8 gap-4">
+                <div className="flex gap-2 rounded-md py-[22px] px-[28px] bg-white/25">
+                  <img src={ystar} alt="str" className="w-[24px] h-[24px]" />
+                  <p className="font-semibold text-[16px] text-white">
+                    Quick and easy onboarding
+                  </p>
+                </div>
+                <div className="flex rounded-md py-[22px] px-[28px] bg-white/25 ">
+                  <img src={ohalf} alt="str" className="w-[35px] h-[16px]" />
+                  <p className="font-semibold text-[16px]  text-white">
+                    Quality meal choices
+                  </p>
+                </div>
+                <div className="flex gap-2   rounded-md py-[22px] px-[28px] bg-white/25 ">
+                  <img src={pstar} alt="str" className="w-[35px] h-[24px]" />
+                  <p className="font-semibold text-[16px] text-white">
+                    Live updates on orders
+                  </p>
+                </div>
+                <div className="flex gap-2   rounded-md py-[22px] px-[28px] bg-white/25 ">
+                  <img
+                    src={glocation}
+                    alt="str"
+                    className="w-[21px] h-[24px]"
+                  />
+                  <p className="font-semibold text-[16px] text-white">
+                    Highly rated riders
+                  </p>
+                </div>
+                <div className="flex gap-2   rounded-md py-[19px] px-[26px] bg-white/25 ">
+                  <img src={phalf} alt="str" className="w-[35px] h-[16px]" />
+                  <p className="font-semibold text-[16px] text-white">
+                    20/7 support for customers and vendors
+                  </p>
+                </div>
+              </div>
+              {/*marquee-2 */}
+              <div className="flex absolute top-0 animate-marquee2 py-12 px-2 gap-4">
                 <div className="flex gap-2 rounded-md py-[18px] px-[28px] bg-white/25">
                   <img src={ystar} alt="str" className="w-[24px] h-[24px]" />
                   <p className="font-semibold text-[16px] text-white">
@@ -78,44 +115,7 @@ const GreenCard = () => {
                     Highly rated riders
                   </p>
                 </div>
-                <div className="flex gap-2   rounded-md py-[12px] px-[26px] bg-white/25 ">
-                  <img src={phalf} alt="str" className="w-[35px] h-[16px]" />
-                  <p className="font-semibold text-[16px] text-white">
-                    20/7 support for customers and vendors
-                  </p>
-                </div>
-              </div>
-              {/*marquee-2 */}
-              <div className="flex absolute top-0 animate-marquee2 py-12 px-2 gap-4">
-                <div className="flex gap-2 rounded-md py-[12px] px-[28px] bg-white/25">
-                  <img src={ystar} alt="str" className="w-[24px] h-[24px]" />
-                  <p className="font-semibold text-[16px] text-white">
-                    Quick and easy onboarding
-                  </p>
-                </div>
-                <div className="flex rounded-md py-[22px] px-[28px] bg-white/25 ">
-                  <img src={ohalf} alt="str" className="w-[35px] h-[16px]" />
-                  <p className="font-semibold text-[16px]  text-white">
-                    Quality meal choices
-                  </p>
-                </div>
-                <div className="flex gap-2   rounded-md py-[22px] px-[28px] bg-white/25 ">
-                  <img src={pstar} alt="str" className="w-[35px] h-[24px]" />
-                  <p className="font-semibold text-[16px] text-white">
-                    Live updates on orders
-                  </p>
-                </div>
-                <div className="flex gap-2   rounded-md py-[22px] px-[28px] bg-white/25 ">
-                  <img
-                    src={glocation}
-                    alt="str"
-                    className="w-[21px] h-[24px]"
-                  />
-                  <p className="font-semibold text-[16px] text-white">
-                    Highly rated riders
-                  </p>
-                </div>
-                <div className="flex gap-2   rounded-md py-[12px] px-[26px] bg-white/25 ">
+                <div className="flex gap-2   rounded-md py-[22px] px-[26px] bg-white/25 ">
                   <img src={phalf} alt="str" className="w-[35px] h-[16px]" />
                   <p className="font-semibold text-[16px] text-white">
                     20/7 support for customers and vendors

@@ -52,7 +52,7 @@ const WIthdrowCard = () => {
 
   return (
     <div className="flex justify-center items-center">
-      <div className="border-4 border-black rounded-3xl p-10 bg-white md:h-[800px] pb-32 md:w-[1044px] md:mx-0 mx-[10px]">
+      <div className="border-4 border-black rounded-3xl p-10 bg-white md:h-[800px] pb-32 lg:mx-auto md:w-[1044px] md:mx-[10px] mx-[10px]">
         <div className="relative flex flex-col h-full animate__animated animate__fadeIn">
           <h2
             className="text-black lg:text-[64px] sm:text-[32px] text-[30px] font-bold aos-init aos-animate lg:max-w-[480px]"
@@ -104,25 +104,45 @@ const WIthdrowCard = () => {
             {[1, 2, 3].map((num) => (
               <button
                 key={num}
-                className={`relative p-2 rounded-full border border-black overflow-hidden ${
+                className={`relative p-4 rounded-full border border-black overflow-hidden ${
                   currentImage === num
                     ? "bg-black text-white"
-                    : "bg-gray-300 text-black"
+                    : "border-black border-4 text-black"
                 }`}
                 onClick={() => handleButtonClick(num)}
-                style={{ width: "40px", height: "40px" }}
               >
                 {num.toString().padStart(2, "0")}
 
                 {/* Progress bar */}
                 {currentImage === num && (
-                  <span
-                    className="absolute bottom-0 left-0 h-1 bg-green-500"
-                    style={{
-                      width: "100%",
-                      animation: "progressBar 4s linear forwards",
-                    }}
-                  />
+                  <svg
+                    className="absolute top-0 left-0 w-full h-full"
+                    viewBox="0 0 36 36"
+                  >
+                    <circle
+                      className="text-black"
+                      stroke="currentColor"
+                      strokeWidth="4"
+                      fill="transparent"
+                      r="16"
+                      cx="18"
+                      cy="18"
+                    />
+                    <circle
+                      className="text-black"
+                      stroke="currentColor"
+                      strokeWidth="4"
+                      fill="transparent"
+                      r="16"
+                      cx="18"
+                      cy="18"
+                      strokeDasharray="100"
+                      strokeDashoffset="100"
+                      style={{
+                        animation: "progressCircle 4s linear forwards",
+                      }}
+                    />
+                  </svg>
                 )}
               </button>
             ))}
