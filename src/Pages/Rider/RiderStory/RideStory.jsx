@@ -4,8 +4,7 @@ import image7 from "../../../assets/images/image7.png";
 import image8 from "../../../assets/images/image8.png";
 import image9 from "../../../assets/images/image9.png";
 
-const ChowStories = () => {
-
+const RideStory = () => {
   const data = [
     {
       image: image7,
@@ -26,7 +25,7 @@ const ChowStories = () => {
       btn: "Read More",
     },
   ];
-  
+
   return (
     <div className="pt-[40px] pb-[144px]">
       <div className="sm:flex gap-2.5 xl:pl-[96px] pl-[10px]">
@@ -39,7 +38,7 @@ const ChowStories = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-10 ">
           {data.map((item, index) => (
             <div key={index}>
-              <div className="border-4 rounded-2xl border-black max-w-[360.33px] max-h-[446px]">
+              <div className="border-4 rounded-2xl border-black max-w-[363.33px] max-h-[446px]">
                 <img src={item.image} alt="s1" />
                 <p className="text-[14px] font-extrabold text-black pt-[16px] px-[20.6px]">
                   {item.p1}
@@ -67,4 +66,4 @@ const ChowStories = () => {
   );
 };
 
-export default ChowStories;
+export default RideStory;

@@ -1,9 +1,9 @@
 import React from "react";
-
 import rider from "../../assets/svg/rider.svg";
 import ridebg from "../../assets/svg/ridebg.svg";
 import playstore from "../..//assets/svg/playstore.svg";
 import appstore from "../../assets/svg/gapp.svg";
+import Card from "./WithdrowCard/Card";
 
 const RideBg = () => {
   return (
@@ -16,8 +16,9 @@ const RideBg = () => {
             className="z-0 w-[100%] h-[100%] bg-no-repeat bg-cover bg-position[50%]"
           />
         </div>
+
         <div
-          className=" absolute top-40 left-32 py-12"
+          className=" absolute z-20 md:top-40 top-3 lg:left-32 py-12"
           data-aos="fade-down"
           data-aos-delay="200"
         >
@@ -30,13 +31,14 @@ const RideBg = () => {
           </p>
           <div className="w-fit mx-0">
             <div className="flex flex-col md:flex-row md:items-center md:space-x-4 w-fit space-y-4 md:space-y-0">
-              {/* buttons */}
               <div>
                 <button
                   className="bg-white text-[#0C513F]
                                    font-medium 
-                                   text-[14px] py-[12px] md:py-[20px] 
-                                   md:px-[24px]  px-[16px]
+                                   text-[14px] 
+                                   md:px-[24px] md:py-[20px]
+                                   sm:px-[16px] sm:py-[12px]
+                                   px-[7px] py-[10px]
                                    rounded-md flex items-center gap-1.5"
                 >
                   <img src={playstore} alt="ps" />
@@ -47,8 +49,9 @@ const RideBg = () => {
                 <button
                   className="bg-white text-[#0C513F]
                                    font-medium 
-                                   text-[14px] py-[12px] md:py-[20px] 
-                                   md:px-[24px]  px-[16px]
+                                   text-[14px] 
+                                   py-[12px] px-[16px]
+                                   md:py-[20px]  md:px-[24px] 
                                    rounded-md flex items-center gap-1.5"
                 >
                   <img src={appstore} alt="as" className="text-[#0C513F]" />
@@ -58,12 +61,28 @@ const RideBg = () => {
             </div>
           </div>
         </div>
+
         <div
+          className=" container h-full relative"
           data-aos="fade-left"
           data-aos-delay="200"
-          className=" absolute bottom-8 right-16"
         >
-          <img src={rider} alt="rider" />
+          <div className=" absolute z-20 sm:bottom-28 bottom-4 sm:right-16 right-0">
+            <img
+              src={rider}
+              alt="rider"
+              className="
+              lg:w-[512px] lg:h-[687px]
+              sm:w-[300px] sm:h-[330px]
+              w-[200px] h-[200px]
+              "
+            />
+          </div>
+        </div>
+
+        <div className=" absolute md:-mt-40 container pb-32  ">
+          {/* <WIthdrowCard /> */}
+          <Card />
         </div>
       </div>
     </div>

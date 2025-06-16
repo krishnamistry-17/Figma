@@ -63,11 +63,13 @@ const FaqAccordian = () => {
                       <p className="font-extrabold text-[18px] pt-[20px] pb-[22px] pl-[21px] ">
                         {item.ques}
                       </p>
-                      <img
-                        src={ystar2}
-                        alt="ys2"
-                        className="py-[23px] pr-[23px] "
-                      />
+                      {activeIndex === index && (
+                        <img
+                          src={ystar2}
+                          alt="ys2"
+                          className="py-[23px] pr-[23px] "
+                        />
+                      )}
                     </div>
                   </div>
                 </div>

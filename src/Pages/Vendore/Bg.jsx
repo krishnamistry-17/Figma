@@ -24,7 +24,7 @@ const Bg = () => {
             in menu item sales, growth in business value, and increased brand
             awareness. Download our Vendor app to get started.
           </p>
-          {/* Buttons stay as they are */}
+         
           <div className="w-fit mx-0">
             <div className="flex flex-col md:flex-row md:items-center md:space-x-4 w-fit space-y-4 md:space-y-0">
               {/* buttons */}

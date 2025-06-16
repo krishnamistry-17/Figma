@@ -2,23 +2,19 @@ import React, { useState } from "react";
 import ystar2 from "../../../assets/svg/ystar2.svg";
 import bstar from "../../../assets/svg/bstar.svg";
 
-const VendAccord = () => {
+const RideAccord = () => {
   const items = [
     {
-      ques: " How do I sign up as a vendor on Chowdeck?",
-      ans: "Go to Playstore or App Store on your phone, search for Chowdeck Vendor  and download the app. Create an account in minutes by entering your personal and business details, set up your restaurant with menu items and prices, opening and closing times, average preparation time, tags and pictures. Our restaurant team will review and send a required agreement to be signed before you're fully live on the app. ",
+      ques: " What tools / items are given to riders from Chowdeck?",
+      ans: "Riders are handed Chowdeck delivery bags, Helmets and branded merchandise. ",
     },
     {
-      ques: " If my restaurant is already on a different delivery platform, can I still partner with Chowdeck?",
-      ans: "Yes! Vendors willing to partner with Chowdeck can also be on other delivery platforms to make comparisons to which partner offers the best experience.",
+      ques: " What is the payment plan for riders?",
+      ans: "Riders can accrue bonuses and money earned on deliveries on a weekly basis. They also can withdraw from in-app wallet to their verified bank account anytime.",
     },
     {
-      ques: " What is the payout plan for vendors?",
-      ans: "Payouts are made the next day to vendors for orders completed the previous day excluding Chowdeck’s commission rate ",
-    },
-    {
-      ques: "How do I navigate the vendor app?",
-      ans: "On the vendor app, vendors can make adjustments to the account. Home-page: You can view also view the total orders and amount you have gathered. Click on Orders to see pending orders. Vendors can either accept or reject them. Click on Menu to add menu items, fill tin necessary details and the menu items would be successfully created. Profile: You can make changes such as opening and closing time, tags, vendor class and more.",
+      ques: " How do I sign up as a rider on Chowdeck?",
+      ans: "Go to Playstore or App Store on your phone, search for Chowdeck Rider and download the app. Create an account in minutes by entering your personal details and indicate if you will like to be a full time or part time rider. Your profile will be reviewed by the operations team before you'll be full onboarded as a rider. ",
     },
   ];
   const [activeIndex, setActiveIndex] = useState(1);
@@ -83,4 +79,4 @@ const VendAccord = () => {
   );
 };
 
-export default VendAccord;
+export default RideAccord;

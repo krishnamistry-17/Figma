@@ -1,10 +1,68 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import playstore from "../../../assets/svg/playstore.svg";
 import appstore from "../../../assets/svg/appstore.svg";
 import message from "../../../assets/svg/message.svg";
 import scooty from "../../../assets/svg/scooty.svg";
 
+const data = [
+  {
+    heading: "Se o ti jeun?",
+  },
+  {
+    heading: "You don chow?",
+  },
+  {
+    heading: "I riela nri?",
+  },
+  {
+    heading: "Kun ci abinci?",
+  },
+  {
+    heading: "Have you eaten?",
+  },
+];
+
 const Bg = () => {
+  const [currentHeading, setCurrentHeading] = useState(5);
+  const headingRef = useRef();
+  const intervalRef = useRef(null);
+
+  const chnageHead = () => {
+    if (num === currentHeading) return;
+
+    const headEl = headingRef.current;
+
+    imgEl.classList.remove("animate__fadeIn");
+    imgEl.classList.add("animate__fadeOut");
+
+    imgEl.addEventListener(
+      "animationend",
+      () => {
+        setCurrentImage(num);
+        imgEl.classList.remove("animate__fadeOut");
+        imgEl.classList.add("animate__fadeIn");
+      },
+      { once: true }
+    );
+  };
+
+  useEffect(() => {
+    intervalRef.current = setInterval(() => {
+      const nextHead =
+        currentHeading === "Have you eaten?"
+          ? "Se o ti jeun?"
+          : currentHeading + 1;
+      chnageHead(nextHead);
+    }, 8000);
+
+    return () => clearInterval(intervalRef.current);
+  }, [currentHeading]);
+
+  const handleButtonClick = (num) => {
+    clearInterval(intervalRef.current);
+    chnageHead(num);
+  };
+
   return (
     <>
       <div data-aos="fade-up" data-aos-delay="0">
@@ -12,11 +70,9 @@ const Bg = () => {
           className="text-black md:text-[112px] text-[55px] 
         text-center md:pt-[57px] pt-[40px] font-roboto leading-tight tracking-tighter"
         >
-          <span className=" animate__animated hidden">Se o ti jeun?</span>
-          <span className=" animate__animated hidden">You don chow?</span>
-          <span className=" animate__animated hidden">I riela nri?</span>
-          <span className=" animate__animated hidden">Kun ci abinci?</span>
-          <span className=" animate__animated ">Have you eaten?</span>
+          <span ref={headingRef} className=" animate__animated ">
+            Have you eaten?
+          </span>
         </h1>
         <div
           className="flex flex-col md:flex-row justify-center

@@ -1,16 +1,16 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect } from "react";
 import arrow from "../../../assets/svg/downarrow.svg";
 import pstar from "../../../assets/svg/pstar.svg";
+import star from "../../../assets/svg/star.svg";
 import half from "../../../assets/svg/half.svg";
 import rightarrow from "../../../assets/svg/rightarrow.svg";
 import image6 from "../../../assets/images/image6.png";
-import box from "../../../assets/images/box.png";
+import lemon from "../../../assets/images/lemon.png";
 import cartoon from "../../../assets/images/cartoon.png";
 import blocation from "../../../assets/svg/blocation.svg";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
-const Growcard = () => {
+const Network = () => {
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -18,21 +18,17 @@ const Growcard = () => {
     });
     AOS.refresh();
   }, []);
-
   return (
-    <div>
-      <div className="flex justify-center items-center gap-0.5">
-        <p
-          className="md:text-[64px] sm:text-[40px] text-[33px] text-center pt-[32px]"
-          style={{ color: "#D1D5DB" }}
-        >
+    <div className=" pt-[650px]">
+      <div className=" flex justify-center items-center gap-0.5 pt-3.5">
+        <p className="md:text-[64px] sm:text-[40px] text-[30px] text-gray-300 text-center">
           Join our growing network
         </p>
-        <img src={arrow} alt="dr" className="md:pt-[47px]" />
+        <img src={arrow} alt="arow" />
       </div>
       <div
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 place-items-center 
-      lg:px-auto px-[10px] gap-2 pt-[40px] pb-[58px]"
+            lg:px-auto px-[10px] gap-2 pt-[40px] pb-[58px]"
       >
         {/*grid1 */}
         <div data-aos="fade-up" data-aos-delay="0">
@@ -46,7 +42,6 @@ const Growcard = () => {
               chop life ? Get started and allow us deliver happiness to your
               door step.
             </p>
-            {/* <p className="text-[16px] text-black pt-[20px] pl-[24px]"></p> */}
             <button className="font-extrabold text-[14px]  text-black pt-[35px] pl-[24px] pb-[44px] flex">
               SEE MORE
               <img src={rightarrow} alt="ra" className="pl-[2px]" />
@@ -59,13 +54,13 @@ const Growcard = () => {
         {/*grid2 */}
         <div data-aos="fade-up" data-aos-delay="300">
           <div className="border-4 rounded-2xl border-black max-w-[402.66px] max-h-auto">
-            <img src={half} alt="st" className="pt-[28px] pl-[24px]" />
+            <img src={star} alt="st" className="pt-[28px] pl-[24px]" />
             <h2 className="font-extrabold text-[27px] text-black pt-[19px] pl-[24px]">
-              Deliver happiness
+              Start selling
             </h2>
             <p className="text-[16px] text-black pt-[20px] pl-[24px]">
-              Join our elite league of delivery riders delivering happiness to
-              customers and earn to achieve your dreams while at it.
+              Are you a restaurant owner looking to grow your business? Reach
+              new customers when you join our network.
             </p>
 
             <button className="font-extrabold text-[14px]  text-black pt-[35px] pl-[24px] pb-[44px] flex">
@@ -73,7 +68,7 @@ const Growcard = () => {
               <img src={rightarrow} alt="ra" className="pl-[2px]" />
             </button>
             <div>
-              <img src={box} alt="lm" />
+              <img src={lemon} alt="lm" />
             </div>
           </div>
         </div>
@@ -103,4 +98,4 @@ const Growcard = () => {
   );
 };
 
-export default Growcard;
+export default Network;
