@@ -7,6 +7,7 @@ import Rider from "./Pages/Rider/Rider";
 import "./index.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Company from "./Pages/Company/Company";
 
 AOS.init();
 
@@ -20,6 +21,7 @@ function App() {
         <Route path="/footer" element={<Footer />} />
         <Route path="/vendores" element={<Vendore />} />
         <Route path="/riders" element={<Rider />} />
+        <Route path="/company" element={<Company />} />
       </Routes>
     </BrowserRouter>
   );

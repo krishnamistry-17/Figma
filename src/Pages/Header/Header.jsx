@@ -8,13 +8,17 @@ import { useNavigate } from "react-router-dom";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isopen, setIsOpen] = useState(false);
+  const [isNewOpen, setIsNewOpen] = useState(false);
 
   const handleOption = () => setIsOpen(!isopen);
+  const handleNewOption = () => setIsNewOpen(!isNewOpen);
+
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   const navigate = useNavigate();
 
   const [selectedMenu, setSelectedMenu] = useState("Customers");
+  const [newSelect, setNewSelect] = useState("Products");
 
   const handleVendores = () => {
     setSelectedMenu("Vendores");
@@ -29,9 +33,27 @@ const Header = () => {
   };
 
   const handleCustomres = () => {
-    setSelectedMenu("Customer");
+    setSelectedMenu("Customers");
     navigate("/");
     setIsOpen(false);
+  };
+
+  const handleChowPass = () => {
+    setNewSelect("ChowPass");
+    navigate("/chowpass");
+    setIsNewOpen(false);
+  };
+
+  const handleRelay = () => {
+    setNewSelect("Relay");
+    navigate("/relay");
+    setIsNewOpen(false);
+  };
+
+  const handleProducts = () => {
+    setNewSelect("Products");
+    navigate("/products");
+    setIsNewOpen(false);
   };
 
   return (
@@ -56,8 +78,45 @@ const Header = () => {
         </nav> */}
 
         <nav className="hidden md:flex items-center gap-6">
+          <div className=" relative flex items-center">
+            <button
+              onClick={handleNewOption}
+              className="text-black text-[16px] sm:pl-0 pl-[5px] flex font-semibold"
+            >
+              {newSelect}
+              <img src={dropdown} alt="dropdown" className="pl-[5px]" />
+            </button>
+            {isNewOpen && (
+              <div className="absolute top-12 right-0 bg-white rounded-lg shadow-md mt-1.5 flex flex-col z-50">
+                {newSelect !== "ChowPass" && (
+                  <button
+                    onClick={handleChowPass}
+                    className="px-6 py-4 hover:bg-gray-100 text-left"
+                  >
+                    ChowPass
+                  </button>
+                )}
+                {newSelect !== "Relay" && (
+                  <button
+                    onClick={handleRelay}
+                    className="px-6 py-4 hover:bg-gray-100 text-left"
+                  >
+                    Relay
+                  </button>
+                )}
+                {newSelect !== "Products" && (
+                  <button
+                    onClick={handleProducts}
+                    className="px-6 py-4 hover:bg-gray-100 text-left"
+                  >
+                    Products
+                  </button>
+                )}
+              </div>
+            )}
+          </div>
           <a
-            href="/caompany"
+            href="/company"
             className="text-black text-[16px] font-medium hover:text-green-bg transition"
           >
             Company
@@ -94,14 +153,6 @@ const Header = () => {
 
           {isopen && (
             <div className="absolute top-12 right-0 bg-white rounded-lg shadow-md mt-2 flex flex-col z-50">
-              {selectedMenu !== "Customer" && (
-                <button
-                  onClick={handleCustomres}
-                  className="px-6 py-4 hover:bg-gray-100 text-left"
-                >
-                  Customer
-                </button>
-              )}
               {selectedMenu !== "Vendores" && (
                 <button
                   onClick={handleVendores}
@@ -118,9 +169,55 @@ const Header = () => {
                   Riders
                 </button>
               )}
+              {selectedMenu !== "Customers" && (
+                <button
+                  onClick={handleCustomres}
+                  className="px-6 py-4 hover:bg-gray-100 text-left"
+                >
+                  Customers
+                </button>
+              )}
             </div>
           )}
         </div>
+
+        {/* <div className="md:hidden relative flex items-center">
+          <button
+            onClick={handleNewOption}
+            className="text-black text-[16px] sm:pl-0 pl-[5px] flex font-semibold"
+          >
+            {newSelect}
+            <img src={dropdown} alt="dropdown" className="pl-[5px]" />
+          </button>
+          {isNewOpen && (
+            <div className="absolute top-12 right-0 bg-white rounded-lg shadow-md mt-1.5 flex flex-col z-50">
+              {newSelect !== "ChowPass" && (
+                <button
+                  onClick={handleChowPass}
+                  className="px-6 py-4 hover:bg-gray-100 text-left"
+                >
+                  ChowPass
+                </button>
+              )}
+              {newSelect !== "Relay" && (
+                <button
+                  onClick={handleRelay}
+                  className="px-6 py-4 hover:bg-gray-100 text-left"
+                >
+                  Relay
+                </button>
+              )}
+              {newSelect !== "Products" && (
+                <button
+                  onClick={handleProducts}
+                  className="px-6 py-4 hover:bg-gray-100 text-left"
+                >
+                  Products
+                </button>
+              )}
+            </div>
+          )}
+        </div> */}
 
         {/* Mobile Menu Button */}
         <button
@@ -135,16 +232,18 @@ const Header = () => {
       {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="mt-4 bg-white border border-gray-200 rounded-md shadow-md p-4 flex flex-col gap-3 md:hidden">
-          {["Company", "FAQs", "Blog", "Contact"].map((label) => (
-            <a
-              key={label}
-              href={`/${label.toLowerCase()}`}
-              onClick={() => setIsMenuOpen(false)} // closes menu
-              className="text-black text-sm font-medium hover:text-green-bg"
-            >
-              {label}
-            </a>
-          ))}
+          {["Company", "FAQs", "Blog", "Contact", "ChowPass", "Relay"].map(
+            (label) => (
+              <a
+                key={label}
+                href={`/${label.toLowerCase()}`}
+                onClick={() => setIsMenuOpen(false)} // closes menu
+                className="text-black text-sm font-medium hover:text-green-bg"
+              >
+                {label}
+              </a>
+            )
+          )}
         </div>
       )}
     </header>
