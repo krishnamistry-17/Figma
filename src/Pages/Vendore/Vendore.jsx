@@ -17,7 +17,7 @@ const Vendore = () => {
       <div>
         <ChowPass />
       </div>
-      <div>∂
+      <div>
         <Tires />
       </div>
       <div>

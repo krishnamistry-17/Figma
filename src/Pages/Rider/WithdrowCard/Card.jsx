@@ -12,10 +12,30 @@ const images = {
   3: grow3,
 };
 
+const data = [
+  {
+    heading: "Track your metrics & bonuses earned",
+    para: "Monitor your growth and earn huge bonuses as you go.",
+  },
+  {
+    heading: "Withdraw straight to your account",
+    para: "No delays, withdraw from your wallet and into you account with ease.",
+  },
+  {
+    heading: "Unlock new levels of growth.",
+    para: "Own your hours, be your own boss, ride your vehicle, take loans,call shots, grow and learn with your team.",
+  },
+];
+
 const WIthdrowCard = () => {
   const [currentImage, setCurrentImage] = useState(1);
+  const [currentIndex, setCurrentIndex] = useState(data.length - 1);
+
   const imgRef = useRef(null);
-  const intervalRef = useRef(null);
+  const headingRef = useRef(null);
+
+  const imageIntervalRef = useRef(null);
+  const headingIntervalRef = useRef(null);
 
   const changeImage = (num) => {
     if (num === currentImage) return;
@@ -36,38 +56,73 @@ const WIthdrowCard = () => {
     );
   };
 
+  const changeHead = (newHeading) => {
+    const headEl = headingRef.current;
+
+    headEl.classList.remove("animate__fadeIn");
+    headEl.classList.add("animate__fadeOut");
+
+    headEl.addEventListener(
+      "animationend",
+      () => {
+        setCurrentIndex(data.findIndex((d) => d.heading === newHeading));
+        headEl.classList.remove("animate__fadeOut");
+        headEl.classList.add("animate__fadeIn");
+      },
+      { once: true }
+    );
+  };
+
   useEffect(() => {
-    intervalRef.current = setInterval(() => {
+    imageIntervalRef.current = setInterval(() => {
       const nextImage = currentImage === 3 ? 1 : currentImage + 1;
       changeImage(nextImage);
-    }, 8000);
+    }, 5000);
 
-    return () => clearInterval(intervalRef.current);
+    return () => clearInterval(imageIntervalRef.current);
   }, [currentImage]);
 
+  useEffect(() => {
+    headingIntervalRef.current = setInterval(() => {
+      setCurrentIndex((prevIndex) => {
+        const nextIndex = (prevIndex + 1) % data.length;
+        const nextHeading = data[nextIndex].heading;
+        changeHead(nextHeading);
+        console.log("nextIndex  :", nextIndex);
+        console.log("nextHeading :", nextHeading);
+        return nextIndex;
+      });
+    }, 6000);
+
+    return () => clearInterval(headingIntervalRef.current);
+  }, []);
+
   const handleButtonClick = (num) => {
-    clearInterval(intervalRef.current);
+    clearInterval(imageIntervalRef.current);
+    clearInterval(headingIntervalRef.current);
     changeImage(num);
   };
 
   return (
     <div className="flex justify-center items-center">
-      <div className="border-4 border-black rounded-3xl p-10 bg-white md:h-[800px] pb-32 lg:mx-auto md:w-[1044px] md:mx-[10px] mx-[10px]">
-        <div className="relative flex flex-col h-full animate__animated animate__fadeIn">
+      <div className="border-4 border-black rounded-3xl p-10 bg-white md:h-[800px] pb-32  lg:w-[1280px] md:w-[1044px]  ">
+        <div className="relative flex flex-col h-full ">
           <h2
-            className="text-black lg:text-[64px] sm:text-[32px] text-[30px] font-bold aos-init aos-animate lg:max-w-[480px]"
+            className="text-black lg:text-[64px] sm:text-[32px] text-[30px] font-bold aos-init aos-animate lg:max-w-[480px]
+            animate__animated animate__fadeIn
+            "
+            ref={headingRef}
             data-aos="fade-up"
             data-aos-delay="0"
           >
-            Unlock new levels of growth.
+            {data[currentIndex].heading}
           </h2>
           <p
-            className="text-black text-[18px] pt-5 max-w-[320px]"
-            data-aos="fade-up"
-            data-aos-delay="0"
+            className="text-black text-[18px] pt-5 max-w-[320px]
+            "
+            ref={headingRef}
           >
-            Own your hours, be your own boss, ride your vehicle, take loans,
-            call shots, grow and learn with your team.
+            {data[currentIndex].para}
           </p>
 
           <div
@@ -96,7 +151,8 @@ const WIthdrowCard = () => {
               ref={imgRef}
               src={images[currentImage]}
               alt={`grow${currentImage}`}
-              className="hidden md:block md:absolute self-center py-0 md:w-3/5 right-0 -bottom-20 lg:w-[600px] animate__animated animate__fadeIn"
+              className="hidden md:block md:absolute self-center py-0 md:w-4/6 right-0 lg:-bottom-20 bottom-8 lg:w-[600px] 
+              animate__animated animate__fadeIn"
             />
           </div>
 
@@ -104,10 +160,10 @@ const WIthdrowCard = () => {
             {[1, 2, 3].map((num) => (
               <button
                 key={num}
-                className={`relative p-4 rounded-full border border-black overflow-hidden ${
+                className={`relative p-4 rounded-full  overflow-hidden ${
                   currentImage === num
-                    ? "bg-black text-white"
-                    : "border-black border-4 text-black"
+                    ? " border-black  text-black"
+                    : "bg-black text-white"
                 }`}
                 onClick={() => handleButtonClick(num)}
               >
@@ -129,7 +185,7 @@ const WIthdrowCard = () => {
                       cy="18"
                     />
                     <circle
-                      className="text-black"
+                      className="text-green-400"
                       stroke="currentColor"
                       strokeWidth="4"
                       fill="transparent"
@@ -149,14 +205,6 @@ const WIthdrowCard = () => {
           </div>
         </div>
       </div>
-
-      {/* Progress bar keyframes */}
-      <style>{`
-        @keyframes progressBar {
-          from { width: 0; }
-          to { width: 100%; }
-        }
-      `}</style>
     </div>
   );
 };
