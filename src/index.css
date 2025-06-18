@@ -6,3 +6,15 @@
     stroke-dashoffset: 0;
   }
 }
+    @layer utilities {
+      /* Chrome, Safari and Opera */
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+
+      /* IE and Edge */
+      .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    }
