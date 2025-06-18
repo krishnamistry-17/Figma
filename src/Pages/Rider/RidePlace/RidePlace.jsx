@@ -94,7 +94,7 @@ const RidePlace = () => {
                 />
               </div>
             </div>
-            <div className="flex-1 lg:pt-0 md:pt-6 sm:pt-7 pt-8">
+            <div className="hidden md:flex flex-1  lg:pt-0 md:pt-6 sm:pt-7 pt-8">
               <img src={order1} alt="o1" />
             </div>
           </div>

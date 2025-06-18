@@ -7,16 +7,16 @@ import playstore from "../../../assets/svg/playstore.svg";
 import gapple from "../../../assets/svg/gapple.svg";
 import bag from "../../../assets/images/bag.png";
 import ycstar from "../../../assets/svg/ycstar.svg";
-// import Faq from "../WhiteCard/Faq";
-import FaqAccordian from "../WhiteCard/FaqAccordian";
-const PlaceOrder = () => {
+import CompanyAccord from "../CompanyAccord/CompnayAccord";
+
+const CompanyPlace = () => {
   return (
     <>
       <div className="bg-black relative ">
         <div className="absolute -top-55 ">
-          <FaqAccordian />
+          <CompanyAccord />
         </div>
-        <div className="lg:pt-[720px] md:pt-[1340px] sm:pt-[1600px] pt-[2035px]">
+        <div className="lg:pt-[720px] md:pt-[1340px] sm:pt-[1600px] pt-[1755px]">
           <div className="lg:flex lg:px-[96px] gap-6 pt-[298px]">
             <div className="flex-1 bg-[#0C513F] relative rounded-2xl">
               <h2 className="font-extrabold sm:text-[58px] text-[32px] text-white pl-[40px] pt-[39px]">
@@ -94,7 +94,7 @@ const PlaceOrder = () => {
                 />
               </div>
             </div>
-            <div className="hidden md:flex flex-1  lg:pt-0 md:pt-6 sm:pt-7 pt-8">
+            <div className=" hidden md:flex flex-1  lg:pt-0 md:pt-6 sm:pt-7 pt-8">
               <img src={order1} alt="o1" />
             </div>
           </div>
@@ -124,4 +124,4 @@ const PlaceOrder = () => {
   );
 };
 
-export default PlaceOrder;
+export default CompanyPlace;

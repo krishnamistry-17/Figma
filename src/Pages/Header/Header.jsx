@@ -20,6 +20,10 @@ const Header = () => {
   const [selectedMenu, setSelectedMenu] = useState("Customers");
   const [newSelect, setNewSelect] = useState("Products");
 
+  const handleHome = () => {
+    navigate("/");
+  };
+
   const handleVendores = () => {
     setSelectedMenu("Vendores");
     navigate("/vendores");
@@ -61,7 +65,12 @@ const Header = () => {
       <div className="flex justify-between items-center">
         {/* Logo */}
         <div>
-          <img src={logo} alt="App Logo" className="h-8 sm:h-10" />
+          <img
+            src={logo}
+            alt="App Logo"
+            className="h-8 sm:h-10"
+            onClick={handleHome}
+          />
         </div>
 
         {/* Desktop Nav */}

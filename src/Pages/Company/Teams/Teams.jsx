@@ -29,7 +29,7 @@ const Teams = () => {
         "The Operations team is all about execution. They manage the critical logistics required to ensure that meals, medicine, and groceries are delivered to our customers efficiently and on time. By overseeing day-to-day operations and providing stellar support, they make sure that our services run like clockwork, delivering excellence every time.",
     },
   ];
-  const [activeIndex, setActiveIndex] = useState(2);
+  const [activeIndex, setActiveIndex] = useState(1);
   return (
     <div className=" bg-[#0c513f] relative">
       <div className=" absolute -top-19 right-5">
@@ -81,19 +81,21 @@ const Teams = () => {
           <h2 className="font-extrabold text-[32px] text-white pl-8 pt-8">
             Teams.
           </h2>
-          <div className="mt-8 flex gap-4 items-start pb-16 h-fit overflow-y-hidden overflow-x-auto scrollbar-hide">
+          <div className="mt-8 flex gap-20 items-start pb-16 h-fit overflow-y-hidden overflow-x-auto scrollbar-hide">
             {items.map((item, index) => (
               <div key={index} onClick={() => setActiveIndex(index)}>
-                <div className="h-[400px] min-w-[90%]">
+                <div className="h-[400px] min-w-[150%]">
                   <span className="pl-8">
-                    <span className="text-[#FFC501]">{item.num}</span>
-                    <span className="pl-2.5 font-bold text-[20px] text-[#FFC501]">
+                    <span className="text-[#FFC501] text-[15px]">
+                      {item.num}
+                    </span>
+                    <span className="pl-2.5 font-bold text-[12px] text-[#FFC501]">
                       {item.team}
                     </span>
                   </span>
                   <p className="h-[100%] overflow-y-auto bg-[#ffedb3] p-6 rounded-xl ml-5 mt-2">
                     <img src={ystar2} alt="ys" />
-                    <p className=" text-black text-[18px] pt-4">{item.focus}</p>
+                    <p className=" text-black text-[16px] pt-4">{item.focus}</p>
                   </p>
                 </div>
               </div>
