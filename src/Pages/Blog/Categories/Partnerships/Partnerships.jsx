@@ -1,7 +1,7 @@
 import React from "react";
 
-import image7 from "../../../../assets/images/image17.png";
-import image8 from "../../../../assets/images/image18.png";
+import image7 from "../../../../assets/images/image25.png";
+import image8 from "../../../../assets/images/image26.png";
 import image10 from "../../../../assets/images/image19.png";
 import image11 from "../../../../assets/images/image20.png";
 import image12 from "../../../../assets/images/image12.png";
@@ -9,12 +9,18 @@ import image13 from "../../../../assets/images/image13.png";
 import image14 from "../../../../assets/images/image14.png";
 import image16 from "../../../../assets/images/image16.png";
 
-const News = () => {
+const Partnerships = () => {
   const data = [
     {
-      image: image13,
-      p1: "Chowdeck is Now in Ghana — Here’s What We Have in Store",
-      d1: " After months of planning, training, and listening, we’re excited to officially launch Chowdeck in Ghana!",
+      image: image7,
+      p1: "Love Is In The Grey with Grey",
+      d1: "To celebrate sweet, sweet devotion on Valentine's Day, we partnered with Grey to present Love Is In The Grey.",
+      btn: "Read More",
+    },
+    {
+      image: image8,
+      p1: "Everything’s Better With Love and Chocolates with Chocolate City",
+      d1: "To commemorate Valentine’s Day, we partnered with Chocolate City Music to...",
       btn: "Read More",
     },
     {
@@ -24,15 +30,9 @@ const News = () => {
       btn: "Read More",
     },
     {
-      image: image7,
-      p1: "Get Free Deliveries and Reduced Service Fees with Chowpass!",
-      d1: " What if we told you there’s a way to save on delivery fees, service charges, and surge fees? It's called Chowpass!",
-      btn: "Read More",
-    },
-    {
-      image: image8,
-      p1: "#AcceleratingYou: Celebrating Women-Led Brands in the Chowdeck Ecosystem",
-      d1: "The world flourishes when women lead. For International Women's Day, celebrates  brilliant women.",
+      image: image13,
+      p1: "Chowdeck is Now in Ghana — Here’s What We Have in Store",
+      d1: " After months of planning, training, and listening, we’re excited to officially launch Chowdeck in Ghana!",
       btn: "Read More",
     },
     {
@@ -42,9 +42,9 @@ const News = () => {
       btn: "Read More",
     },
     {
-      image: image11,
-      p1: "#AcceleratingYou: Celebrating Women-Led Brands in the Chowdeck Ecosystem",
-      d1: "The world flourishes when women lead. For International Women's Day, celebrates  brilliant women.",
+      image: image7,
+      p1: "Get Free Deliveries and Reduced Service Fees with Chowpass!",
+      d1: " What if we told you there’s a way to save on delivery fees, service charges, and surge fees? It's called Chowpass!",
       btn: "Read More",
     },
     {
@@ -60,7 +60,7 @@ const News = () => {
       btn: "Read More",
     },
     {
-      image: image16,
+      image: image11,
       p1: "Get Free Deliveries and Reduced Service Fees with Chowpass!",
       d1: " What if we told you there’s a way to save on delivery fees, service charges, and surge fees? It's called Chowpass!",
       btn: "Read More",
@@ -104,4 +104,4 @@ const News = () => {
   );
 };
 
-export default News;
+export default Partnerships;

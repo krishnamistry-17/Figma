@@ -9,26 +9,8 @@ import image13 from "../../../../assets/images/image13.png";
 import image14 from "../../../../assets/images/image14.png";
 import image16 from "../../../../assets/images/image16.png";
 
-const News = () => {
+const Marketing = () => {
   const data = [
-    {
-      image: image13,
-      p1: "Chowdeck is Now in Ghana — Here’s What We Have in Store",
-      d1: " After months of planning, training, and listening, we’re excited to officially launch Chowdeck in Ghana!",
-      btn: "Read More",
-    },
-    {
-      image: image16,
-      p1: "#AcceleratingYou: Celebrating Women-Led Brands in the Chowdeck Ecosystem",
-      d1: "The world flourishes when women lead. For International Women's Day, celebrates  brilliant women.",
-      btn: "Read More",
-    },
-    {
-      image: image7,
-      p1: "Get Free Deliveries and Reduced Service Fees with Chowpass!",
-      d1: " What if we told you there’s a way to save on delivery fees, service charges, and surge fees? It's called Chowpass!",
-      btn: "Read More",
-    },
     {
       image: image8,
       p1: "#AcceleratingYou: Celebrating Women-Led Brands in the Chowdeck Ecosystem",
@@ -45,6 +27,24 @@ const News = () => {
       image: image11,
       p1: "#AcceleratingYou: Celebrating Women-Led Brands in the Chowdeck Ecosystem",
       d1: "The world flourishes when women lead. For International Women's Day, celebrates  brilliant women.",
+      btn: "Read More",
+    },
+    {
+      image: image13,
+      p1: "Chowdeck is Now in Ghana — Here’s What We Have in Store",
+      d1: " After months of planning, training, and listening, we’re excited to officially launch Chowdeck in Ghana!",
+      btn: "Read More",
+    },
+    {
+      image: image16,
+      p1: "#AcceleratingYou: Celebrating Women-Led Brands in the Chowdeck Ecosystem",
+      d1: "The world flourishes when women lead. For International Women's Day, celebrates  brilliant women.",
+      btn: "Read More",
+    },
+    {
+      image: image7,
+      p1: "Get Free Deliveries and Reduced Service Fees with Chowpass!",
+      d1: " What if we told you there’s a way to save on delivery fees, service charges, and surge fees? It's called Chowpass!",
       btn: "Read More",
     },
     {
@@ -104,4 +104,4 @@ const News = () => {
   );
 };
 
-export default News;
+export default Marketing;

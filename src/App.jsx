@@ -9,6 +9,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Company from "./Pages/Company/Company";
 import Blog from "./Pages/Blog/Blog";
+import Contact from "./Pages/Contact/Contact";
 
 AOS.init();
 
@@ -24,6 +25,7 @@ function App() {
         <Route path="/riders" element={<Rider />} />
         <Route path="/company" element={<Company />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </BrowserRouter>
   );

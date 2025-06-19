@@ -49,8 +49,8 @@ const All = () => {
     },
     {
       image: image13,
-      p1: "#AcceleratingYou: Celebrating Women-Led Brands in the Chowdeck Ecosystem",
-      d1: "The world flourishes when women lead. For International Women's Day, celebrates  brilliant women.",
+      p1: "Celebrating Women-Led Brands in the Chowdeck Ecosystem",
+      d1: "The world flourishes when women lead. For  Women's Day, celebrates women.",
       btn: "Read More",
     },
     {

@@ -19,8 +19,14 @@ const BlogBg = () => {
             className="w-[300px] h-[91px] md:h-[108px] md:w-[420px] top-0 right-6 absolute"
           />
         </div>
-        <div className=" absolute md:top-[418px] sm:top-52 top-96 sm:left-48">
-          <h2 className="text-white font-bold xl:text-[112px] md:text-[80px] sm:text-[70px] text-[55px]">
+        <div
+          className=" absolute md:top-[418px] sm:top-52 top-96 sm:left-48"
+          data-aos="fade-down"
+        >
+          <h2
+            className="text-white font-bold xl:text-[112px] md:text-[80px] sm:text-[70px] text-[55px]"
+            data-aos="fade-down"
+          >
             Blog & Stories
           </h2>
           <p className="text-white font-bold text-[20px] lg:max-w-[500px]">
@@ -32,6 +38,7 @@ const BlogBg = () => {
         <div>
           <img src={bottom} alt="btm" className=" absolute bottom-0 w-full" />
         </div>
+
         {/* <div className=" relative flex overflow-x-hidden">
         
           <div className="flex animate-marquee py-12   gap-4">
@@ -75,7 +82,7 @@ const BlogBg = () => {
             </div>
           </div>
         </div> */}
-        <div className=" absolute right-28 top-36">
+        <div className=" absolute xl:right-28 right-16 top-36">
           <div className=" hidden lg:block h-[700px] overflow-y-auto scrollbar-hide">
             <BgStories />
           </div>
