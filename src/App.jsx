@@ -10,6 +10,8 @@ import "aos/dist/aos.css";
 import Company from "./Pages/Company/Company";
 import Blog from "./Pages/Blog/Blog";
 import Contact from "./Pages/Contact/Contact";
+import ChowPass from "./Pages/ChowPass/ChowPass";
+import Relay from "./Pages/Relay/Relay";
 
 AOS.init();
 
@@ -26,6 +28,8 @@ function App() {
         <Route path="/company" element={<Company />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/chowpass" element={<ChowPass />} />
+        <Route path="/relay" element={<Relay />} />
       </Routes>
     </BrowserRouter>
   );

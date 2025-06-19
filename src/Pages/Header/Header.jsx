@@ -56,7 +56,7 @@ const Header = () => {
 
   const handleProducts = () => {
     setNewSelect("Products");
-    navigate("/products");
+    navigate("/");
     setIsNewOpen(false);
   };
 
