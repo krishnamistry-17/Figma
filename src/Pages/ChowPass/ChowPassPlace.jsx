@@ -11,7 +11,7 @@ const ChowPassPlace = () => {
   return (
     <>
       <div className="bg-black relative ">
-        <div className="absolute -top-53 ">
+        <div className="absolute xl:-top-103 md:-top-97 -top-115 ">
           <ChowPassAccord />
         </div>
         <div className="lg:pt-[720px] md:pt-[1340px] sm:pt-[1600px] pt-[1755px]">

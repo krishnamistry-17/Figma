@@ -36,7 +36,7 @@ const ChowPassAccord = () => {
     <section id="faq">
       <div className="lg:px-[90px] px-[10px]  md:pt-[143px] pt-[219px]">
         <div className="border-4 border-black bg-white rounded-xl">
-          <div className="lg:px-[36px] pt-[36px] pb-[28px]">
+          <div className="lg:px-[36px] pt-[36px] pb-[0px]">
             <div className="lg:flex lg:gap-8">
               <div className="flex-1">
                 <h2 className="font-extrabold text-[63px] text-[#0C513F]">
