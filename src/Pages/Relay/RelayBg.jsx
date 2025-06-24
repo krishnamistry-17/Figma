@@ -12,7 +12,7 @@ const RelayBg = () => {
         <img src={hero} alt="hro" className=" relative z-0" />
         <div className=" text-center container absolute top-36 lg:left-16">
           <h2
-            className="text-black lg:text-[112px] md:text-[75px] text-[55px] font-bold tracking-tighter "
+            className="text-black xl:text-[112px] md:text-[75px] text-[55px] font-bold tracking-tighter "
             data-aos="fade-up"
             data-aos-delay="0"
           >
