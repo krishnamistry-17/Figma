@@ -11,7 +11,14 @@ const Bg = () => {
         <img
           src={vendore}
           alt="vndr"
-          className="w-screen object-cover"
+          className="w-screen md:block hidden object-cover"
+          data-aos="fade-down"
+          data-aos-delay="300"
+        />
+        <img
+          src={vendore}
+          alt="vndr"
+          className="w-screen sm:hidden h-screen object-cover"
           data-aos="fade-down"
           data-aos-delay="300"
         />
@@ -19,14 +26,14 @@ const Bg = () => {
           <p className="xl:text-[112px] md:text-[60px] text-[31px] text-black font-bold lg:max-w-[750px] sm:max-w-[300px]">
             Grow your Food Business
           </p>
-          <p className="text-[18px] max-w-full sm:max-w-[300px] md:max-w-[500px] mb-10 mt-8 text-center sm:text-left text-black font-medium">
+          <p className="text-[18px] max-w-[74%] sm:max-w-[300px] md:max-w-[500px] mb-10 mt-8 text-center sm:text-left text-black font-medium">
             Join over 3,000+ businesses selling daily on Chowdeck. Enjoy a boost
             in menu item sales, growth in business value, and increased brand
             awareness. Download our Vendor app to get started.
           </p>
 
           <div className="w-fit mx-0">
-            <div className="flex flex-col md:flex-row md:items-center md:space-x-4 w-fit space-y-4 md:space-y-0">
+            <div className=" hidden md:flex flex-row  items-center md:space-x-4 w-fit space-y-4 md:space-y-0">
               {/* buttons */}
               <div>
                 <button
@@ -53,10 +60,34 @@ const Bg = () => {
                 </button>
               </div>
             </div>
+            <div className="sm:hidden flex flex-row items-center w-fit space-x-2">
+              <div>
+                <button
+                  className="bg-black text-white 
+                         font-medium 
+                         text-[14px] py-[15px]
+                          px-[16px]
+                         rounded-full flex items-center gap-1.5"
+                >
+                  <img src={playstore} alt="ps" />
+                </button>
+              </div>
+              <div>
+                <button
+                  className="bg-black text-white 
+                         font-medium 
+                         text-[14px] py-[15px]
+                          px-[16px]
+                         rounded-full flex items-center gap-1.5"
+                >
+                  <img src={appstore} alt="as" />
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div className=" relative md:-top-53.5">
+      <div className=" relative lg:-top-53.5 md:-top-38.5">
         <BgAnimate />
       </div>
     </div>

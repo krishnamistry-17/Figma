@@ -81,15 +81,15 @@ const Teams = () => {
           <h2 className="font-extrabold text-[32px] text-white pl-8 pt-8">
             Teams.
           </h2>
-          <div className="mt-8 flex gap-20 items-start pb-16 h-fit overflow-y-hidden overflow-x-auto scrollbar-hide">
+          <div className="mt-8 flex gap-24 items-start pb-16 h-fit overflow-y-hidden overflow-x-auto scrollbar-hide">
             {items.map((item, index) => (
               <div key={index} onClick={() => setActiveIndex(index)}>
-                <div className="h-[400px] min-w-[150%]">
+                <div className="h-[400px] min-w-[156%]">
                   <span className="pl-8">
                     <span className="text-[#FFC501] text-[15px]">
                       {item.num}
                     </span>
-                    <span className="pl-2.5 font-bold text-[12px] text-[#FFC501]">
+                    <span className="pl-2.5 font-bold text-[15px] text-[#FFC501]">
                       {item.team}
                     </span>
                   </span>

@@ -24,7 +24,7 @@ const ContactPage = () => {
     },
   ];
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(2);
 
   const handleToggle = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -80,7 +80,7 @@ const ContactPage = () => {
             />
           </div>
         </div>
-        <div
+        {/* <div
           className="flex justify-between items-center
          bg-black w-full rounded-lg text-white py-5 md:px-10 px-3 cursor-pointer"
           onClick={handleToggle}
@@ -97,7 +97,29 @@ const ContactPage = () => {
             </p>
             <img src={down} alt="down" className="pl-2" />
           </div>
+        </div> */}
+        <div
+          className="flex items-center justify-between text-white 
+    rounded-xl bg-black py-4 sm:px-10 px-4 cursor-pointer max-w-2xl w-full flex-wrap gap-y-2"
+          onClick={handleToggle}
+        >
+          {/* Dot */}
+          <span className="h-3 w-3 bg-[#ffc201] rounded-full" />
+
+          {/* Category Text */}
+          <p className=" text-[13px] sm:text-[16px] truncate max-w-[60%]">
+            {data[activeIndex].head}
+          </p>
+
+          {/* Right-side SELECT + arrow */}
+          <div className="flex items-center pl-3 sm:pl-16">
+            <p className="uppercase text-[13px] sm:text-[16px] font-bold">
+              s e l e c t
+            </p>
+            <img src={down} alt="down" className="pl-2 w-4 h-4 sm:w-5 sm:h-5" />
+          </div>
         </div>
+
         {isMenuOpen && (
           <div className="mt-0.5">
             <div className=" bg-black text-white w-full py-5 px-10 rounded-lg">

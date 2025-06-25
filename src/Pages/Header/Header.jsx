@@ -261,8 +261,43 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="mt-4 bg-white border border-gray-200 rounded-md shadow-md p-4 flex flex-col gap-3 md:hidden">
-          {["Company", "Blog", "Contact", "ChowPass", "Relay"].map((label) => (
+        <div
+          className="mt-4 bg-white border border-gray-200 rounded-md shadow-md p-4 flex flex-col gap-3 md:hidden"
+          onClick={() => setIsMenuOpen(false)}
+        >
+          <nav>
+            <Link
+              to="/company"
+              className="text-black text-sm font-medium hover:text-green-bg block p-2"
+            >
+              Company
+            </Link>
+            <Link
+              to="/blog"
+              className="text-black text-sm font-medium hover:text-green-bg block p-2"
+            >
+              Blog
+            </Link>
+            <Link
+              to="/contact"
+              className="text-black text-sm font-medium hover:text-green-bg block p-2"
+            >
+              Contact
+            </Link>
+            <Link
+              to="/chowpass"
+              className="text-black text-sm font-medium hover:text-green-bg block p-2"
+            >
+              ChowPass
+            </Link>
+            <Link
+              to="/relay"
+              className="text-black text-sm font-medium hover:text-green-bg block p-2"
+            >
+              Relay
+            </Link>
+          </nav>
+          {/* {["Company", "Blog", "Contact", "ChowPass", "Relay"].map((label) => (
             <a
               key={label}
               href={`/${label.toLowerCase()}`}
@@ -271,7 +306,7 @@ const Header = () => {
             >
               {label}
             </a>
-          ))}
+          ))} */}
         </div>
       )}
     </header>

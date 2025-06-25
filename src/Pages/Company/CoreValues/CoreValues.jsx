@@ -12,8 +12,10 @@ const CoreValues = () => {
   return (
     <div className="py-20">
       <div className="pb-36">
-        <div className=" flex md:pl-12">
-          <h2 className=" text-black font-bold text-[64px]">Core Values</h2>
+        <div className=" flex md:pl-12 pl-4">
+          <h2 className=" text-black font-bold md:text-[64px] text-[55px]">
+            Core Values
+          </h2>
           <p className="text-[#8c77ec] font-medium text-[18px] pt-13 pl-2.5">
             What keeps us grounded
           </p>

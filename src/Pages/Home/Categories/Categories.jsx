@@ -198,7 +198,7 @@ const Categories = () => {
             />
           </div>
           <div className="sm:flex justify-between items-center">
-            <div className="flex gap-2">
+            <div className="flex gap-2 pl-3 pb-3">
               <img
                 src={slides[currentSlide].location}
                 alt="lcn"
@@ -255,7 +255,7 @@ const Categories = () => {
               />
             </div>
 
-            <div className="flex justify-end items-center gap-2 pr-[32px] ">
+            <div className="flex justify-end items-center gap-2 pr-[32px] sm:pt-0 pt-4 pb-3">
               <div className="bg-black rounded-full">
                 <button onClick={handlePrevious}>
                   <img src={back} alt="bk" className="sm:p-[20px] p-[16px]" />

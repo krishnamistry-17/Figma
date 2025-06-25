@@ -37,9 +37,9 @@ const RideAccord = () => {
 
   return (
     <section id="faqs">
-      <div className="lg:px-[96px] px-[10px]  pt-[143px]">
+      <div className="lg:px-[96px] px-[17px]  pt-[143px]">
         <div className="border-4 border-black bg-white rounded-xl">
-          <div className="lg:px-[36px] pt-[36px] pb-[28px]">
+          <div className="lg:px-[36px] px-2 pt-[36px] pb-[28px]">
             <div className="lg:flex lg:gap-8">
               <div className="flex-1">
                 <h2 className="font-extrabold text-[63px] text-[#0C513F]">
@@ -57,7 +57,7 @@ const RideAccord = () => {
                       }
                       `}
                       >
-                        <p className="font-extrabold text-[18px] pt-[20px] pb-[22px] pl-[21px] ">
+                        <p className="font-extrabold text-[18px] pt-[14px] pb-[7px] pl-[21px] ">
                           {item.ques}
                         </p>
                         {activeIndex === index && (

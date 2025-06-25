@@ -43,7 +43,7 @@ const Categories = () => {
     <div>
       <div className="flex justify-center items-center">
         <div className="py-20">
-          <div
+          {/* <div
             className="flex items-center justify-between text-white 
             rounded-r-xl rounded-l-xl bg-black py-5 sm:px-10 px-3 cursor-pointer max-w-2xl"
             onClick={handleToggle}
@@ -57,6 +57,28 @@ const Categories = () => {
                 s e l e c t
               </p>
               <img src={down} alt="down" className="pl-2" />
+            </div>
+          </div> */}
+          <div
+            className="flex items-center justify-between text-white 
+    rounded-xl bg-black py-4 sm:px-10 px-4 cursor-pointer max-w-2xl w-full flex-wrap gap-y-2"
+            onClick={handleToggle}
+          >
+            <span className="h-3 w-3 bg-[#ffc201] rounded-full" />
+
+            <p className="pl-3 text-[14px] sm:text-[16px] truncate max-w-[60%]">
+              Categories: {categories[activeIndex]?.name}
+            </p>
+
+            <div className="flex items-center pl-3 sm:pl-16">
+              <p className="uppercase text-[14px] sm:text-[16px] font-bold">
+                s e l e c t
+              </p>
+              <img
+                src={down}
+                alt="down"
+                className="pl-2 w-4 h-4 sm:w-5 sm:h-5"
+              />
             </div>
           </div>
 

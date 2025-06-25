@@ -20,7 +20,7 @@ const BlogBg = () => {
           />
         </div>
         <div
-          className=" absolute md:top-[418px] sm:top-52 top-96 sm:left-48"
+          className=" absolute md:top-[418px] sm:top-52 top-96 sm:left-48 left-4"
           data-aos="fade-down"
         >
           <h2

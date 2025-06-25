@@ -77,7 +77,7 @@ const PlaceOrder = () => {
                 <img src={p} alt="p" />
               </div>
               <div>
-                <p className="sm:text-[16px] text-[14px] text-white pt-[7px] md:max-w-[319px] sm:max-w-[230px] max-w-[178px] sm:pl-[40px] pl-[11px]">
+                <p className="sm:text-[16px] text-[14px] text-white pt-[7px] md:max-w-[319px] sm:max-w-[230px] max-w-[178px] sm:pl-[40px] pl-[18px] pb-2">
                   Get <span className="text-[#FFC501]">₦300 off</span> your
                   first order when you use this promo code!
                 </p>

@@ -38,11 +38,17 @@ const ChowPass = () => {
         </p>
       </div>
       <button
-        className="mt-6 bg-white text-black md:py-3 md:px-6 px-0 py-4  absolute top-[504px] left-1/2 transform -translate-x-1/2 z-10
-      rounded-md shadow-md hover:bg-gray-200 transition"
+        className="mt-6 bg-white text-black absolute top-[504px] md:left-1/2 md:transform md:-translate-x-1/2 z-10
+      rounded-md shadow-md hover:bg-gray-200 transition md:block hidden
+         md:py-3 md:px-6 px-3 py-4  "
       >
         Learn more about ChowPass
       </button>
+      <div className=" flex justify-center items-center">
+        <button className="sm:hidden  top-[494px] absolute bg-white text-black z-10 px-3 py-3 rounded-md shadow-md hover:bg-gray-200">
+          Learn more about ChowPass
+        </button>
+      </div>
     </div>
   );
 };

@@ -23,14 +23,14 @@ const RideBg = () => {
           data-aos-delay="200"
         >
           <p
-            className="lg:text-[112px] md:text-[60px] text-[30px]
-            lg:max-w-[508px]
+            className="lg:text-[112px] md:text-[60px] text-[26px]
+            lg:max-w-[508px] md:pl-0 pl-4
           text-white font-bold"
           >
             Become a Champion
           </p>
           <div className="w-fit mx-0">
-            <div className="flex flex-col md:flex-row md:items-center md:space-x-4 w-fit space-y-4 md:space-y-0">
+            <div className="md:flex flex-col md:flex-row md:items-center md:space-x-4 w-fit space-y-4 md:space-y-0   hidden">
               <div>
                 <button
                   className="bg-white text-[#0C513F]
@@ -56,6 +56,32 @@ const RideBg = () => {
                 >
                   <img src={appstore} alt="as" className="text-[#0C513F]" />
                   Download on App Store
+                </button>
+              </div>
+            </div>
+            <div className="flex flex-row md:items-center  w-fit space-x-2 pt-4 pl-4  sm:hidden">
+              <div>
+                <button
+                  className="bg-white text-[#0C513F]
+                                   font-medium 
+                                   text-[14px] 
+                                 
+                                 p-[10px]
+                                   rounded-full flex items-center gap-1.5"
+                >
+                  <img src={playstore} alt="ps" />
+                </button>
+              </div>
+              <div>
+                <button
+                  className="bg-white text-[#0C513F]
+                                   font-medium 
+                                   text-[14px] 
+                                 p-[15px]
+                                  
+                                   rounded-full flex items-center gap-1.5"
+                >
+                  <img src={appstore} alt="as" className="text-[#0C513F]" />
                 </button>
               </div>
             </div>

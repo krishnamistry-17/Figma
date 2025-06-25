@@ -58,9 +58,9 @@ const CompanyAccord = () => {
 
   return (
     <section id="faqs">
-      <div className="lg:px-[90px] px-[10px]  md:pt-[143px] pt-[219px]">
+      <div className="lg:px-[90px] px-[17px]  md:pt-[143px] pt-[219px]">
         <div className="border-4 border-black bg-white rounded-xl">
-          <div className="lg:px-[36px] pt-[36px] pb-[28px]">
+          <div className="lg:px-[36px] px-2 pt-[36px] pb-[28px]">
             <div className="lg:flex lg:gap-8">
               <div className="flex-1">
                 <h2 className="font-extrabold text-[63px] text-[#0C513F]">
@@ -78,7 +78,7 @@ const CompanyAccord = () => {
                       }
                       `}
                       >
-                        <p className="font-extrabold text-[18px] pt-[20px] pb-[22px] pl-[21px] cursor-pointer">
+                        <p className="font-extrabold text-[18px] pt-[14px] pb-[7px] pl-[21px] cursor-pointer">
                           {item.ques}
                         </p>
                         {activeIndex === index && (
