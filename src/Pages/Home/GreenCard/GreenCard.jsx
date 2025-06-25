@@ -47,79 +47,81 @@ const GreenCard = () => {
             </div>
 
             {/*animate-marquee */}
-            <div className=" relative flex overflow-x-hidden">
-              {/*marquee-1 */}
-              <div className="flex animate-marquee py-12  px-8 gap-4">
-                <div className="flex gap-2 rounded-md py-[22px] px-[28px] bg-white/25">
-                  <img src={ystar} alt="str" className="w-[24px] h-[24px]" />
-                  <p className="font-semibold text-[16px] text-white">
-                    Quick and easy onboarding
-                  </p>
-                </div>
-                <div className="flex rounded-md py-[22px] px-[28px] bg-white/25 ">
-                  <img src={ohalf} alt="str" className="w-[35px] h-[16px]" />
-                  <p className="font-semibold text-[16px]  text-white">
-                    Quality meal choices
-                  </p>
-                </div>
-                <div className="flex gap-2   rounded-md py-[22px] px-[28px] bg-white/25 ">
-                  <img src={pstar} alt="str" className="w-[35px] h-[24px]" />
-                  <p className="font-semibold text-[16px] text-white">
-                    Live updates on orders
-                  </p>
-                </div>
-                <div className="flex gap-2   rounded-md py-[22px] px-[28px] bg-white/25 ">
-                  <img
-                    src={glocation}
-                    alt="str"
-                    className="w-[21px] h-[24px]"
-                  />
-                  <p className="font-semibold text-[16px] text-white">
-                    Highly rated riders
-                  </p>
-                </div>
-                <div className="flex gap-2   rounded-md py-[19px] px-[26px] bg-white/25 ">
-                  <img src={phalf} alt="str" className="w-[35px] h-[16px]" />
-                  <p className="font-semibold text-[16px] text-white">
-                    20/7 support for customers and vendors
-                  </p>
+            <div className=" relative flex gap-3 overflow-x-hidden ">
+              <div className=" animate-marquee py-12  whitespace-nowrap">
+                <div className="flex gap-3">
+                  <div className="flex gap-2 rounded-md py-[22px] px-[28px] bg-white/25">
+                    <img src={ystar} alt="ys" className="'w-[24px] h-[24px]" />
+                    <p className="font-semibold text-[16px] text-white">
+                      Quick and easy onboarding
+                    </p>
+                  </div>
+                  <div className="flex gap-2 rounded-md py-[22px] px-[28px] bg-white/25">
+                    <img src={ohalf} alt="of" className="'w-[22px] h-[22px]" />
+                    <p className="font-semibold text-[16px] text-white">
+                      Quality meal choicess
+                    </p>
+                  </div>
+                  <div className="flex gap-2 rounded-md py-[22px] px-[28px] bg-white/25">
+                    <img src={pstar} alt="ps" className="'w-[24px] h-[24px]" />
+                    <p className="font-semibold text-[16px] text-white">
+                      Live updates on orders
+                    </p>
+                  </div>
+                  <div className="flex gap-2 rounded-md py-[22px] px-[28px] bg-white/25">
+                    <img
+                      src={glocation}
+                      alt="gl"
+                      className="'w-[24px] h-[24px]"
+                    />
+                    <p className="font-semibold text-[16px] text-white">
+                      Highly rated riders
+                    </p>
+                  </div>
+                  <div className="flex gap-2 rounded-md py-[22px] px-[32px]  bg-white/25">
+                    <img src={phalf} alt="pf" className="'w-[22px] h-[22px]" />
+                    <p className="font-semibold text-[16px] text-white">
+                      20/7 support for customers & vendores
+                    </p>
+                  </div>
                 </div>
               </div>
-              {/*marquee-2 */}
-              <div className="flex absolute top-0 animate-marquee2 py-12 px-2 gap-4">
-                <div className="flex gap-2 rounded-md py-[18px] px-[28px] bg-white/25">
-                  <img src={ystar} alt="str" className="w-[24px] h-[24px]" />
-                  <p className="font-semibold text-[16px] text-white">
-                    Quick and easy onboarding
-                  </p>
-                </div>
-                <div className="flex rounded-md py-[22px] px-[28px] bg-white/25 ">
-                  <img src={ohalf} alt="str" className="w-[35px] h-[16px]" />
-                  <p className="font-semibold text-[16px]  text-white">
-                    Quality meal choices
-                  </p>
-                </div>
-                <div className="flex gap-2   rounded-md py-[22px] px-[28px] bg-white/25 ">
-                  <img src={pstar} alt="str" className="w-[35px] h-[24px]" />
-                  <p className="font-semibold text-[16px] text-white">
-                    Live updates on orders
-                  </p>
-                </div>
-                <div className="flex gap-2   rounded-md py-[22px] px-[28px] bg-white/25 ">
-                  <img
-                    src={glocation}
-                    alt="str"
-                    className="w-[21px] h-[24px]"
-                  />
-                  <p className="font-semibold text-[16px] text-white">
-                    Highly rated riders
-                  </p>
-                </div>
-                <div className="flex gap-2   rounded-md py-[22px] px-[26px] bg-white/25 ">
-                  <img src={phalf} alt="str" className="w-[35px] h-[16px]" />
-                  <p className="font-semibold text-[16px] text-white">
-                    20/7 support for customers and vendors
-                  </p>
+              <div className=" absolute top-0 animate-marquee2 py-12 px-2 whitespace-nowrap">
+                <div className="flex gap-3">
+                  <div className="flex gap-2 rounded-md py-[22px] px-[28px] bg-white/25">
+                    <img src={ystar} alt="ys" className="'w-[24px] h-[24px]" />
+                    <p className="font-semibold text-[16px] text-white">
+                      Quick and easy onboarding
+                    </p>
+                  </div>
+                  <div className="flex gap-2 rounded-md py-[22px] px-[28px] bg-white/25">
+                    <img src={ohalf} alt="of" className="'w-[24px] h-[24px]" />
+                    <p className="font-semibold text-[16px] text-white">
+                      Quality meal choicess
+                    </p>
+                  </div>
+                  <div className="flex gap-2 rounded-md py-[22px] px-[28px] bg-white/25">
+                    <img src={pstar} alt="ps" className="'w-[24px] h-[24px]" />
+                    <p className="font-semibold text-[16px] text-white">
+                      Live updates on orders
+                    </p>
+                  </div>
+                  <div className="flex gap-2 rounded-md py-[22px] px-[28px] bg-white/25">
+                    <img
+                      src={glocation}
+                      alt="gl"
+                      className="'w-[24px] h-[24px]"
+                    />
+                    <p className="font-semibold text-[16px] text-white">
+                      Highly rated riders
+                    </p>
+                  </div>
+                  <div className="flex gap-2 rounded-md py-[22px] px-[28px] bg-white/25">
+                    <img src={phalf} alt="pf" className="'w-[22px] h-[22px]" />
+                    <p className="font-semibold text-[16px] text-white">
+                      20/7 support for customers & vendores
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>

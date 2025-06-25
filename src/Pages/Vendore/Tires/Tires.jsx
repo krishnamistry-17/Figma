@@ -9,7 +9,7 @@ const Tires = () => {
         <h2 className=" text-center text-[#271386] md:text-[64px] text-[45px] font-bold pt-18">
           Chowdeck vendor tiers
         </h2>
-        <p className="text-center text-black pb-[70px] text-[18px] mx-auto ">
+        <p className="text-center text-black pb-[70px] text-[18px] mx-auto px-4">
           If you're part of our basic, premium or Agba plan, your store will be
           highlighted to Chowpass subscribers, who enjoy zero delivery fees and
           reduced service fees.

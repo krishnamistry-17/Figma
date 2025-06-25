@@ -28,7 +28,7 @@ const Vendores = () => {
 
   return (
     <div>
-      <div className="flex justify-center px-4">
+      <div className="flex justify-center sm:px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-[1200px] w-full">
           {data.map((item, index) => (
             <div

@@ -6,7 +6,7 @@ import BgStories from "./BgStories";
 const BlogBg = () => {
   return (
     <div>
-      <div className="bg-[#0c513f] h-[912px]  overflow-hidden relative">
+      <div className="bg-[#0c513f] h-[912px]  overflow-hidden relative z-10">
         <div>
           <img
             src={leftcloud}
@@ -39,50 +39,7 @@ const BlogBg = () => {
           <img src={bottom} alt="btm" className=" absolute bottom-0 w-full" />
         </div>
 
-        {/* <div className=" relative flex overflow-x-hidden">
-        
-          <div className="flex animate-marquee py-12   gap-4">
-            <div>
-              <img
-                src={bottom}
-                alt="btm"
-                className=" absolute bottom-0 w-full"
-              />
-            </div>
-            <div>
-              <img
-                src={bottom}
-                alt="btm"
-                className=" absolute bottom-0 w-full"
-              />
-            </div>
-            <div>
-              <img
-                src={bottom}
-                alt="btm"
-                className=" absolute bottom-0 w-full"
-              />
-            </div>
-          </div>
-        
-          <div className="flex absolute top-0 animate-marquee2 py-12  gap-4">
-            <div>
-              <img
-                src={bottom}
-                alt="btm"
-                className=" absolute bottom-0 w-full"
-              />
-            </div>
-            <div>
-              <img
-                src={bottom}
-                alt="btm"
-                className=" absolute bottom-0 w-full"
-              />
-            </div>
-          </div>
-        </div> */}
-        <div className=" absolute xl:right-28 right-16 top-36">
+        <div className=" absolute xl:right-28 lg:right-3 right-16 top-36 z-0">
           <div className=" hidden lg:block h-[700px] overflow-y-auto scrollbar-hide">
             <BgStories />
           </div>

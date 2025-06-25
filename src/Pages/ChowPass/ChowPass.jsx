@@ -26,23 +26,18 @@ const ChowPass = () => {
         />
 
         {/* Content Container */}
-        <div className="container relative z-10 py-16">
-          {/* <div className="flex flex-col  items-center">
-            <h2
-              className="text-[#271386] font-bold px-10 my-7 
-        lg:text-[80px] md:text-[65px] text-[35px] text-center"
-            >
-              Unlock Free Deliveries and Reduced Fees!
-            </h2>
-        
-          </div> */}
+        <div
+          className="container relative z-10 py-16 xl:pl-44"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
           <h2
-            className="text-[#271386] font-bold xl:px-42 my-7 
+            className="text-[#271386] font-bold   my-7 
         lg:text-[80px] md:text-[65px] text-[35px] text-center"
           >
             Unlock Free Deliveries and Reduced Fees!
           </h2>
-          <p className="text-[#333333] px-10 my-7 text-center">
+          <p className="text-[#333333]  my-7 text-center">
             For just ₦3500, you can enjoy savings on orders with Chowpass
           </p>
           <div className="flex justify-center items-center">

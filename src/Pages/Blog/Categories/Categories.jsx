@@ -45,15 +45,15 @@ const Categories = () => {
         <div className="py-20">
           <div
             className="flex items-center justify-between text-white 
-            rounded-r-xl rounded-l-xl bg-black py-5 sm:px-10 px-4 cursor-pointer max-w-2xl"
+            rounded-r-xl rounded-l-xl bg-black py-5 sm:px-10 px-3 cursor-pointer max-w-2xl"
             onClick={handleToggle}
           >
             <span className="h-3 w-3 bg-[#ffc201] rounded-full"></span>
-            <p className="pl-3 sm:text-[16px] text-[14px]">
+            <p className="pl-3 sm:text-[16px] text-[13px]">
               Categoris: {categories[activeIndex]?.name}
             </p>
-            <div className="flex justify-between pl-16">
-              <p className="uppercase sm:text-[16px] text-[14px] font-bold">
+            <div className="flex justify-between sm:pl-16 pl-12">
+              <p className="uppercase sm:text-[16px] text-[13px] font-bold">
                 s e l e c t
               </p>
               <img src={down} alt="down" className="pl-2" />

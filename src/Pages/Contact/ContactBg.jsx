@@ -19,13 +19,13 @@ const ContactBg = () => {
           <img
             src={leftcloud}
             alt="lc"
-            className="w-[137px] h-[150px] md:w-[190px] md:h-[200px] absolute top-48 left-0"
+            className="w-[137px] h-[150px] md:w-[190px] md:h-[200px] absolute md:top-48 bottom-0 left-0"
           />
         </div>
         <div>
           <h2
-            className=" text-white text-[64px] max-w-md
-          font-bold text-center absolute top-52 left-52"
+            className=" text-white md:text-[64px] text-[40px] max-w-md
+          font-bold text-center absolute top-52 md:left-52"
             data-aos="fade-up"
           >
             Get In Contact With Us

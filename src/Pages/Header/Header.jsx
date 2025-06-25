@@ -3,7 +3,7 @@ import dropdown from "../../assets/svg/dropdown.svg";
 import cart from "../../assets/svg/cart.svg";
 import { useState } from "react";
 import { SlOptionsVertical } from "react-icons/sl";
-import { useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,12 +16,33 @@ const Header = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   const navigate = useNavigate();
+  const location = useLocation();
 
   const [selectedMenu, setSelectedMenu] = useState("Customers");
   const [newSelect, setNewSelect] = useState("Products");
 
   const handleHome = () => {
     navigate("/");
+  };
+
+  const handleFaqClick = () => {
+    if (location.pathname.startsWith("/riders")) {
+      navigate("/riders#faqs");
+    } else if (location.pathname.startsWith("/vendores")) {
+      navigate("/vendores#faqs");
+    } else if (location.pathname.startsWith("/company")) {
+      navigate("/company#faqs");
+    } else if (location.pathname.startsWith("/blog")) {
+      navigate("/blog#faqs");
+    } else if (location.pathname.startsWith("/contact")) {
+      navigate("/contact#faqs");
+    } else if (location.pathname.startsWith("/chowpass")) {
+      navigate("/chowpass#faqs");
+    } else if (location.pathname.startsWith("/relay")) {
+      navigate("/relay#faqs");
+    } else {
+      navigate("/#faqs");
+    }
   };
 
   const handleVendores = () => {
@@ -124,30 +145,30 @@ const Header = () => {
               </div>
             )}
           </div>
-          <a
-            href="/company"
+          <Link
+            to="/company"
             className="text-black text-[16px] font-medium hover:text-green-bg transition"
           >
             Company
-          </a>
+          </Link>
           <a
-            href="/faqs"
-            className="text-black text-[16px] font-medium hover:text-green-bg transition"
+            className="text-black text-[16px] font-medium hover:text-green-bg transition cursor-pointer"
+            onClick={handleFaqClick}
           >
             FAQs
           </a>
-          <a
-            href="/blog"
+          <Link
+            to="/blog"
             className="text-black text-[16px] font-medium hover:text-green-bg transition"
           >
             Blog
-          </a>
-          <a
-            href="/contact"
+          </Link>
+          <Link
+            to="/contact"
             className="text-black text-[16px] font-medium hover:text-green-bg transition"
           >
             Contact
-          </a>
+          </Link>
         </nav>
 
         {/* Right Side */}

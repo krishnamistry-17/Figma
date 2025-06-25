@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ystar2 from "../../assets/svg/pinkstar.svg";
 import whstar from "../../assets/svg/blackstar.svg";
+import { useLocation } from "react-router-dom";
 
 const RelayAccord = () => {
   const items = [
@@ -32,7 +33,7 @@ const RelayAccord = () => {
       ques: " What is Surge fee?",
       ans: "Chowdeck6666 is a technology company that provides logistics services to both vendors and consumers. This potentially allows food vendors to deliver meals seamlessly while also providing consumers with an easy platform to order meals from their favourite restaurants in their city.",
     },
-  ];  
+  ];
 
   const [activeIndex, setActiveIndex] = useState(1);
 
@@ -40,8 +41,19 @@ const RelayAccord = () => {
     setActiveIndex((prev) => (prev === index ? null : index));
   };
 
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash === "#faqs") {
+      const el = document.getElementById("faqs");
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
+
   return (
-    <section id="faq">
+    <section id="faqs">
       <div className="lg:px-[90px] px-[10px]  md:pt-[143px] pt-[219px]">
         <div className="border-4 border-black bg-white rounded-xl">
           <div className="lg:px-[36px] pt-[36px] pb-[0px]">

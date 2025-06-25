@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ystar2 from "../../../assets/svg/ystar2.svg";
 import bstar from "../../../assets/svg/bstar.svg";
+import { useLocation } from "react-router-dom";
 
 const CompanyAccord = () => {
   const items = [
@@ -44,8 +45,19 @@ const CompanyAccord = () => {
     setActiveIndex((prev) => (prev === index ? null : index));
   };
 
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash === "#faqs") {
+      const el = document.getElementById("faqs");
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
+
   return (
-    <section id="faq">
+    <section id="faqs">
       <div className="lg:px-[90px] px-[10px]  md:pt-[143px] pt-[219px]">
         <div className="border-4 border-black bg-white rounded-xl">
           <div className="lg:px-[36px] pt-[36px] pb-[28px]">
@@ -66,7 +78,7 @@ const CompanyAccord = () => {
                       }
                       `}
                       >
-                        <p className="font-extrabold text-[18px] pt-[20px] pb-[22px] pl-[21px] ">
+                        <p className="font-extrabold text-[18px] pt-[20px] pb-[22px] pl-[21px] cursor-pointer">
                           {item.ques}
                         </p>
                         {activeIndex === index && (

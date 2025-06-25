@@ -38,7 +38,7 @@ const ChowPass = () => {
         </p>
       </div>
       <button
-        className="mt-6 bg-white text-black py-3 px-6  absolute top-[504px] left-1/2 transform -translate-x-1/2 z-10
+        className="mt-6 bg-white text-black md:py-3 md:px-6 px-0 py-4  absolute top-[504px] left-1/2 transform -translate-x-1/2 z-10
       rounded-md shadow-md hover:bg-gray-200 transition"
       >
         Learn more about ChowPass
