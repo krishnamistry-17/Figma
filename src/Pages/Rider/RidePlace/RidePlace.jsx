@@ -16,7 +16,7 @@ const RidePlace = () => {
         <div className="absolute -top-55 ">
           <RideAccord />
         </div>
-        <div className="lg:pt-[720px] md:pt-[1340px] sm:pt-[1600px] pt-[1755px]">
+        <div className="lg:pt-[720px] md:pt-[1340px] sm:pt-[1600px] pt-[1900px]">
           <div className="lg:flex lg:px-[96px] gap-6 pt-[298px]">
             <div className="flex-1 bg-[#0C513F] relative rounded-2xl">
               <h2 className="font-extrabold sm:text-[58px] text-[32px] text-white pl-[40px] pt-[39px]">

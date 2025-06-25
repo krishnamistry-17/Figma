@@ -17,11 +17,16 @@ const RelayPlace = () => {
           <RelayAccord />
         </div>
 
-        <div className="pt-[1755px] sm:pt-[1600px] md:pt-[1340px] lg:pt-[720px]">
-          <div className="flex flex-col sm:flex-row lg:px-[96px] gap-6 pt-[298px]">
-            <div className="flex-1 bg-[#990038] relative rounded-2xl py-4 z-0">
+        <div className="pt-[1900px] sm:pt-[1600px] md:pt-[1340px] lg:pt-[720px]">
+          <div className="flex flex-col sm:flex-row lg:px-[96px] gap-6 sm:pt-[298px]">
+            <div className="flex-1 bg-[#990038] relative rounded-2xl py-4 z-0 md:block hidden">
               {/* Headline */}
-              <h2 className="text-[32px] md:text-[50px] xl:text-[60px] absolute z-10 pt-2 pb-5 pl-2 xl:pl-9 text-white font-bold tracking-tighter max-w-xs md:max-w-sm">
+              <h2
+                className="text-[32px] md:text-[50px] xl:text-[60px] 
+              absolute z-10 pt-2 pb-5 pl-2 xl:pl-9
+               text-white font-bold tracking-tighter 
+               max-w-xs md:max-w-sm"
+              >
                 <span className="text-[#ffb3ce]">Send </span>
                 <span>and </span>
                 <span className="text-[#ffb3ce]">Receive </span>
@@ -92,6 +97,44 @@ const RelayPlace = () => {
                   Get <span className="text-[#FFC501]">₦300 off</span> your
                   first order when you use this promo code!
                 </p>
+              </div>
+            </div>
+            <div className="sm:hidden">
+              <div className="bg-[#990038] relative rounded-2xl">
+                {/*Heading */}
+                <p className="text-[#ffb3ce] text-[40px] pl-4 py-9">
+                  Send <span className="text-white">and</span> Receive
+                  <span className="text-white"> swiftly</span>
+                </p>
+                {/* Mobile Buttons */}
+                <div className=" flex gap-2 pt-[8px] pl-4 ">
+                  <img
+                    src={playstore}
+                    alt="ps"
+                    className="bg-white rounded-full p-[15px] w-[60px] h-[60px]"
+                  />
+                  <img
+                    src={gapple}
+                    alt="as"
+                    className="bg-white rounded-full p-[15px] w-[60px] h-[60px]"
+                  />
+                </div>
+                {/*Promo text */}
+                <div className="pt-25">
+                  <div className="">
+                    <p
+                      className="text-black text-[18px] font-bold uppercase px-6 py-4 bg-[#ffb3ce] absolute
+                   bottom-21 ml-4 left-0.5 flex gap-3 border-4 border-black rounded-xl"
+                    >
+                      <span className="w-[20px] h-[20px] rounded-full bg-[#ffc501] border-4 border-black mt-0.5"></span>
+                      userelay
+                    </p>
+                  </div>
+                  <p className="text-white text-[14px]   max-w-[65%] pl-8 py-4">
+                    Get <span className="text-[#FFC501]">₦300 off</span> your
+                    first order when you use this promo code!
+                  </p>
+                </div>
               </div>
             </div>
 

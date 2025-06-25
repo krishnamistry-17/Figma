@@ -7,7 +7,7 @@ import Categories from "./Categories/Categories";
 import WhiteCard from "./WhiteCard/WhiteCard";
 import BlackCard from "./BlackCard/BlackCard";
 import ChoiceButton from "./AppCard/ChoiceButton";
-
+import Footer from "../Footer/Footer";
 const Home = () => {
   return (
     <div>
@@ -34,6 +34,9 @@ const Home = () => {
       </div>
       <div>
         <BlackCard />
+      </div>
+      <div>
+        <Footer />
       </div>
     </div>
   );

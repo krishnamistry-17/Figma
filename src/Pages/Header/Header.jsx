@@ -82,7 +82,7 @@ const Header = () => {
   };
 
   return (
-    <header className="w-full bg-white shadow-sm px-4 py-3 sm:px-10 sm:py-5 relative z-50">
+    <header className="w-full bg-white shadow-sm px-4 py-3 sm:px-10 sm:py-5  sticky top-0 z-50">
       <div className="flex justify-between items-center">
         {/* Logo */}
         <div>
@@ -262,18 +262,16 @@ const Header = () => {
       {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="mt-4 bg-white border border-gray-200 rounded-md shadow-md p-4 flex flex-col gap-3 md:hidden">
-          {["Company", "FAQs", "Blog", "Contact", "ChowPass", "Relay"].map(
-            (label) => (
-              <a
-                key={label}
-                href={`/${label.toLowerCase()}`}
-                onClick={() => setIsMenuOpen(false)} // closes menu
-                className="text-black text-sm font-medium hover:text-green-bg"
-              >
-                {label}
-              </a>
-            )
-          )}
+          {["Company", "Blog", "Contact", "ChowPass", "Relay"].map((label) => (
+            <a
+              key={label}
+              href={`/${label.toLowerCase()}`}
+              onClick={() => setIsMenuOpen(false)} // closes menu
+              className="text-black text-sm font-medium hover:text-green-bg"
+            >
+              {label}
+            </a>
+          ))}
         </div>
       )}
     </header>
