@@ -30,7 +30,7 @@ const StrretCard = () => {
         <div className="py-[80px]">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/*grid1*/}
-            <div className="pt-[56px]">
+            <div className="xl:pt-[56px]">
               {/*card1*/}
               <div className="border border-[#E5E7EB] rounded-md">
                 <div className="flex px-[25px] pt-[25px] justify-around items-center ">
@@ -143,7 +143,7 @@ const StrretCard = () => {
               </div>
             </div>
             {/*div3*/}
-            <div className="pt-[96px]">
+            <div className="xl:pt-[96px]">
               {/*card1*/}
               <div className="border border-[#E5E7EB] rounded-md">
                 <div className="flex px-[25px] pt-[25px] justify-around items-center ">
@@ -195,7 +195,7 @@ const StrretCard = () => {
               </div>
             </div>
             {/*div4*/}
-            <div className="pt-[70px]">
+            <div className="xl:pt-[70px]">
               {/*card1*/}
               <div className="border border-[#E5E7EB] rounded-md">
                 <div className="flex px-[25px] pt-[25px] justify-around items-center ">

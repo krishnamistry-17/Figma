@@ -148,24 +148,192 @@ const RelayWork = () => {
   }, []);
 
   return (
-    <div className=" py-28">
-      <div>
-        <h2 className=" text-black md:text-[64px] text-[40px] font-bold md:pl-25 pl-5">
-          How Relay works
-        </h2>
+    <>
+      <div className=" py-28 lg:block hidden">
+        <div>
+          <h2 className=" text-black md:text-[64px] text-[40px] font-bold md:pl-25 pl-5">
+            How Relay works
+          </h2>
 
-        <div className="lg:flex justify-between gap-4 py-16 lg:h-[500px]">
-          {/* LEFT IMAGE */}
-          <div className="flex-col h-full w-[300px]">
-            <div className="rounded-[20px] h-[300px] w-full relative">
-              <img src={detail[images[0]].bg} alt="bg-left" />
-              <img
-                src={detail[images[0]].step}
-                alt="step-left"
-                className="absolute top-0"
-              />
+          <div className="lg:flex justify-between gap-4 py-16 lg:h-[500px]">
+            {/* LEFT IMAGE */}
+            <div className="flex-col h-full w-[300px]">
+              <div className="rounded-[20px] h-[300px] w-full relative">
+                <img src={detail[images[0]].bg} alt="bg-left" />
+                <img
+                  src={detail[images[0]].step}
+                  alt="step-left"
+                  className="absolute top-0"
+                />
+              </div>
+              <div className="flex justify-end mt-20 gap-2">
+                <div
+                  className="bg-[#990038] w-[50px] h-[50px] rounded-full p-5"
+                  onClick={handlePrev}
+                >
+                  <img src={previous} alt="previous" />
+                </div>
+                <div
+                  className="bg-[#990038] w-[50px] h-[50px] rounded-full p-5"
+                  onClick={handleNext}
+                >
+                  <img src={next} alt="next" />
+                </div>
+              </div>
             </div>
-            <div className="flex justify-end mt-20 gap-2">
+
+            {/* CENTER BLOCK (TEXT + IMAGE) */}
+            <div className="px-1">
+              <div className="grid lg:grid-cols-2 max-w-[950px] lg:h-[500px] lg:overflow-hidden">
+                <div className="flex flex-col h-full bg-[#990038] relative">
+                  <div className="w-[53px] h-[53px] rounded-full mt-18 ml-7  p-4 text-white relative">
+                    <p ref={headingRef}>{detail[images[1]]?.number}</p>
+
+                    <svg
+                      className="absolute top-0 left-0 w-full h-full"
+                      viewBox="0 0 36 36"
+                    >
+                      <circle
+                        className="text-black"
+                        stroke="currentColor"
+                        strokeWidth="4"
+                        fill="transparent"
+                        r="16"
+                        cx="18"
+                        cy="18"
+                      />
+                      <circle
+                        className="text-white"
+                        stroke="currentColor"
+                        strokeWidth="4"
+                        fill="transparent"
+                        r="16"
+                        cx="18"
+                        cy="18"
+                        strokeDasharray="100"
+                        strokeDashoffset="100"
+                        style={{
+                          animation: "progressCircle 3s linear forwards",
+                        }}
+                      />
+                    </svg>
+                  </div>
+
+                  <p
+                    className="font-medium text-white text-[50px] mt-20 ml-7"
+                    ref={headingRef}
+                  >
+                    {detail[images[1]]?.heading}
+                  </p>
+                </div>
+                <div className="flex items-center justify-center h-full w-full bg-gray-100 relative rounded-none">
+                  <div className="relative w-full h-full rounded-none">
+                    <img
+                      src={detail[images[1]]?.bg}
+                      alt="bg-center"
+                      className="w-full h-full object-cover rounded-none "
+                      style={{ borderRadius: 0 }}
+                    />
+                    <img
+                      src={detail[images[1]]?.step}
+                      alt="step-center"
+                      className="absolute top-0 left-0 w-full h-full object-contain rounded-none "
+                      style={{ borderRadius: 0 }}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* RIGHT IMAGE */}
+            <div className="flex-col h-full w-[300px]">
+              <div className="rounded-[20px] h-[300px] w-full relative">
+                <img src={detail[images[2]]?.bg} alt="bg-right" />
+                <img
+                  src={detail[images[2]]?.step}
+                  alt="step-right"
+                  className="absolute top-0"
+                />
+              </div>
+              <div className="flex justify-items-start">
+                <button className="bg-[#990038] text-white py-4 px-4 rounded-md mt-20">
+                  Try it now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="lg:hidden">
+        <div>
+          <h2 className=" text-black  text-[40px] font-bold  pl-5">
+            How Relay works
+          </h2>
+          <div>
+            <div className="px-1">
+              <div className="grid lg:grid-cols-2 max-w-[950px] lg:h-[500px] lg:overflow-hidden">
+                <div className="flex flex-col h-full bg-[#990038] relative">
+                  <div className="w-[53px] h-[53px] rounded-full mt-18 ml-7  p-4 text-white relative">
+                    <p ref={headingRef}>{detail[images[1]]?.number}</p>
+
+                    <svg
+                      className="absolute top-0 left-0 w-full h-full"
+                      viewBox="0 0 36 36"
+                    >
+                      <circle
+                        className="text-black"
+                        stroke="currentColor"
+                        strokeWidth="4"
+                        fill="transparent"
+                        r="16"
+                        cx="18"
+                        cy="18"
+                      />
+                      <circle
+                        className="text-white"
+                        stroke="currentColor"
+                        strokeWidth="4"
+                        fill="transparent"
+                        r="16"
+                        cx="18"
+                        cy="18"
+                        strokeDasharray="100"
+                        strokeDashoffset="100"
+                        style={{
+                          animation: "progressCircle 3s linear forwards",
+                        }}
+                      />
+                    </svg>
+                  </div>
+
+                  <p
+                    className="font-medium text-white text-[42px] mt-20 ml-7"
+                    ref={headingRef}
+                  >
+                    {detail[images[1]]?.heading}
+                  </p>
+                </div>
+                <div className="flex items-center justify-center h-full w-full bg-gray-100 relative rounded-none">
+                  <div className="relative w-full h-full rounded-none">
+                    <img
+                      src={detail[images[1]]?.bg}
+                      alt="bg-center"
+                      className="w-full h-full object-cover rounded-none "
+                      style={{ borderRadius: 0 }}
+                    />
+                    <img
+                      src={detail[images[1]]?.step}
+                      alt="step-center"
+                      className="absolute top-0 left-0 w-full h-full object-contain rounded-none "
+                      style={{ borderRadius: 0 }}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div className="flex justify-center items-center mt-10 gap-2">
               <div
                 className="bg-[#990038] w-[50px] h-[50px] rounded-full p-5"
                 onClick={handlePrev}
@@ -180,87 +348,9 @@ const RelayWork = () => {
               </div>
             </div>
           </div>
-
-          {/* CENTER BLOCK (TEXT + IMAGE) */}
-          <div className="px-1">
-            <div className="grid lg:grid-cols-2 max-w-[950px] lg:h-[500px] lg:overflow-hidden">
-              <div className="flex flex-col h-full bg-[#990038] relative">
-                <div className="w-[53px] h-[53px] rounded-full mt-18 ml-7  p-3 text-white relative">
-                  <p ref={headingRef}>{detail[images[1]]?.number}</p>
-
-                  <svg
-                    className="absolute top-0 left-0 w-full h-full"
-                    viewBox="0 0 36 36"
-                  >
-                    <circle
-                      className="text-black"
-                      stroke="currentColor"
-                      strokeWidth="4"
-                      fill="transparent"
-                      r="16"
-                      cx="18"
-                      cy="18"
-                    />
-                    <circle
-                      className="text-white"
-                      stroke="currentColor"
-                      strokeWidth="4"
-                      fill="transparent"
-                      r="16"
-                      cx="18"
-                      cy="18"
-                      strokeDasharray="100"
-                      strokeDashoffset="100"
-                      style={{
-                        animation: "progressCircle 3s linear forwards",
-                      }}
-                    />
-                  </svg>
-                </div>
-
-                <p
-                  className="font-medium text-white text-[50px] mt-20 ml-7"
-                  ref={headingRef}
-                >
-                  {detail[images[1]]?.heading}
-                </p>
-              </div>
-              <div className="flex items-center justify-center h-full w-full bg-gray-100 relative">
-                <div className="relative w-full h-full">
-                  <img
-                    src={detail[images[1]]?.bg}
-                    alt="bg-center"
-                    className="w-full h-full object-cover"
-                  />
-                  <img
-                    src={detail[images[1]]?.step}
-                    alt="step-center"
-                    className="absolute top-0 left-0 w-full h-full object-contain"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* RIGHT IMAGE */}
-          <div className="flex-col h-full w-[300px]">
-            <div className="rounded-[20px] h-[300px] w-full relative">
-              <img src={detail[images[2]]?.bg} alt="bg-right" />
-              <img
-                src={detail[images[2]]?.step}
-                alt="step-right"
-                className="absolute top-0"
-              />
-            </div>
-            <div className="flex justify-items-start">
-              <button className="bg-[#990038] text-white py-4 px-4 rounded-md mt-20">
-                Try it now
-              </button>
-            </div>
-          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -30,27 +30,49 @@ const Founder = () => {
             <img
               src={bike}
               alt="bike"
-              className=" ml-10 w-[40px] md:w-[130px]"
+              className=" sm:ml-10 w-[77px] md:w-[130px]"
             />
             <img
               src={trees}
               alt="tress"
-              className="w-[200px] lg:w-[700px] md:w-[600px] ml-auto"
+              className="w-[267px] lg:w-[700px] md:w-[600px] ml-auto"
             />
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-5 border-4 border-black rounded-2xl overflow-hidden">
-        <div className=" col-span-2 border-r-4 border-b-0">
-          <div className="bg-[#0c513f] flex pl-3 gap-2 p-[10px]">
+      {/* <div className="grid grid-cols-1 md:grid-cols-5 border-4 border-black rounded-2xl overflow-hidden">
+        <div className=" col-span-2 border-r-4 border-b-0"></div>
+        <div className=" col-span-3 h-auto px-14 py-10 bg-white ">
+          {data.map((item, index) => (
+            <div key={index}>
+              <p className="text-black text-[20px] pt-3">{item.para}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className=" col-span-5 flex flex-col items-center justify-center border-t-4 p-10">
+          <span className=" mb-6 text-[16px] uppercase text-black font-bold">
+            backed by
+          </span>
+          <span className="flex flex-col md:flex-row gap-1.5 items-center">
+            <img src={yc} alt="yc" className="w-[150px]" />
+            <img src={hoaq} alt="hoaq" className="w-[150px]" />
+          </span>
+        </div>
+      </div> */}
+
+      <div className="sm:grid grid-cols-1 md:grid-cols-5 border-4 border-black rounded-2xl overflow-hidden">
+        {/* Left Column: Founder's Story */}
+        <div className="col-span-1 md:col-span-2 border-b-4 md:border-b-0 md:border-r-4">
+          <div className="bg-[#0c513f] flex flex-col sm:flex-row pl-3 gap-2 p-[10px]">
             <p className=" bg-[#ffc501] border-black border-4 h-5 w-5 rounded-full ml-2 mt-3"></p>
-            <span className="text-white font-bold text-[30px] pl-2">
+            <span className="text-white font-bold text-[24px] sm:text-[30px] pl-2">
               Founder’s Story
             </span>
           </div>
 
-          <div className="col-span-3 lg:col-span-5 bg-white flex flex-col items-center pt-6">
-            <div className="relative w-full h-[300px] md:w-[277px] md:h-[450px] lg:w-full mb-6 bg-gray-100 flex justify-center items-center overflow-hidden">
+          <div className="bg-white flex flex-col items-center pt-6 px-4">
+            <div className="relative w-full h-auto md:w-[277px] md:h-[450px] lg:w-full mb-6 bg-gray-100 flex justify-center items-center overflow-hidden">
               <img
                 src={ceo}
                 alt="ceo"
@@ -65,19 +87,20 @@ const Founder = () => {
             </span>
           </div>
         </div>
-        <div className=" col-span-3 h-auto px-14 py-10 bg-white ">
+
+        {/* Right Column: Text */}
+        <div className="col-span-1 md:col-span-3 h-auto px-6 md:px-14 py-10 bg-white">
           {data.map((item, index) => (
             <div key={index}>
               <p className="text-black text-[20px] pt-3">{item.para}</p>
             </div>
           ))}
         </div>
-
         <div className=" col-span-5 flex flex-col items-center justify-center border-t-4 p-10">
           <span className=" mb-6 text-[16px] uppercase text-black font-bold">
             backed by
           </span>
-          <span className="md:flex gap-1.5">
+          <span className="flex flex-col md:flex-row gap-1.5 items-center">
             <img src={yc} alt="yc" className="w-[150px]" />
             <img src={hoaq} alt="hoaq" className="w-[150px]" />
           </span>

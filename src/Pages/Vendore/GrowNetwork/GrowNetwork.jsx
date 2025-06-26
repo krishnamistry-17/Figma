@@ -73,7 +73,11 @@ const Growcard = () => {
               <img src={rightarrow} alt="ra" className="pl-[2px]" />
             </button>
             <div>
-              <img src={box} alt="lm" />
+              <img
+                src={box}
+                alt="lm"
+                className="rounded-br-[12px] rounded-bl-[12px]"
+              />
             </div>
           </div>
         </div>

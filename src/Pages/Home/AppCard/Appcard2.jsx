@@ -11,7 +11,7 @@ const Appcard2 = () => {
           Become a Champ
         </p>
         <div className="flex justify-center items-center">
-          <p className="md:text-[20px] text-[17px]  text-black py-[18px] text-center max-w-[530px]">
+          <p className="md:text-[20px] text-[17px]  text-black py-[18px] text-center max-w-[530px] px-4.5">
             Choose your own working hours, ride your choice of bike, track your
             metrics, earn bonuses and withdraw easily to your account. Do more
             with our app.

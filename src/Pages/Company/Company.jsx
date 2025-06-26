@@ -14,7 +14,7 @@ const Company = () => {
       <div>
         <CompanyBg />
       </div>
-      <div>
+      <div className=" relative md:mt-[-147px] mt-[-55px]">
         <Founder />
       </div>
       <div>

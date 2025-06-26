@@ -6,9 +6,9 @@ import story3 from "../../../assets/images/story3.png";
 
 const StoriesCard = () => {
   const [isOpen, setIsOpen] = useState(false);
-  // const [showreadMore, setShowReadMore] = useState(false);
+
   const [openIndexes, setOpenIndexes] = useState({});
-  console.log("openIndexes :", openIndexes);
+
   const [readmore, setReadMore] = useState(false);
 
   const ref = useRef();
@@ -36,7 +36,7 @@ const StoriesCard = () => {
     {
       image: story3,
       p1: "Champions : Anthony Agam",
-      d1: " Anthony a.k.a Spider, a Senior Man, shares his life-changing experience and most memorable delivery with Chowdeck.",
+      d1: " Anthony a.k.a Spider, a Senior Man, shares his life-changing experience and most memorable delivery",
       btn: "Read More",
       btn1: "Read less",
       message:
@@ -44,13 +44,13 @@ const StoriesCard = () => {
     },
   ];
 
-  const limit = 100;
+  const limit = 50;
 
   useEffect(() => {
     if (refpara.current) {
       const isOverflowing =
         refpara.current.scrollHeight > refpara.current.clientHeight;
-      setSeeMore(isOverflowing);
+      setReadMore(isOverflowing);
     }
   }, []);
   return (
@@ -65,18 +65,43 @@ const StoriesCard = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 xl:px-[96px] px-[20px]">
           {data.map((item, index) => (
             <div key={index}>
-              <div className="border-4 rounded-md border-black max-w-[389.33px] max-h-[446px]">
+              <div className="border-4 rounded-md border-black max-w-[389.33px] max-h-fit">
                 <img src={item.image} alt="s1" />
                 <p className="text-[14px] font-extrabold text-black pt-[16px] px-[20.6px]">
                   {item.p1}
                 </p>
-                {openIndexes[index] ? (
-                  <p className="font-medium text-[18px] text-black pt-[19px]   text-center items-center px-[10px]">
-                    {item.message}
-                  </p>
+
+                {/* {openIndexes[index] ? (
+                  <>
+                    <p className="font-medium text-[18px] text-black pt-[19px] text-center px-[10px]">
+                      {item.d1}
+                    </p>
+                    <p className="font-medium text-[18px] text-black  text-center px-[10px]">
+                      {item.message}
+                    </p>
+                  </>
                 ) : (
-                  <p className="font-medium text-[18px] text-black pt-[19px]   text-center items-center px-[10px]">
-                    {item.d1}
+                  <p className="font-medium text-[18px] text-black pt-[19px] text-center px-[10px]">
+                    {item.d1.length > limit
+                      ? item.d1.slice(0, limit) + "..."
+                      : item.d1}
+                  </p>
+                )} */}
+
+                {openIndexes[index] ? (
+                  <>
+                    <p className="font-medium text-[18px] text-black pt-[19px] text-center px-[10px]">
+                      {item.message}
+                    </p>
+                    <p className="font-medium text-[18px] text-black  text-center px-[10px]">
+                      {item.d1}
+                    </p>
+                  </>
+                ) : (
+                  <p className="font-medium text-[18px] text-black pt-[19px] text-center px-[10px]">
+                    {item.d1.length > limit
+                      ? item.d1.slice(0, limit) + "..."
+                      : item.d1}
                   </p>
                 )}
 
@@ -88,7 +113,7 @@ const StoriesCard = () => {
                         [index]: !prev[index],
                       }))
                     }
-                    className="font-medium text-[16px] text-[#0C513F] hover:bg-[#0C513F] pb-[29px]"
+                    className="font-medium text-[16px] text-[#0C513F]  pb-[29px]"
                   >
                     {openIndexes[index] ? "Read less" : "Read More"}
                   </button>

@@ -158,15 +158,22 @@ const Categories = () => {
 
   const handleNext = () => {
     clearInterval(imageIntervalRef.current);
-    setCurrentSlide((prev) => prev.map((index) => (index + 1) % slides.length));
+    setCurrentSlide((prev) => (prev + 1) % slides.length);
   };
 
   const handlePrevious = () => {
     clearInterval(imageIntervalRef.current);
-    setCurrentSlide((prev) =>
-      prev.map((index) => (index - 1 + slides.length) % slides.length)
-    );
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   };
+  //   const handleNext = () => {
+  //   clearInterval(imageIntervalRef.current);
+  //   setCurrentSlide((prev) => (prev + 1) % slides.length);
+  // };
+
+  // const handlePrevious = () => {
+  //   clearInterval(imageIntervalRef.current);
+  //   setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+  // };
 
   // const handleButtonClick = (num) => {
   //   clearInterval(imageIntervalRef.current);

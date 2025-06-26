@@ -97,15 +97,15 @@ const WIthdrowCard = () => {
     return () => clearInterval(headingIntervalRef.current);
   }, []);
 
-  const handleButtonClick = (num) => {
+  const handleButtonClick = (index) => {
     clearInterval(imageIntervalRef.current);
     clearInterval(headingIntervalRef.current);
-    changeImage(num);
+    changeImage(index);
   };
 
   return (
     <div className="flex justify-center items-center">
-      <div className="border-4 border-black rounded-3xl p-10 bg-white md:h-[800px] pb-32  lg:w-[1280px] md:w-[1044px]  ">
+      <div className="border-4 border-black rounded-3xl p-10 bg-white md:h-[800px] pb-32  lg:w-[1280px] md:w-[1044px] relative z-0 ">
         <div className="relative flex flex-col h-full ">
           <h2
             className="text-black lg:text-[64px] sm:text-[32px] text-[30px] font-bold aos-init aos-animate lg:max-w-[480px]
@@ -118,7 +118,7 @@ const WIthdrowCard = () => {
             {data[currentIndex].heading}
           </h2>
           <p
-            className="text-black text-[18px] pt-5 max-w-[320px]
+            className="text-black text-[18px] pt-5 max-w-[320px] relative z-10
             "
             ref={headingRef}
           >
@@ -151,7 +151,10 @@ const WIthdrowCard = () => {
               ref={imgRef}
               src={images[currentImage]}
               alt={`grow${currentImage}`}
-              className="hidden md:block md:absolute self-center py-0 md:w-4/6 right-0 lg:-bottom-20 bottom-8 lg:w-[600px] 
+              className="absolute self-center py-0 
+              w-3/4 md:w-4/6  lg:w-[600px] 
+              -right-10 md:right-0 
+              lg:-bottom-20 md:bottom-8 -bottom-29
               animate__animated animate__fadeIn"
             />
           </div>

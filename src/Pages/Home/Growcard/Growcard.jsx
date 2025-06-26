@@ -66,14 +66,11 @@ const Growcard = () => {
 
   return (
     <div ref={ref}>
-      <div className="flex justify-center items-center gap-0.5">
-        <p
-          className="md:text-[64px] sm:text-[40px] text-[33px] text-center pt-[32px]"
-          style={{ color: "#D1D5DB" }}
-        >
+      <div className="flex justify-center items-center gap-0.5 px-0.5">
+        <p className="md:text-[64px] sm:text-[40px] text-[33px] text-center pt-[32px] text-[#D1D5DB]">
           Join our growing network
         </p>
-        <img src={arrow} alt="dr" className="md:pt-[47px]" />
+        <img src={arrow} alt="dr" className="md:pt-[47px] pt-7" />
       </div>
       <div
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 place-items-center 
@@ -81,7 +78,7 @@ const Growcard = () => {
       >
         {data.map((item, index) => (
           <div key={index}>
-            <div className="border-4 rounded-md border-black max-w-[402.66px] max-h-auto">
+            <div className="border-4 rounded-[6px] overflow-hidden border-black max-w-[402.66px] max-h-auto">
               <img src={item.image} alt="st" className="pt-[28px] pl-[24px]" />
               <h2 className="font-extrabold text-[27px] text-black pt-[19px] pl-[24px]">
                 {item.heading}
@@ -107,7 +104,11 @@ const Growcard = () => {
                 <img src={item.arrowimage} alt="ra" className="pl-[2px]" />
               </button>
               <div>
-                <img src={item.mainimage} alt="lm" />
+                <img
+                  src={item.mainimage}
+                  alt="lm"
+                  className=" rounded-bl-[9px] rounded-br-[9px]"
+                />
               </div>
             </div>
           </div>

@@ -27,7 +27,7 @@ const ChowPassAccord = () => {
     },
   ];
 
-  const [activeIndex, setActiveIndex] = useState(1);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const handleItemClick = (index) => {
     setActiveIndex((prev) => (prev === index ? null : index));
@@ -49,7 +49,7 @@ const ChowPassAccord = () => {
       <div className="lg:px-[90px] px-[17px]  md:pt-[143px] pt-[219px]">
         <div className="border-4 border-black bg-white rounded-xl">
           <div className="lg:px-[36px] px-2 pt-[36px] pb-[0px]">
-            <div className="lg:flex lg:gap-8">
+            <div className="lg:flex hidden lg:gap-8">
               <div className="flex-1">
                 <h2 className="font-extrabold text-[63px] text-[#0C513F]">
                   FAQs.
@@ -93,11 +93,62 @@ const ChowPassAccord = () => {
                       className="pt-[32px] pl-[32px]"
                     />
                     <p className="text-[24px] text-white pt-[32px] px-[33px] ">
-                      {items[activeIndex].ans}
+                      {items[activeIndex]?.ans}
                     </p>
                   </div>
                 </div>
               </div>
+            </div>
+            <div className=" md:hidden">
+              <h2 className="font-extrabold text-[63px] text-[#0C513F]">
+                FAQs.
+              </h2>
+              {items.map((item, index) => (
+                <div key={index} onClick={() => handleItemClick(index)}>
+                  <div className="flex-col pt-[40px] ">
+                    <div
+                      className={`
+                      ${
+                        activeIndex === index
+                          ? "flex justify-between items-center cursor-pointer bg-black text-white rounded-md mb-4"
+                          : "flex justify-between items-center bg-white text-[#0C513F] rounded-md"
+                      }
+                      `}
+                    >
+                      <p className="font-extrabold text-[18px] pt-[14px] pb-[7px] pl-[21px] ">
+                        {item.ques}
+                      </p>
+                      {activeIndex === index && (
+                        <img
+                          src={ystar2}
+                          alt="ys2"
+                          className="py-[23px] pr-[23px] "
+                        />
+                      )}
+                    </div>
+                    {activeIndex === index && (
+                      <div
+                        className={`
+                          ${
+                            activeIndex === index
+                              ? "bg-[#8c77ec] rounded-md py-4 h-auto"
+                              : "Not Open"
+                          }
+                          `}
+                      >
+                        <img
+                          src={whstar}
+                          alt="bs"
+                          className="pt-[32px] pl-[32px]"
+                        />
+                        <p className="text-[24px] text-white pt-[32px] px-[33px] ">
+                          {items[activeIndex]?.ans}
+                        </p>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>

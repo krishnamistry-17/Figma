@@ -87,7 +87,7 @@ const Bg = () => {
           </div>
         </div>
       </div>
-      <div className=" relative lg:-top-53.5 md:-top-38.5">
+      <div className=" relative lg:-top-53.5 md:-top-38.5 -top-25">
         <BgAnimate />
       </div>
     </div>

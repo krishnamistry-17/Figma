@@ -13,11 +13,11 @@ const CompanyPlace = () => {
   return (
     <>
       <div className="bg-black relative ">
-        <div className="absolute -top-55 ">
+        <div className=" relative -top-55 ">
           <CompanyAccord />
         </div>
-        <div className="lg:pt-[720px] md:pt-[1340px] sm:pt-[1600px] pt-[1900px]">
-          <div className="lg:flex lg:px-[96px] gap-6 pt-[298px]">
+        <div className="">
+          <div className="lg:flex lg:px-[96px] gap-6 ">
             <div className="flex-1 bg-[#0C513F] relative rounded-2xl">
               <h2 className="font-extrabold sm:text-[58px] text-[32px] text-white pl-[40px] pt-[39px]">
                 Place your order in seconds
@@ -73,8 +73,11 @@ const CompanyPlace = () => {
               <div className="sm:pt-[165px] pt-6 sm:pl-[28px]">
                 <img src={promo} alt="pm" />
               </div>
-              <div className="pt-[8px] sm:pl-[40px]">
-                <img src={p} alt="p" />
+             <div className="pt-[8px] sm:pl-[40px] pl-[15px]">
+                <button className="text-[18px] font-bold text-black flex bg-[#FFC501] border-black border-4 rounded-2xl p-[13px] ">
+                  <span className="bg-[#0C513F] border-4 rounded-full border-black h-4 w-4 mt-1 mr-2  "></span>
+                  CDNWEB
+                </button>
               </div>
               <div>
                 <p className="sm:text-[16px] text-[14px] text-white pt-[7px] md:max-w-[319px] sm:max-w-[230px] max-w-[178px] sm:pl-[40px] pl-[11px]">
@@ -99,8 +102,9 @@ const CompanyPlace = () => {
             </div>
           </div>
         </div>
+
         <div className="md:flex justify-between items-center pt-[96px] lg:pl-[96px]">
-          <div className="flex">
+          <div className="md:flex hidden">
             <img src={ycstar} alt="ys" />
             <p className="font-extrabold md:text-[47px] sm:text-[37px] text-[24px] text-white pl-[8px] pr-[17px]">
               Cool stuff only
@@ -109,12 +113,24 @@ const CompanyPlace = () => {
               Subscribe to our newsletter
             </button>
           </div>
+          <div className="flex sm:hidden">
+            <div>
+              <img src={ycstar} alt="ys" />
+            </div>
+            <div>
+              <p className="font-extrabold  text-[24px] text-white pl-[8px] pr-[17px]">
+                Cool stuff only
+              </p>
+              <button className="text-[16px] text-[#FFEDB3] pt-[8px] pb-21">
+                Subscribe to our newsletter
+              </button>
+            </div>
+          </div>
           <div>
             <img
               src={bag}
               alt="bag"
-              className="lg:pr-[96px]  md:pt-0 pt-3
-             
+              className="lg:pr-[96px]  md:pt-0 pt-3 md:block hidden
               "
             />
           </div>

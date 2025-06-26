@@ -34,10 +34,12 @@ const FaqAccordian = () => {
       ans: "Chowdeck is a technology company that provides logistics services to both vendors and consumers. This potentially allows food vendors to deliver meals seamlessly while also providing consumers with an easy platform to order meals from their favourite restaurants in their city.",
     },
   ];
-  const [activeIndex, setActiveIndex] = useState(1);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleItemClick = (index) => {
     setActiveIndex((prev) => (prev === index ? null : index));
+    setIsMenuOpen(!isMenuOpen);
   };
 
   const location = useLocation();
@@ -56,7 +58,7 @@ const FaqAccordian = () => {
       <div className="lg:px-[96px] px-[17px]  pt-[143px]">
         <div className="border-4 border-black bg-white rounded-xl">
           <div className="lg:px-[36px] px-2 pt-[36px] pb-[28px]">
-            <div className="lg:flex lg:gap-8">
+            <div className="lg:flex hidden lg:gap-8">
               <div className="flex-1">
                 <h2 className="font-extrabold text-[63px] text-[#0C513F]">
                   FAQs.
@@ -93,14 +95,66 @@ const FaqAccordian = () => {
                   Ans.
                 </h2>
                 <div className="pt-[40px]">
-                  <div className="bg-[#FFC501] rounded-md pb-[320px]">
+                  <div className="bg-[#FFC501] rounded-md pb-[320px] h-auto">
                     <img src={bstar} alt="bs" className="pt-[32px] pl-[32px]" />
                     <p className="text-[24px] text-black pt-[32px] px-[33px] ">
-                      {items[activeIndex].ans}
+                      {items[activeIndex]?.ans}
                     </p>
                   </div>
                 </div>
               </div>
+            </div>
+
+            <div className=" md:hidden">
+              <h2 className="font-extrabold text-[63px] text-[#0C513F]">
+                FAQs.
+              </h2>
+              {items.map((item, index) => (
+                <div key={index} onClick={() => handleItemClick(index)}>
+                  <div className="flex-col pt-[40px] ">
+                    <div
+                      className={`
+                      ${
+                        activeIndex === index
+                          ? "flex justify-between items-center cursor-pointer bg-black text-white rounded-md mb-4"
+                          : "flex justify-between items-center bg-white text-[#0C513F] rounded-md"
+                      }
+                      `}
+                    >
+                      <p className="font-extrabold text-[18px] pt-[14px] pb-[7px] pl-[21px] ">
+                        {item.ques}
+                      </p>
+                      {activeIndex === index && (
+                        <img
+                          src={ystar2}
+                          alt="ys2"
+                          className="py-[23px] pr-[23px] "
+                        />
+                      )}
+                    </div>
+                    {activeIndex === index && (
+                      <div
+                        className={`
+                          ${
+                            activeIndex === index
+                              ? "bg-[#FFC501] rounded-md py-4 h-auto"
+                              : "Not Open"
+                          }
+                          `}
+                      >
+                        <img
+                          src={bstar}
+                          alt="bs"
+                          className="pt-[32px] pl-[32px]"
+                        />
+                        <p className="text-[24px] text-black pt-[32px] px-[33px] ">
+                          {items[activeIndex]?.ans}
+                        </p>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>

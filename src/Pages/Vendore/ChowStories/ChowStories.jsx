@@ -5,7 +5,6 @@ import image8 from "../../../assets/images/image8.png";
 import image9 from "../../../assets/images/image9.png";
 
 const ChowStories = () => {
-
   const data = [
     {
       image: image7,
@@ -26,7 +25,7 @@ const ChowStories = () => {
       btn: "Read More",
     },
   ];
-  
+
   return (
     <div className="pt-[40px] pb-[144px]">
       <div className="sm:flex gap-2.5 xl:pl-[96px] pl-[10px]">
@@ -40,7 +39,11 @@ const ChowStories = () => {
           {data.map((item, index) => (
             <div key={index}>
               <div className="border-4 rounded-2xl border-black max-w-[360.33px] max-h-[446px]">
-                <img src={item.image} alt="s1" />
+                <img
+                  src={item.image}
+                  alt="s1"
+                  className="rounded-tr-[12px] rounded-tl-[12px]"
+                />
                 <p className="text-[14px] font-extrabold text-black pt-[16px] px-[20.6px]">
                   {item.p1}
                 </p>

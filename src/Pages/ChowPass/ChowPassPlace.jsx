@@ -11,11 +11,11 @@ const ChowPassPlace = () => {
   return (
     <>
       <div className="bg-black relative ">
-        <div className="absolute xl:-top-103 md:-top-97 -top-115 ">
+        <div className="relative  -top-55 ">
           <ChowPassAccord />
         </div>
-        <div className="lg:pt-[720px] md:pt-[1340px] sm:pt-[1600px] pt-[1900px]">
-          <div className="lg:flex lg:px-[96px] gap-6 pt-[298px]">
+        <div className="">
+          <div className="lg:flex lg:px-[96px] gap-6 ">
             <div className="flex-1 bg-[#d1c9f7] relative rounded-2xl z-0">
               <div className="">
                 <h2 className=" text-[37px] absolute z-10  lg:text-[60px] md:pt-2 pt-22 pl-4  text-[#271386] font-bold  tracking-tighter md:max-w-sm">
@@ -81,7 +81,7 @@ const ChowPassPlace = () => {
           </div>
         </div>
         <div className="md:flex justify-between items-center pt-[96px] lg:pl-[96px]">
-          <div className="flex">
+          <div className="md:flex hidden">
             <img src={ycstar} alt="ys" />
             <p className="font-extrabold md:text-[47px] sm:text-[37px] text-[24px] text-white pl-[8px] pr-[17px]">
               Cool stuff only
@@ -90,13 +90,25 @@ const ChowPassPlace = () => {
               Subscribe to our newsletter
             </button>
           </div>
+          <div className="flex sm:hidden">
+            <div>
+              <img src={ycstar} alt="ys" />
+            </div>
+            <div>
+              <p className="font-extrabold  text-[24px] text-white pl-[8px] pr-[17px]">
+                Cool stuff only
+              </p>
+              <button className="text-[16px] text-[#FFEDB3] pt-[8px] pb-21">
+                Subscribe to our newsletter
+              </button>
+            </div>
+          </div>
           <div>
             <img
               src={bag}
               alt="bag"
-              className="lg:pr-[96px]  md:pt-0 pt-3
-             
-              "
+              className="lg:pr-[96px]  md:pt-0 pt-3 md:block hidden
+                     "
             />
           </div>
         </div>

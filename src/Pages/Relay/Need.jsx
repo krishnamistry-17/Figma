@@ -138,34 +138,34 @@ const Need = () => {
         </div>
 
         {/*Marquee */}
-        <div className=" relative flex gap-3 overflow-x-hidden ">
+        <div className=" relative flex gap-3 overflow-x-hidden flex-wrap">
           <div className=" animate-marquee py-12  whitespace-nowrap">
             <div className="flex gap-3">
-              <div className="flex gap-2 rounded-md py-[22px] px-[28px] bg-white/25">
+              <div className="flex truncate gap-2 rounded-md py-[22px] px-[28px] bg-white/25">
                 <img src={ystar} alt="ys" className="'w-[24px] h-[24px]" />
                 <p className="font-semibold text-[16px] text-white">
                   Quick and easy onboarding
                 </p>
               </div>
-              <div className="flex gap-2 rounded-md py-[22px] px-[28px] bg-white/25">
+              <div className="flex truncate gap-2 rounded-md py-[22px] px-[28px] bg-white/25">
                 <img src={ohalf} alt="of" className="'w-[22px] h-[22px]" />
                 <p className="font-semibold text-[16px] text-white">
                   Quality meal choicess
                 </p>
               </div>
-              <div className="flex gap-2 rounded-md py-[22px] px-[28px] bg-white/25">
+              <div className="flex truncate gap-2 rounded-md py-[22px] px-[28px] bg-white/25">
                 <img src={pstar} alt="ps" className="'w-[24px] h-[24px]" />
                 <p className="font-semibold text-[16px] text-white">
                   Live updates on orders
                 </p>
               </div>
-              <div className="flex gap-2 rounded-md py-[22px] px-[28px] bg-white/25">
+              <div className="flex truncate gap-2 rounded-md py-[22px] px-[28px] bg-white/25">
                 <img src={glocation} alt="gl" className="'w-[24px] h-[24px]" />
                 <p className="font-semibold text-[16px] text-white">
                   Highly rated riders
                 </p>
               </div>
-              <div className="flex gap-2 rounded-md py-[22px] px-[32px]  bg-white/25">
+              <div className="flex truncate gap-2 rounded-md py-[22px] px-[32px]  bg-white/25">
                 <img src={phalf} alt="pf" className="'w-[22px] h-[22px]" />
                 <p className="font-semibold text-[16px] text-white">
                   20/7 support for customers & vendores
@@ -175,31 +175,31 @@ const Need = () => {
           </div>
           <div className=" absolute top-0 animate-marquee2 py-12 px-2 whitespace-nowrap">
             <div className="flex gap-3">
-              <div className="flex gap-2 rounded-md py-[22px] px-[28px] bg-white/25">
+              <div className="flex truncate gap-2 rounded-md py-[22px] px-[28px] bg-white/25">
                 <img src={ystar} alt="ys" className="'w-[24px] h-[24px]" />
                 <p className="font-semibold text-[16px] text-white">
                   Quick and easy onboarding
                 </p>
               </div>
-              <div className="flex gap-2 rounded-md py-[22px] px-[28px] bg-white/25">
+              <div className="flex truncate gap-2 rounded-md py-[22px] px-[28px] bg-white/25">
                 <img src={ohalf} alt="of" className="'w-[24px] h-[24px]" />
                 <p className="font-semibold text-[16px] text-white">
                   Quality meal choicess
                 </p>
               </div>
-              <div className="flex gap-2 rounded-md py-[22px] px-[28px] bg-white/25">
+              <div className="flex truncate gap-2 rounded-md py-[22px] px-[28px] bg-white/25">
                 <img src={pstar} alt="ps" className="'w-[24px] h-[24px]" />
                 <p className="font-semibold text-[16px] text-white">
                   Live updates on orders
                 </p>
               </div>
-              <div className="flex gap-2 rounded-md py-[22px] px-[28px] bg-white/25">
+              <div className="flex truncate gap-2 rounded-md py-[22px] px-[28px] bg-white/25">
                 <img src={glocation} alt="gl" className="'w-[24px] h-[24px]" />
                 <p className="font-semibold text-[16px] text-white">
                   Highly rated riders
                 </p>
               </div>
-              <div className="flex gap-2 rounded-md py-[22px] px-[28px] bg-white/25">
+              <div className="flex truncate gap-2 rounded-md py-[22px] px-[28px] bg-white/25">
                 <img src={phalf} alt="pf" className="'w-[22px] h-[22px]" />
                 <p className="font-semibold text-[16px] text-white">
                   20/7 support for customers & vendores
@@ -210,7 +210,7 @@ const Need = () => {
         </div>
 
         {/*Marquee*/}
-        <div className="relative flex overflow-x-hidden ">
+        <div className="relative md:flex hidden overflow-x-hidden ">
           <div className=" animate-marquee py-12 whitespace-nowrap">
             <div className=" flex">
               <div>
@@ -240,6 +240,74 @@ const Need = () => {
               </div>
               <div>
                 <img src={phone4} alt="p4" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className=" relative sm:hidden flex overflow-x-hidden">
+          {/*marquee-1 */}
+          <div className=" animate-marquee py-12 whitespace-nowrap">
+            <div className=" flex gap-2">
+              <div className="min-w-max mx-2 md:mx-0">
+                <span className="w-[292px] md:w-[416px] h-[559px] md:h-[720px] block relative">
+                  <span className=" overflow-hidden block box-border p-0 m-0 border-0 absolute ">
+                    <img src={phone1} alt="p1" className=" " />
+                  </span>
+                </span>
+              </div>
+              <div className="min-w-max mx-2 md:mx-0">
+                <span className="w-[292px] md:w-[416px] h-[559px] md:h-[720px] block relative">
+                  <span className=" overflow-hidden block box-border p-0 m-0 border-0 absolute">
+                    <img src={phone2} alt="p2" />
+                  </span>
+                </span>
+              </div>
+              <div className="min-w-max mx-2 md:mx-0">
+                <span className="w-[292px] md:w-[416px] h-[559px] md:h-[720px] block relative">
+                  <span className=" overflow-hidden block box-border p-0 m-0 border-0 absolute">
+                    <img src={phone3} alt="p3" />
+                  </span>
+                </span>
+              </div>
+              <div className="min-w-max mx-2 md:mx-0">
+                <span className="w-[292px] md:w-[416px] h-[559px] md:h-[720px] block relative">
+                  <span className=" overflow-hidden block box-border p-0 m-0 border-0 absolute">
+                    <img src={phone4} alt="p4" />
+                  </span>
+                </span>
+              </div>
+            </div>
+          </div>
+          {/*marquee-2 */}
+          <div className=" absolute top-0 animate-marquee2 py-12 whitespace-nowrap">
+            <div className=" flex">
+              <div className="min-w-max mx-2 md:mx-0">
+                <span className="w-[292px] md:w-[416px] h-[559px] md:h-[720px] block relative">
+                  <span className=" overflow-hidden block box-border p-0 m-0 border-0 absolute ">
+                    <img src={phone1} alt="i1" className=" " />
+                  </span>
+                </span>
+              </div>
+              <div className="min-w-max mx-2 md:mx-0">
+                <span className="w-[292px] md:w-[416px] h-[559px] md:h-[720px] block relative">
+                  <span className=" overflow-hidden block box-border p-0 m-0 border-0 absolute">
+                    <img src={phone2} alt="i2" />
+                  </span>
+                </span>
+              </div>
+              <div className="min-w-max mx-2 md:mx-0">
+                <span className="w-[292px] md:w-[416px] h-[559px] md:h-[720px] block relative">
+                  <span className=" overflow-hidden block box-border p-0 m-0 border-0 absolute">
+                    <img src={phone3} alt="i3" />
+                  </span>
+                </span>
+              </div>
+              <div className="min-w-max mx-2 md:mx-0">
+                <span className="w-[292px] md:w-[416px] h-[559px] md:h-[720px] block relative">
+                  <span className=" overflow-hidden block box-border p-0 m-0 border-0 absolute">
+                    <img src={phone4} alt="i4" />
+                  </span>
+                </span>
               </div>
             </div>
           </div>

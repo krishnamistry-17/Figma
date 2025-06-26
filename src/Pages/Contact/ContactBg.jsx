@@ -28,7 +28,7 @@ const ContactBg = () => {
           font-bold text-center absolute top-52 md:left-52"
             data-aos="fade-up"
           >
-            Get In Contact With Us
+            Get In Touch With Us
           </h2>
         </div>
         <div>

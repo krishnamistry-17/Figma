@@ -11,7 +11,7 @@ const Appcard1 = () => {
           All in One
         </p>
         <div className="flex justify-center items-center">
-          <p className="md:text-[20px] text-[17px]  text-black py-[18px] text-center max-w-[530px]">
+          <p className="md:text-[20px] text-[17px]  text-black py-[18px] text-center max-w-[530px] px-4.5">
             Unlock new levels of growth with seamless menu and orders
             management, multiple branches and team, easy payouts withdrawal and
             a lot more.

@@ -11,7 +11,7 @@ const Appcard = () => {
           Try the App
         </p>
         <div className="flex justify-center items-center">
-          <p className="md:text-[20px] text-[17px]  text-black py-[18px] text-center max-w-[530px]">
+          <p className="md:text-[20px] text-[17px]  text-black py-[18px] text-center max-w-[530px] px-4.5">
             Have meals delivered to you within minutes from a wide variety of
             restaurants ranging from African to Continental cuisines to satisfy
             your cravings.

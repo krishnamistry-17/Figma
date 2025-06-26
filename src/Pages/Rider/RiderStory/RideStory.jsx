@@ -39,7 +39,11 @@ const RideStory = () => {
           {data.map((item, index) => (
             <div key={index}>
               <div className="border-4 rounded-2xl border-black max-w-[363.33px] max-h-[446px]">
-                <img src={item.image} alt="s1" />
+                <img
+                  src={item.image}
+                  alt="s1"
+                  className=" rounded-tr-[12px] rounded-tl-[12px]"
+                />
                 <p className="text-[14px] font-extrabold text-black pt-[16px] px-[20.6px]">
                   {item.p1}
                 </p>

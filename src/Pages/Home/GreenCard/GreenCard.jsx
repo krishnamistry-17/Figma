@@ -28,7 +28,7 @@ const GreenCard = () => {
             {/**xl:px-[96px] md:px-[20px] sm:px-[73px] px-[20px] */}
             <div className="xl:flex justify-between">
               <div className="xl:flex">
-                <p className="lg:text-[63px] md:text-[52px] text-[30px] text-white font-extrabold xl:max-w-[441px] ">
+                <p className="lg:text-[63px] md:text-[52px] text-[30px] text-white font-extrabold xl:max-w-[441px] xl:pl-0 pl-4.5">
                   Chowdeck has you covered
                 </p>
                 <img
@@ -126,34 +126,34 @@ const GreenCard = () => {
               </div>
             </div> */}
 
-            <div className="relative flex items-start gap-3 overflow-x-hidden w-full max-w-full">
+            <div className="relative flex items-start gap-3 overflow-x-hidden w-full max-w-full flex-wrap">
               <div className="animate-marquee py-12 whitespace-nowrap flex">
                 <div className="flex gap-3">
-                  <div className="flex gap-2 rounded-md py-6 px-7 bg-white/25">
+                  <div className="flex truncate gap-2 rounded-md py-6 px-7 bg-white/25">
                     <img src={ystar} alt="ys" className="w-6 h-6" />
                     <p className="font-semibold text-[14px] sm:text-[16px] text-white break-words max-w-[150px] sm:max-w-full">
                       Quick and easy onboarding
                     </p>
                   </div>
-                  <div className="flex gap-2 rounded-md py-6 sm:px-7 px-8 bg-white/25">
+                  <div className="flex truncate gap-2 rounded-md py-6 sm:px-7 px-8 bg-white/25">
                     <img src={ohalf} alt="of" className="'w-6 h-6" />
                     <p className="font-semibold text-[14px] sm:text-[16px] text-white break-words max-w-[150px] sm:max-w-full">
                       Quality meal choicess
                     </p>
                   </div>
-                  <div className="flex gap-2 rounded-md py-6 px-7 bg-white/25">
+                  <div className="flex truncate gap-2 rounded-md py-6 px-7 bg-white/25">
                     <img src={pstar} alt="ps" className="w-6 h-6" />
                     <p className="font-semibold text-[14px] sm:text-[16px] text-white break-words max-w-[150px] sm:max-w-full">
                       Live updates on orders
                     </p>
                   </div>
-                  <div className="flex gap-2 rounded-md py-6 px-7 bg-white/25">
+                  <div className="flex truncate gap-2 rounded-md py-6 px-7 bg-white/25">
                     <img src={glocation} alt="gl" className="w-6 h-6" />
                     <p className="font-semibold text-[14px] sm:text-[16px] text-white break-words max-w-[150px] sm:max-w-full">
                       Highly rated riders
                     </p>
                   </div>
-                  <div className="flex gap-2 rounded-md py-6 px-7 bg-white/25">
+                  <div className="flex truncate gap-2 rounded-md py-6 px-7 bg-white/25">
                     <img src={phalf} alt="pf" className="w-6 h-6" />
                     <p className="font-semibold text-[14px] sm:text-[16px] text-white break-words max-w-[150px] sm:max-w-full">
                       20/7 support for customers & vendores
@@ -161,33 +161,33 @@ const GreenCard = () => {
                   </div>
                 </div>
               </div>
-              <div className="absolute top-0 animate-marquee2 py-12 px-2 whitespace-nowrap flex">
+              <div className="absolute top-0 animate-marquee2 py-12 px-2 whitespace-nowrap flex truncate">
                 <div className="flex gap-3">
-                  <div className="flex gap-2 rounded-md py-6 px-7 bg-white/25">
+                  <div className="flex truncate gap-2 rounded-md py-6 px-7 bg-white/25">
                     <img src={ystar} alt="ys" className="w-6 h-6" />
                     <p className="font-semibold text-[14px] sm:text-[16px] text-white break-words max-w-[150px] sm:max-w-full">
                       Quick and easy onboarding
                     </p>
                   </div>
-                  <div className="flex gap-2 rounded-md py-6 px-7 bg-white/25">
+                  <div className="flex truncate gap-2 rounded-md py-6 px-7 bg-white/25">
                     <img src={ohalf} alt="of" className="'w-6 h-6" />
                     <p className="font-semibold text-[14px] sm:text-[16px] text-white break-words max-w-[150px] sm:max-w-full">
                       Quality meal choicess
                     </p>
                   </div>
-                  <div className="flex gap-2 rounded-md py-6 px-7 bg-white/25">
+                  <div className="flex truncate gap-2 rounded-md py-6 px-7 bg-white/25">
                     <img src={pstar} alt="ps" className="w-6 h-6" />
                     <p className="font-semibold text-[14px] sm:text-[16px] text-white break-words max-w-[150px] sm:max-w-full">
                       Live updates on orders
                     </p>
                   </div>
-                  <div className="flex gap-2 rounded-md py-6 px-7 bg-white/25">
+                  <div className="flex truncate gap-2 rounded-md py-6 px-7 bg-white/25">
                     <img src={glocation} alt="gl" className="w-6 h-6" />
                     <p className="font-semibold text-[14px] sm:text-[16px] text-white break-words max-w-[150px] sm:max-w-full">
                       Highly rated riders
                     </p>
                   </div>
-                  <div className="flex gap-2 rounded-md py-6 px-7 bg-white/25">
+                  <div className="flex truncate gap-2 rounded-md py-6 px-7 bg-white/25">
                     <img src={phalf} alt="pf" className="w-6 h-6" />
                     <p className="font-semibold text-[14px] sm:text-[16px] text-white break-words max-w-[150px] sm:max-w-full">
                       20/7 support for customers & vendores

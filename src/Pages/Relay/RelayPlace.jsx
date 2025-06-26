@@ -13,12 +13,12 @@ const RelayPlace = () => {
   return (
     <>
       <div className="bg-black relative ">
-        <div className="absolute xl:-top-83 md:-top-68 -top-115 ">
+        <div className=" relative  -top-55 ">
           <RelayAccord />
         </div>
 
-        <div className="pt-[1900px] sm:pt-[1600px] md:pt-[1340px] lg:pt-[720px]">
-          <div className="flex flex-col sm:flex-row lg:px-[96px] gap-6 sm:pt-[298px]">
+        <div className="">
+          <div className="flex flex-col sm:flex-row lg:px-[96px] gap-6 ">
             <div className="flex-1 bg-[#990038] relative rounded-2xl py-4 z-0 md:block hidden">
               {/* Headline */}
               <h2
@@ -149,7 +149,7 @@ const RelayPlace = () => {
           </div>
         </div>
         <div className="md:flex justify-between items-center pt-[96px] lg:pl-[96px]">
-          <div className="flex">
+          <div className="md:flex hidden">
             <img src={ycstar} alt="ys" />
             <p className="font-extrabold md:text-[47px] sm:text-[37px] text-[24px] text-white pl-[8px] pr-[17px]">
               Cool stuff only
@@ -158,13 +158,25 @@ const RelayPlace = () => {
               Subscribe to our newsletter
             </button>
           </div>
+          <div className="flex sm:hidden">
+            <div>
+              <img src={ycstar} alt="ys" />
+            </div>
+            <div>
+              <p className="font-extrabold  text-[24px] text-white pl-[8px] pr-[17px]">
+                Cool stuff only
+              </p>
+              <button className="text-[16px] text-[#FFEDB3] pt-[8px] pb-21">
+                Subscribe to our newsletter
+              </button>
+            </div>
+          </div>
           <div>
             <img
               src={bag}
               alt="bag"
-              className="lg:pr-[96px]  md:pt-0 pt-3
-  
-              "
+              className="lg:pr-[96px]  md:pt-0 pt-3 md:block hidden
+                     "
             />
           </div>
         </div>

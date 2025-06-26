@@ -22,7 +22,7 @@ const VendAccord = () => {
       ans: "On the vendor app, vendors can make adjustments to the account. Home-page: You can view also view the total orders and amount you have gathered. Click on Orders to see pending orders. Vendors can either accept or reject them. Click on Menu to add menu items, fill tin necessary details and the menu items would be successfully created. Profile: You can make changes such as opening and closing time, tags, vendor class and more.",
     },
   ];
-  const [activeIndex, setActiveIndex] = useState(1);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const handleItemClick = (index) => {
     setActiveIndex((prev) => (prev === index ? null : index));
@@ -44,7 +44,7 @@ const VendAccord = () => {
       <div className="lg:px-[96px] px-[17px]  pt-[143px]">
         <div className="border-4 border-black bg-white rounded-xl">
           <div className="lg:px-[36px] px-2 pt-[36px] pb-[28px]">
-            <div className="lg:flex lg:gap-8">
+            <div className="lg:flex hidden lg:gap-8">
               <div className="flex-1">
                 <h2 className="font-extrabold text-[63px] text-[#0C513F]">
                   FAQs.
@@ -84,11 +84,62 @@ const VendAccord = () => {
                   <div className="bg-[#FFC501] rounded-md pb-[320px]">
                     <img src={bstar} alt="bs" className="pt-[32px] pl-[32px]" />
                     <p className="text-[24px] text-black pt-[32px] px-[33px] ">
-                      {items[activeIndex].ans}
+                      {items[activeIndex]?.ans}
                     </p>
                   </div>
                 </div>
               </div>
+            </div>
+            <div className=" md:hidden">
+              <h2 className="font-extrabold text-[63px] text-[#0C513F]">
+                FAQs.
+              </h2>
+              {items.map((item, index) => (
+                <div key={index} onClick={() => handleItemClick(index)}>
+                  <div className="flex-col pt-[40px] ">
+                    <div
+                      className={`
+                      ${
+                        activeIndex === index
+                          ? "flex justify-between items-center cursor-pointer bg-black text-white rounded-md mb-4"
+                          : "flex justify-between items-center bg-white text-[#0C513F] rounded-md"
+                      }
+                      `}
+                    >
+                      <p className="font-extrabold text-[18px] pt-[14px] pb-[7px] pl-[21px] ">
+                        {item.ques}
+                      </p>
+                      {activeIndex === index && (
+                        <img
+                          src={ystar2}
+                          alt="ys2"
+                          className="py-[23px] pr-[23px] "
+                        />
+                      )}
+                    </div>
+                    {activeIndex === index && (
+                      <div
+                        className={`
+                          ${
+                            activeIndex === index
+                              ? "bg-[#FFC501] rounded-md py-4 h-auto"
+                              : "Not Open"
+                          }
+                          `}
+                      >
+                        <img
+                          src={bstar}
+                          alt="bs"
+                          className="pt-[32px] pl-[32px]"
+                        />
+                        <p className="text-[24px] text-black pt-[32px] px-[33px] ">
+                          {items[activeIndex]?.ans}
+                        </p>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
