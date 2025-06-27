@@ -199,7 +199,7 @@ const Footer = () => {
               {" "}
               COMPANY
             </h1>
-            <ul className=" grid gap-6 pt-[64px] pl-20">
+            <ul className=" grid gap-6 pt-[64px] pl-10">
               <li className="text-[16px] text-white ">Customers</li>
               <li className="text-[16px] text-white ">Vendors</li>
               <li className="text-[16px] text-white ">Riders</li>
@@ -214,7 +214,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="flex items-start px-5">
-            <h1 className="font-extrabold text-[14px] text-white/40 pt-[64px] pr-0.5 max-w-[145px]">
+            <h1 className="font-extrabold text-[14px] text-white/40 pt-[64px] pr-0.5 max-w-[111px]">
               CUISINES NEAR YOU
             </h1>
             <ul className=" grid gap-6 pt-[64px] ">
@@ -242,7 +242,7 @@ const Footer = () => {
               {" "}
               POPULAR
             </h1>
-            <ul className=" grid gap-6 pt-[64px] pl-20">
+            <ul className=" grid gap-6 pt-[64px] pl-10">
               <li className="text-[16px] text-white ">Food delivery</li>
               <li className="text-[16px] text-white ">Surulere</li>
               <li className="text-[16px] text-white ">Ogudu</li>

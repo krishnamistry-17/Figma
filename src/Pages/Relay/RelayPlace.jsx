@@ -18,7 +18,7 @@ const RelayPlace = () => {
         </div>
 
         <div className="">
-          <div className="flex flex-col sm:flex-row lg:px-[96px] gap-6 ">
+          <div className="flex flex-col sm:flex-row lg:px-[96px] px-4 gap-6 ">
             <div className="flex-1 bg-[#990038] relative rounded-2xl py-4 z-0 md:block hidden">
               {/* Headline */}
               <h2

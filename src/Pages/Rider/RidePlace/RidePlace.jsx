@@ -17,7 +17,7 @@ const RidePlace = () => {
           <RideAccord />
         </div>
         <div className="">
-          <div className="lg:flex lg:px-[96px] gap-6 ">
+          <div className="lg:flex lg:px-[96px] px-4 gap-6 ">
             <div className="flex-1 bg-[#0C513F] relative rounded-2xl">
               <h2 className="font-extrabold sm:text-[58px] text-[32px] text-white pl-[40px] pt-[39px]">
                 Place your order in seconds
@@ -92,7 +92,7 @@ const RidePlace = () => {
                   className="
               md:w-[210px] md:h-[472px]
               sm:w-[162px] sm:h-[348px]
-              w-[144px] h-[325px]
+              w-[109px] h-[222px]
               "
                 />
               </div>

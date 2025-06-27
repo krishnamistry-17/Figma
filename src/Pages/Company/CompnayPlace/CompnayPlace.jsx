@@ -17,7 +17,7 @@ const CompanyPlace = () => {
           <CompanyAccord />
         </div>
         <div className="">
-          <div className="lg:flex lg:px-[96px] gap-6 ">
+          <div className="lg:flex lg:px-[96px] px-4 gap-6 ">
             <div className="flex-1 bg-[#0C513F] relative rounded-2xl">
               <h2 className="font-extrabold sm:text-[58px] text-[32px] text-white pl-[40px] pt-[39px]">
                 Place your order in seconds
@@ -73,7 +73,7 @@ const CompanyPlace = () => {
               <div className="sm:pt-[165px] pt-6 sm:pl-[28px]">
                 <img src={promo} alt="pm" />
               </div>
-             <div className="pt-[8px] sm:pl-[40px] pl-[15px]">
+              <div className="pt-[8px] sm:pl-[40px] pl-[15px]">
                 <button className="text-[18px] font-bold text-black flex bg-[#FFC501] border-black border-4 rounded-2xl p-[13px] ">
                   <span className="bg-[#0C513F] border-4 rounded-full border-black h-4 w-4 mt-1 mr-2  "></span>
                   CDNWEB
@@ -92,7 +92,7 @@ const CompanyPlace = () => {
                   className="
               md:w-[210px] md:h-[472px]
               sm:w-[162px] sm:h-[348px]
-              w-[144px] h-[325px]
+              w-[109px] h-[222px]
               "
                 />
               </div>

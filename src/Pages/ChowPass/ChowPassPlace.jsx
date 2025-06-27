@@ -15,7 +15,7 @@ const ChowPassPlace = () => {
           <ChowPassAccord />
         </div>
         <div className="">
-          <div className="lg:flex lg:px-[96px] gap-6 ">
+          <div className="lg:flex lg:px-[96px] px-4 gap-6 ">
             <div className="flex-1 bg-[#d1c9f7] relative rounded-2xl z-0">
               <div className="">
                 <h2 className=" text-[37px] absolute z-10  lg:text-[60px] md:pt-2 pt-22 pl-4  text-[#271386] font-bold  tracking-tighter md:max-w-sm">

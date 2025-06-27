@@ -68,7 +68,7 @@ const ChowPass = () => {
         Learn more about ChowPass
       </button>
       <div className=" flex justify-center items-center">
-        <button className="sm:hidden  bottom-24 absolute bg-white text-black z-10 px-7 py-3 rounded-md shadow-md hover:bg-gray-200">
+        <button className="sm:hidden  bottom-24 absolute bg-white text-black z-10 px-5 py-3 rounded-md shadow-md hover:bg-gray-200">
           Learn more about ChowPass
         </button>
       </div>

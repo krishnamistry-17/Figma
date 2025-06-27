@@ -279,7 +279,7 @@ const Header = () => {
               FAQs
             </a>
             <Link
-              to="/blog"
+              to="/blog/"
               className="text-black text-sm font-medium hover:text-green-bg block p-2"
             >
               Blog

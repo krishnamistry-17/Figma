@@ -13,6 +13,7 @@ import Contact from "./Pages/Contact/Contact";
 import ChowPass from "./Pages/ChowPass/ChowPass";
 import Relay from "./Pages/Relay/Relay";
 import Faqs from "./Pages/Faqs/Faqs";
+import BlogDetail from "./Pages/Blog/Categories/BlogDetail";
 
 AOS.init();
 
@@ -34,7 +35,10 @@ function App() {
           <Route path="faqs" element={<Faqs />} />
         </Route>
         <Route path="/faqs" element={<Faqs />} />
+
         <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:category/:id" element={<BlogDetail />} />
+
         <Route path="/contact" element={<Contact />} />
         <Route path="/chowpass" element={<ChowPass />} />
         <Route path="/relay" element={<Relay />}>
