@@ -14,7 +14,6 @@ import ChowPass from "./Pages/ChowPass/ChowPass";
 import Relay from "./Pages/Relay/Relay";
 import Faqs from "./Pages/Faqs/Faqs";
 import BlogDetail from "./Pages/Blog/Categories/BlogDetail";
-
 AOS.init();
 
 function App() {

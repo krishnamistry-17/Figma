@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import rightcloud from "../../../../assets/svg/rightcloud.svg";
 import bottom from "../../../../assets/images/bottom.png";
-import relayblog from "../../../../assets/images/relayblog.png";
 import { IoArrowBackOutline } from "react-icons/io5";
+import image7 from "../../../../assets/images/eight.png";
 import twits from "../../../../assets/svg/twits.svg";
 import linkd from "../../../../assets/svg/linkd.svg";
 import noodles from "../../../../assets/images/noodles.png";
@@ -13,7 +13,70 @@ import { useNavigate, useParams } from "react-router-dom";
 import BlogPlace from "../../BlogPlace/BlogPlace";
 import Footer from "../../../Footer/Footer";
 
-const Third = () => {
+const NSecond = () => {
+  const data1 = [
+    {
+      para: [
+        "",
+        <strong>Lagos, Nigeria — Chowdeck</strong>,
+        "Africa’s fastest growing on-demand online food, grocery, and medication delivery service, announces ",
+        <strong>Shoprite</strong>,
+        " Nigeria’s largest supermarket chain, as its latest grocery partner.",
+      ],
+    },
+
+    {
+      para1:
+        "A landmark partnership, Chowdeck will transform the online supermarket ecosystem by providing quick and easy logistics solutions for on-demand grocery orders from Shoprite through its mobile application and web store.",
+    },
+    {
+      para2:
+        "Already servicing hundreds of thousands of orders successfully each month, Chowdeck’s partnership with Shoprite will provide ease, comfort and convenience, for its customers, particularly disabled and limited-mobility individuals, who may be unable to run errands frequently in their day-to-day lives.",
+    },
+    {
+      para3:
+        "L-R, Vivien Iberi, Operational Excellence Manager at Shoprite; Kennedy Offor, Head of Sales and Partnership at Chowdeck; Tosin Olukoya, Strategy Manager at Shoprite; Hubertus Rick, CEO at Shoprite; Ad (2).jpg L-R: Vivien Iberi, Operations Excellence Manager at Shoprite; Kennedy Offor, Head of Sales and Partnerships at Chowdeck; Tosin Olukoya, Strategy Manager at Shoprite; Hubertus Rick, CEO at Shoprite; and Adaora Obiwulu, Corporate Communications Officer at Shoprite",
+    },
+    {
+      para4: [
+        "",
+        <strong>Kennedy Offor</strong>,
+        " Head of Sales and Partnerships at ",
+        <strong>Chowdeck</strong>,
+        " said, “This partnership represents a significant milestone on our quest to provide unparalleled customer satisfaction, convenience, by elevating the way Nigerians shop for groceries. Our customers can now enjoy the ease of access to Shoprite’s high-quality, expansive product range from the comfort of their homes. We’re incredibly delighted to join hands with Shoprite to bring the best of both worlds – meals and groceries – to our customers,”",
+      ],
+    },
+    {
+      heading: "About Chowdeck",
+    },
+    {
+      para5: [
+        "Chowdeck is Africa’s leading on-demand online food and grocery delivery service. With operations spanning across several cities in Nigeria including ",
+        <strong>Lagos, Abuja, Ibadan, Asaba, Benin City, Abeokuta </strong>,
+        "and ",
+        <strong>Port Harcourt</strong>,
+        " Chowdeck serves thousands of customers monthly, delivering meals, groceries, and medicine with ease, alleviating the burden of long queues and waiting times.",
+      ],
+    },
+    {
+      para6:
+        "Chowdeck was founded in October 2021 by Femi Aluko, Lanre Yusuf, and Olumide Ojo.",
+    },
+    {
+      para7: [
+        "For more information, please visit ",
+        <strong className="text-[#0c513f] font-bold">Chowdeck.com</strong>,
+        " or contact ",
+        <b className=" font-bold text-black">Press</b>,
+        " at",
+        <strong className=" text-[#0c513f] font-bold">
+          {" "}
+          press@chowdeck.com{" "}
+        </strong>,
+        "",
+      ],
+    },
+  ];
   const data = [
     {
       image: story2,
@@ -40,12 +103,10 @@ const Third = () => {
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
-  }, []);
-
+  });
   const handleClick = (id) => {
     navigate(`/blog/all/${id}`);
   };
-
   return (
     <div>
       <div className="bg-[#0c513f] h-[600px] w-full  overflow-hidden relative z-10">
@@ -67,7 +128,9 @@ const Third = () => {
             </div>
             <div className="">
               <p className="text-center text-white text-[18px] uppercase font-bold">
-                Chowdeck is Now in Ghana — Here’s What We Have in Store
+                Chowdeck Partners with Shoprite, Nigeria’s Largest Supermarket
+                <br />
+                Chain, to Transform Grocery Logistics Across the Country
               </p>
             </div>
           </div>
@@ -80,7 +143,7 @@ const Third = () => {
         <div className="flex justify-center items-center">
           <div className=" absolute bottom-0 z-0 ">
             <img
-              src={relayblog}
+              src={image7}
               alt="i7"
               className="w-[985px] md:h-[375px] px-4"
             />
@@ -106,53 +169,37 @@ const Third = () => {
             </div>
           </div>
           <div>
-            <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 md:pt-0 pt-6">
-              Dear Chowstars,
-            </p>
-            <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 pt-5">
-              We are beyond thrilled to introduce you to Relay, our on-demand
-              logistics innovation, here to revolutionise package deliveries one
-              at a time!
-            </p>
-            <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 pt-5">
-              We've been working behind the scenes to create something truly
-              special just for you! Relay is not just another logistics
-              solution—it's a game-changer designed to make your life easier and
-              smoother than ever before.
-            </p>
-            <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 pt-5">
-              Relay’s got some cool features too! Check them out:
-            </p>
-            <ul>
-              <li className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 pt-5 flex">
-                <p className="w-2 h-2 bg-black rounded-full mr-4 mt-2.5 "></p>
-                <b> Package Protection-</b>Your parcels can be insured against
-                any incidents for a small fee!
-              </li>
-              <li className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 pt-5 flex">
-                <p className="w-2 h-2 bg-black rounded-full mr-4 mt-2.5 "></p>
-                <b> Delivery Notes -</b>Leave customised delivery instructions
-                for each rider on their trips!
-              </li>
-              <li className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 pt-5 flex">
-                <p className="w-2 h-2 bg-black rounded-full mr-4 mt-2.5 "></p>
-                <b>Delivery Pin-</b>Secure your deliveries with our nifty pin
-                feature! Deliveries can only be confirmed when you offer a pin!
-              </li>
-            </ul>
-            <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 pt-13">
-              To celebrate our launch, we’re offering all Chowstars a special
-              first-time use discount code! Use ‘RELAY’ at checkout to redeem a
-              10% discount on your first package delivery!
-            </p>
-            <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 pt-5">
-              We’re thoroughly excited for our journey ahead! Thank you for
-              staying on track with us!
-            </p>
-            <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 pt-5">
-              With love,
-              <br /> Team Chowdeck
-            </p>
+            {data1.map((item, index) => (
+              <div key={index} className="">
+                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 md:pt-0 pt-4">
+                  {item.para}
+                </p>
+                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5  md:pt-2">
+                  {item.para1}
+                </p>
+                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5  md:pt-2">
+                  {item.para2}
+                </p>
+                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5  md:pt-2">
+                  {item.para3}
+                </p>
+                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5  md:pt-2">
+                  {item.para4}
+                </p>
+                <p className="sm:text-[24px] text-[18px] text-black font-bold md:px-11 px-5  ">
+                  {item.heading}
+                </p>
+                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5  ">
+                  {item.para5}
+                </p>
+                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5  ">
+                  {item.para6}
+                </p>
+                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5  ">
+                  {item.para7}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
@@ -209,4 +256,4 @@ const Third = () => {
   );
 };
 
-export default Third;
+export default NSecond;

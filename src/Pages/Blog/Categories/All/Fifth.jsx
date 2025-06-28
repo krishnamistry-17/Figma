@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import rightcloud from "../../../../assets/svg/rightcloud.svg";
 import bottom from "../../../../assets/images/bottom.png";
-import image7 from "../../../../assets/images/image7.png";
+import image7 from "../../../../assets/images/fifth.png";
 import { IoArrowBackOutline } from "react-icons/io5";
 import twits from "../../../../assets/svg/twits.svg";
 import linkd from "../../../../assets/svg/linkd.svg";
@@ -12,7 +12,8 @@ import story3 from "../../../../assets/images/rstory3.png";
 import { useNavigate, useParams } from "react-router-dom";
 import BlogPlace from "../../BlogPlace/BlogPlace";
 import Footer from "../../../Footer/Footer";
-const First = () => {
+
+const Fifth = () => {
   const data = [
     {
       image: story2,
@@ -48,71 +49,53 @@ const First = () => {
 
   const data1 = [
     {
-      para: [
-        "After months of planning, training, and listening, we’re excited to officially launch ",
-        <strong
-          key="bold
-        "
-        >
-          Chowdeck in Ghana!
-        </strong>,
-        "It’s our first step outside Nigeria and it feels right to begin this new chapter in Accra, a city buzzing with culture, energy, and an appetite for great food delivered fast.",
-      ],
+      para: "We're thrilled to announce a landmark partnership between Chowdeck and Chicken Republic, aimed at bringing you stress-free, affordable meals this August and beyond.",
     },
-
+    { heading: "The Big News " },
     {
-      para: "We’ve always believed that delivery can be more than just logistics. It’s about creating a seamless bridge between people and the things they love — whether that’s a hot plate of waakye or household essentials delivered just in time.",
+      para: "Chowdeck has become the exclusive delivery partner for Chicken Republic in Lagos and Ibadan. This collaboration extends our existing relationship, which already covers eight Nigerian cities and over 90 Chicken Republic outlets.",
     },
   ];
   const data2 = [
     {
-      heading: "Investing in our riders, building with intention",
-    },
-    {
-      para: "Building upon a successful launch in Nigeria in 2021, where we've already connected with 1.5 million users through a network of over 20,000 riders across 11 cities, our expansion into Ghana signifies a pivotal step towards a larger regional vision.",
-    },
-    {
-      para: "Recognising that exceptional service hinges on a well-equipped rider network, we prioritised comprehensive training initiatives even before our launch in Ghana. This foundational training covers critical areas such as professional conduct, efficient navigation and utilisation of our app, exemplary customer service skills, and the meticulous handling of deliveries to ensure quality.",
+      heading: "What This Means for You",
     },
     {
       para: [
-        "To further empower our riders and foster a culture of achievement, we've introduced ",
-        <strong key="bold">Rider Games </strong>,
-        ",an engaging performance-based reward system. This innovative program allows riders to earn tangible cash bonuses by consistently meeting and exceeding their delivery targets, directly incentivising efficiency and dedication.",
+        "1. Enhanced Quality: Our partnership ensures your favorite Chicken Republic meals reach you in prime condition on time. ",
+        <br />,
+        "2. Affordable Delivery: We've optimized our processes to bring down delivery costs for more accessibility.",
+        <br />,
+        "3. More Affordable Meals: Enjoy special deals and offers exclusive to only Chowdeck users.",
+      ],
+    },
+    { heading1: "August Special: Refuel Price Don Crash!" },
+    {
+      para1: [
+        "To kick off this partnership, we're offering the popular Refuel Combo for just ",
+        <strong>₦1000 </strong>,
+        " - that's 50% off the regular price of ₦2000",
+      ],
+    },
+    { heading2: "How to Order" },
+    {
+      para3: [
+        "1. Open your Chowdeck app",
+        <br />,
+        "2. Choose your meals and complete your order",
+        <br />,
+        "3. Sit back and relax while we deliver your food",
       ],
     },
     {
-      para: [
-        "Beyond immediate earnings, we are also committed to the long-term financial well-being of our riders. Through our rider loan program, active riders gain access to loans of up to ",
-        <strong key="bold">GH₵ 1,000</strong>,
-        " providing crucial financial flexibility and support.",
-      ],
+      para4:
+        "This August, let Chowdeck and Chicken Republic handle your meals so you can focus on what really matters. Whether you're working late, too tired to cook, or simply craving some delicious chicken, we've got you covered.",
     },
     {
-      para: "Importantly, our commitment to development is ongoing; these training programs and support systems are not one-time events but will be implemented periodically to ensure continuous improvement and adaptation.",
+      minipara: "Stay tuned for more exciting offers and updates!",
     },
-    {
-      para: "Our entry into Ghana is not simply a market expansion; it's a commitment to sustained growth alongside the Ghanaian community, upholding high service standards, and generating meaningful economic opportunities. We recognise the dynamic landscape of Ghana, fuelled by rapid urbanisation and a clear consumer appetite for convenience, speed, and reliability.",
-    },
-    {
-      heading1: "Come ride with us",
-    },
-    {
-      newpara: [
-        " The ",
-        <strong>Chowdeck app</strong>,
-        " is available for download now on the ",
-        <a className="text-green-800 font-bold underline">Google Play Store</a>,
-        " and ",
-        <a className="text-green-800 font-bold underline">Apple App Store.</a>,
-        " Whether you’re a business looking for better logistics, a rider ready to earn more, or a customer who just wants their food on time — welcome. We’re glad you’re here.",
-      ],
-    },
-    {
-      minipara: "Let’s build this together.",
-    },
-    { end: " With love," },
-    { end1: "Team Chowdeck" },
+    { end: " Bon appétit!" },
+    { end1: "Chowdeck" },
   ];
 
   {
@@ -198,21 +181,33 @@ const First = () => {
                 <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 md:pt-0 pt-4">
                   {item.para}
                 </p>
+                <p className="sm:text-[24px] text-[18px] font-bold text-black md:px-11 px-5  pt-4">
+                  {item.heading}
+                </p>
               </div>
             ))}
             {data2.map((item, index) => (
               <div key={index} className="">
-                <h3 className="sm:text-[24px] text-[18px] text-black font-bold pt-5 md:pl-11 pl-4">
+                <h3 className="sm:text-[24px] text-[18px] text-black font-bold pt-4  md:pl-11 pl-4">
                   {item.heading}
                 </h3>
                 <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 ">
                   {item.para}
                 </p>
-                <p className="sm:text-[24px] text-[18px] text-black font-bold pt-5 md:pl-11 pl-4">
+                <h3 className="sm:text-[24px] text-[18px] text-black font-bold pt-4  md:pl-11 pl-4">
                   {item.heading1}
+                </h3>
+                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 ">
+                  {item.para1}
+                </p>
+                <h3 className="sm:text-[24px] text-[18px] text-black font-bold  md:pl-11 pl-4">
+                  {item.heading2}
+                </h3>
+                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 ">
+                  {item.para3}
                 </p>
                 <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 ">
-                  {item.newpara}
+                  {item.para4}
                 </p>
                 <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 ">
                   {item.minipara}
@@ -281,4 +276,4 @@ const First = () => {
   );
 };
 
-export default First;
+export default Fifth;

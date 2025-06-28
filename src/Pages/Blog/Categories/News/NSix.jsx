@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import rightcloud from "../../../../assets/svg/rightcloud.svg";
 import bottom from "../../../../assets/images/bottom.png";
-import image7 from "../../../../assets/images/image7.png";
+import relayblog from "../../../../assets/images/relayblog.png";
 import { IoArrowBackOutline } from "react-icons/io5";
 import twits from "../../../../assets/svg/twits.svg";
 import linkd from "../../../../assets/svg/linkd.svg";
@@ -12,7 +12,8 @@ import story3 from "../../../../assets/images/rstory3.png";
 import { useNavigate, useParams } from "react-router-dom";
 import BlogPlace from "../../BlogPlace/BlogPlace";
 import Footer from "../../../Footer/Footer";
-const First = () => {
+
+const NSix = () => {
   const data = [
     {
       image: story2,
@@ -33,7 +34,6 @@ const First = () => {
       btn: "Read More",
     },
   ];
-
   const { id } = useParams();
   const blogId = parseInt(id);
   const navigate = useNavigate();
@@ -46,93 +46,6 @@ const First = () => {
     navigate(`/blog/all/${id}`);
   };
 
-  const data1 = [
-    {
-      para: [
-        "After months of planning, training, and listening, we’re excited to officially launch ",
-        <strong
-          key="bold
-        "
-        >
-          Chowdeck in Ghana!
-        </strong>,
-        "It’s our first step outside Nigeria and it feels right to begin this new chapter in Accra, a city buzzing with culture, energy, and an appetite for great food delivered fast.",
-      ],
-    },
-
-    {
-      para: "We’ve always believed that delivery can be more than just logistics. It’s about creating a seamless bridge between people and the things they love — whether that’s a hot plate of waakye or household essentials delivered just in time.",
-    },
-  ];
-  const data2 = [
-    {
-      heading: "Investing in our riders, building with intention",
-    },
-    {
-      para: "Building upon a successful launch in Nigeria in 2021, where we've already connected with 1.5 million users through a network of over 20,000 riders across 11 cities, our expansion into Ghana signifies a pivotal step towards a larger regional vision.",
-    },
-    {
-      para: "Recognising that exceptional service hinges on a well-equipped rider network, we prioritised comprehensive training initiatives even before our launch in Ghana. This foundational training covers critical areas such as professional conduct, efficient navigation and utilisation of our app, exemplary customer service skills, and the meticulous handling of deliveries to ensure quality.",
-    },
-    {
-      para: [
-        "To further empower our riders and foster a culture of achievement, we've introduced ",
-        <strong key="bold">Rider Games </strong>,
-        ",an engaging performance-based reward system. This innovative program allows riders to earn tangible cash bonuses by consistently meeting and exceeding their delivery targets, directly incentivising efficiency and dedication.",
-      ],
-    },
-    {
-      para: [
-        "Beyond immediate earnings, we are also committed to the long-term financial well-being of our riders. Through our rider loan program, active riders gain access to loans of up to ",
-        <strong key="bold">GH₵ 1,000</strong>,
-        " providing crucial financial flexibility and support.",
-      ],
-    },
-    {
-      para: "Importantly, our commitment to development is ongoing; these training programs and support systems are not one-time events but will be implemented periodically to ensure continuous improvement and adaptation.",
-    },
-    {
-      para: "Our entry into Ghana is not simply a market expansion; it's a commitment to sustained growth alongside the Ghanaian community, upholding high service standards, and generating meaningful economic opportunities. We recognise the dynamic landscape of Ghana, fuelled by rapid urbanisation and a clear consumer appetite for convenience, speed, and reliability.",
-    },
-    {
-      heading1: "Come ride with us",
-    },
-    {
-      newpara: [
-        " The ",
-        <strong>Chowdeck app</strong>,
-        " is available for download now on the ",
-        <a className="text-green-800 font-bold underline">Google Play Store</a>,
-        " and ",
-        <a className="text-green-800 font-bold underline">Apple App Store.</a>,
-        " Whether you’re a business looking for better logistics, a rider ready to earn more, or a customer who just wants their food on time — welcome. We’re glad you’re here.",
-      ],
-    },
-    {
-      minipara: "Let’s build this together.",
-    },
-    { end: " With love," },
-    { end1: "Team Chowdeck" },
-  ];
-
-  {
-    /*import { useEffect } from "react";
-import { useParams } from "react-router-dom";
-
-const First = () => {
-  const { id } = useParams(); // get blog id from route
-
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' }); // scroll to top on load
-  }, []);
-  
-  const blogId = parseInt(id); // if you need it
-
-  // render content based on blogId here
-  ...
-};
- */
-  }
   return (
     <div>
       <div className="bg-[#0c513f] h-[600px] w-full  overflow-hidden relative z-10">
@@ -167,7 +80,7 @@ const First = () => {
         <div className="flex justify-center items-center">
           <div className=" absolute bottom-0 z-0 ">
             <img
-              src={image7}
+              src={relayblog}
               alt="i7"
               className="w-[985px] md:h-[375px] px-4"
             />
@@ -193,38 +106,53 @@ const First = () => {
             </div>
           </div>
           <div>
-            {data1.map((item, index) => (
-              <div key={index} className="">
-                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 md:pt-0 pt-4">
-                  {item.para}
-                </p>
-              </div>
-            ))}
-            {data2.map((item, index) => (
-              <div key={index} className="">
-                <h3 className="sm:text-[24px] text-[18px] text-black font-bold pt-5 md:pl-11 pl-4">
-                  {item.heading}
-                </h3>
-                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 ">
-                  {item.para}
-                </p>
-                <p className="sm:text-[24px] text-[18px] text-black font-bold pt-5 md:pl-11 pl-4">
-                  {item.heading1}
-                </p>
-                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 ">
-                  {item.newpara}
-                </p>
-                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 ">
-                  {item.minipara}
-                </p>
-                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 ">
-                  {item.end}
-                </p>
-                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 -mt-4.5">
-                  {item.end1}
-                </p>
-              </div>
-            ))}
+            <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 md:pt-0 pt-6">
+              Dear Chowstars,
+            </p>
+            <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 pt-5">
+              We are beyond thrilled to introduce you to Relay, our on-demand
+              logistics innovation, here to revolutionise package deliveries one
+              at a time!
+            </p>
+            <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 pt-5">
+              We've been working behind the scenes to create something truly
+              special just for you! Relay is not just another logistics
+              solution—it's a game-changer designed to make your life easier and
+              smoother than ever before.
+            </p>
+            <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 pt-5">
+              Relay’s got some cool features too! Check them out:
+            </p>
+            <ul>
+              <li className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 pt-5 flex">
+                <p className="w-2 h-2 bg-black rounded-full mr-4 mt-2.5 "></p>
+                <b> Package Protection-</b>Your parcels can be insured against
+                any incidents for a small fee!
+              </li>
+              <li className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 pt-5 flex">
+                <p className="w-2 h-2 bg-black rounded-full mr-4 mt-2.5 "></p>
+                <b> Delivery Notes -</b>Leave customised delivery instructions
+                for each rider on their trips!
+              </li>
+              <li className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 pt-5 flex">
+                <p className="w-2 h-2 bg-black rounded-full mr-4 mt-2.5 "></p>
+                <b>Delivery Pin-</b>Secure your deliveries with our nifty pin
+                feature! Deliveries can only be confirmed when you offer a pin!
+              </li>
+            </ul>
+            <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 pt-13">
+              To celebrate our launch, we’re offering all Chowstars a special
+              first-time use discount code! Use ‘RELAY’ at checkout to redeem a
+              10% discount on your first package delivery!
+            </p>
+            <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 pt-5">
+              We’re thoroughly excited for our journey ahead! Thank you for
+              staying on track with us!
+            </p>
+            <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 pt-5">
+              With love,
+              <br /> Team Chowdeck
+            </p>
           </div>
         </div>
       </div>
@@ -281,4 +209,4 @@ const First = () => {
   );
 };
 
-export default First;
+export default NSix;

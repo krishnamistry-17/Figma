@@ -5,8 +5,6 @@ import image8 from "../../../../assets/images/image8.png";
 import image10 from "../../../../assets/images/image10.png";
 import image11 from "../../../../assets/images/image11.png";
 import image12 from "../../../../assets/images/image12.png";
-import image13 from "../../../../assets/images/image13.png";
-import image14 from "../../../../assets/images/image14.png";
 import image16 from "../../../../assets/images/image16.png";
 
 import { useNavigate, useParams } from "react-router-dom";
@@ -55,27 +53,6 @@ const All = () => {
       d1: "The world flourishes when women lead. For International Women's Day, celebrates  brilliant women.",
       btn: "Read More",
     },
-    {
-      id: 6,
-      image: image13,
-      p1: "Celebrating Women-Led Brands in the Chowdeck Ecosystem",
-      d1: "The world flourishes when women lead. For  Women's Day, celebrates women.",
-      btn: "Read More",
-    },
-    {
-      id: 7,
-      image: image14,
-      p1: "#AcceleratingYou: Celebrating Women-Led Brands in the Chowdeck Ecosystem",
-      d1: "The world flourishes when women lead. For International Women's Day, celebrates  brilliant women.",
-      btn: "Read More",
-    },
-    {
-      id: 8,
-      image: image16,
-      p1: "Get Free Deliveries and Reduced Service Fees with Chowpass!",
-      d1: " What if we told you there’s a way to save on delivery fees, service charges, and surge fees? It's called Chowpass!",
-      btn: "Read More",
-    },
   ];
 
   const [selectBlogId, setSelectBlogId] = useState(null);
@@ -87,7 +64,6 @@ const All = () => {
 
   const navigate = useNavigate();
   const selectedBlog = data.find((item) => item.id === selectBlogId);
-  console.log("selectedBlog :", selectedBlog);
 
   const handleClick = (id) => {
     navigate(`/blog/all/${id}`);

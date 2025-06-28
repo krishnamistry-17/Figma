@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import rightcloud from "../../../../assets/svg/rightcloud.svg";
 import bottom from "../../../../assets/images/bottom.png";
-import image7 from "../../../../assets/images/image7.png";
 import { IoArrowBackOutline } from "react-icons/io5";
+import image7 from "../../../../assets/images/seven.png";
 import twits from "../../../../assets/svg/twits.svg";
 import linkd from "../../../../assets/svg/linkd.svg";
 import noodles from "../../../../assets/images/noodles.png";
@@ -12,7 +12,58 @@ import story3 from "../../../../assets/images/rstory3.png";
 import { useNavigate, useParams } from "react-router-dom";
 import BlogPlace from "../../BlogPlace/BlogPlace";
 import Footer from "../../../Footer/Footer";
-const First = () => {
+
+const NFirst = () => {
+  const data1 = [
+    {
+      para: "As we head full swing into the holiday season, we’re prioritising the comfort of our beloved Chowstars. We’ve partnered with Shaaré to bring you sweet discounts on home cleaning sessions all December long!",
+    },
+
+    {
+      para1:
+        "Shaaré is a home cleaning service that prides itself in hassle-free, affordable cleaning. With a wide range of services from the cleaning of showers, baths, and sinks in bathrooms to the wardrobe reorganisation, window cleaning, dish washing, fan cleaning and more, Shaaré’s services prioritise comfort at its finest and most accessible.",
+    },
+    {
+      para2:
+        "Chowstars will get up to 10% off home cleaning sessions, depending on their Chowscore Tier. Here’s how it works with each tier:",
+    },
+    {
+      detail: [
+        " ",
+        <strong>Starter -</strong>,
+        " 10% Off 1 session",
+        <br />,
+        <strong>Next Rated -</strong>,
+        "10% Off 2 sessions.",
+        <br />,
+        <strong>OG -</strong>,
+        "10% Off 3 sessions.",
+        <br />,
+        <strong>Connoisseur - </strong>,
+        "10% Off 4 sessions.",
+        <br />,
+        <strong>Prime Minister - </strong>,
+        "10% Off 5 sessions.",
+      ],
+    },
+  ];
+  const data2 = [
+    {
+      heading:
+        "Rack up Chowscore points by rating our Champion riders, restaurants, and leaving tips.",
+    },
+    {
+      para: [
+        "To redeem your discount, please visit the ‘Profile’ page and follow the prompts on screen. For more information on Shaaré, please visit their store ",
+        <a className=" underline text-[#0c513f] font-semibold"> here.</a>,
+        "",
+      ],
+    },
+
+    {
+      minipara: "Enjoy your comfortable Christmas, Chowstars!",
+    },
+  ];
   const data = [
     {
       image: story2,
@@ -33,106 +84,16 @@ const First = () => {
       btn: "Read More",
     },
   ];
-
   const { id } = useParams();
   const blogId = parseInt(id);
   const navigate = useNavigate();
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
-  }, []);
-
+  });
   const handleClick = (id) => {
     navigate(`/blog/all/${id}`);
   };
-
-  const data1 = [
-    {
-      para: [
-        "After months of planning, training, and listening, we’re excited to officially launch ",
-        <strong
-          key="bold
-        "
-        >
-          Chowdeck in Ghana!
-        </strong>,
-        "It’s our first step outside Nigeria and it feels right to begin this new chapter in Accra, a city buzzing with culture, energy, and an appetite for great food delivered fast.",
-      ],
-    },
-
-    {
-      para: "We’ve always believed that delivery can be more than just logistics. It’s about creating a seamless bridge between people and the things they love — whether that’s a hot plate of waakye or household essentials delivered just in time.",
-    },
-  ];
-  const data2 = [
-    {
-      heading: "Investing in our riders, building with intention",
-    },
-    {
-      para: "Building upon a successful launch in Nigeria in 2021, where we've already connected with 1.5 million users through a network of over 20,000 riders across 11 cities, our expansion into Ghana signifies a pivotal step towards a larger regional vision.",
-    },
-    {
-      para: "Recognising that exceptional service hinges on a well-equipped rider network, we prioritised comprehensive training initiatives even before our launch in Ghana. This foundational training covers critical areas such as professional conduct, efficient navigation and utilisation of our app, exemplary customer service skills, and the meticulous handling of deliveries to ensure quality.",
-    },
-    {
-      para: [
-        "To further empower our riders and foster a culture of achievement, we've introduced ",
-        <strong key="bold">Rider Games </strong>,
-        ",an engaging performance-based reward system. This innovative program allows riders to earn tangible cash bonuses by consistently meeting and exceeding their delivery targets, directly incentivising efficiency and dedication.",
-      ],
-    },
-    {
-      para: [
-        "Beyond immediate earnings, we are also committed to the long-term financial well-being of our riders. Through our rider loan program, active riders gain access to loans of up to ",
-        <strong key="bold">GH₵ 1,000</strong>,
-        " providing crucial financial flexibility and support.",
-      ],
-    },
-    {
-      para: "Importantly, our commitment to development is ongoing; these training programs and support systems are not one-time events but will be implemented periodically to ensure continuous improvement and adaptation.",
-    },
-    {
-      para: "Our entry into Ghana is not simply a market expansion; it's a commitment to sustained growth alongside the Ghanaian community, upholding high service standards, and generating meaningful economic opportunities. We recognise the dynamic landscape of Ghana, fuelled by rapid urbanisation and a clear consumer appetite for convenience, speed, and reliability.",
-    },
-    {
-      heading1: "Come ride with us",
-    },
-    {
-      newpara: [
-        " The ",
-        <strong>Chowdeck app</strong>,
-        " is available for download now on the ",
-        <a className="text-green-800 font-bold underline">Google Play Store</a>,
-        " and ",
-        <a className="text-green-800 font-bold underline">Apple App Store.</a>,
-        " Whether you’re a business looking for better logistics, a rider ready to earn more, or a customer who just wants their food on time — welcome. We’re glad you’re here.",
-      ],
-    },
-    {
-      minipara: "Let’s build this together.",
-    },
-    { end: " With love," },
-    { end1: "Team Chowdeck" },
-  ];
-
-  {
-    /*import { useEffect } from "react";
-import { useParams } from "react-router-dom";
-
-const First = () => {
-  const { id } = useParams(); // get blog id from route
-
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' }); // scroll to top on load
-  }, []);
-  
-  const blogId = parseInt(id); // if you need it
-
-  // render content based on blogId here
-  ...
-};
- */
-  }
   return (
     <div>
       <div className="bg-[#0c513f] h-[600px] w-full  overflow-hidden relative z-10">
@@ -154,7 +115,7 @@ const First = () => {
             </div>
             <div className="">
               <p className="text-center text-white text-[18px] uppercase font-bold">
-                Chowdeck is Now in Ghana — Here’s What We Have in Store
+                Sparkle with Shaaré
               </p>
             </div>
           </div>
@@ -198,30 +159,28 @@ const First = () => {
                 <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 md:pt-0 pt-4">
                   {item.para}
                 </p>
+                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5  md:pt-4">
+                  {item.para1}
+                </p>
+                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5  md:pt-4">
+                  {item.para2}
+                </p>
+                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5  ">
+                  {item.detail}
+                </p>
               </div>
             ))}
             {data2.map((item, index) => (
               <div key={index} className="">
-                <h3 className="sm:text-[24px] text-[18px] text-black font-bold pt-5 md:pl-11 pl-4">
+                <h3 className="sm:text-[24px] text-[18px] text-black  pt-5 md:pl-11 pl-4">
                   {item.heading}
                 </h3>
                 <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 ">
                   {item.para}
                 </p>
-                <p className="sm:text-[24px] text-[18px] text-black font-bold pt-5 md:pl-11 pl-4">
-                  {item.heading1}
-                </p>
-                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 ">
-                  {item.newpara}
-                </p>
+
                 <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 ">
                   {item.minipara}
-                </p>
-                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 ">
-                  {item.end}
-                </p>
-                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 -mt-4.5">
-                  {item.end1}
                 </p>
               </div>
             ))}
@@ -281,4 +240,4 @@ const First = () => {
   );
 };
 
-export default First;
+export default NFirst;

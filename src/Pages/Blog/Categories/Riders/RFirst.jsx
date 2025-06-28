@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import rightcloud from "../../../../assets/svg/rightcloud.svg";
 import bottom from "../../../../assets/images/bottom.png";
-import image7 from "../../../../assets/images/image7.png";
+import image7 from "../../../../assets/images/eleven.png";
 import { IoArrowBackOutline } from "react-icons/io5";
 import twits from "../../../../assets/svg/twits.svg";
 import linkd from "../../../../assets/svg/linkd.svg";
@@ -12,7 +12,7 @@ import story3 from "../../../../assets/images/rstory3.png";
 import { useNavigate, useParams } from "react-router-dom";
 import BlogPlace from "../../BlogPlace/BlogPlace";
 import Footer from "../../../Footer/Footer";
-const First = () => {
+const RFirst = () => {
   const data = [
     {
       image: story2,
@@ -48,91 +48,44 @@ const First = () => {
 
   const data1 = [
     {
-      para: [
-        "After months of planning, training, and listening, we’re excited to officially launch ",
-        <strong
-          key="bold
-        "
-        >
-          Chowdeck in Ghana!
-        </strong>,
-        "It’s our first step outside Nigeria and it feels right to begin this new chapter in Accra, a city buzzing with culture, energy, and an appetite for great food delivered fast.",
-      ],
+      para: "We're excited to announce that Chowdeck has been accepted to Y Combinator’s Summer Batch 2022, joining a league of extraordinary companies like Stripe, Airbnb, Paystack, and more, who’ve been through the YC process.",
     },
 
     {
-      para: "We’ve always believed that delivery can be more than just logistics. It’s about creating a seamless bridge between people and the things they love — whether that’s a hot plate of waakye or household essentials delivered just in time.",
+      para: "This year, the batch was super selective, with roughly 1.2% of companies accepted out of 19 000; we do not take Chowdeck’s place in this cohort for granted. Over the next couple of weeks, we’ll be learning everything it takes to be better entrepreneurs and to serve our customers better. ",
     },
   ];
   const data2 = [
     {
-      heading: "Investing in our riders, building with intention",
+      heading: "Running a business is both hard and rewarding",
     },
     {
-      para: "Building upon a successful launch in Nigeria in 2021, where we've already connected with 1.5 million users through a network of over 20,000 riders across 11 cities, our expansion into Ghana signifies a pivotal step towards a larger regional vision.",
+      para: "As first-time founders, my co-founders and I are learning to embrace the highs and lows of building a product and are now at a stage where it’s critical for us to get better at being entrepreneurs.",
     },
     {
-      para: "Recognising that exceptional service hinges on a well-equipped rider network, we prioritised comprehensive training initiatives even before our launch in Ghana. This foundational training covers critical areas such as professional conduct, efficient navigation and utilisation of our app, exemplary customer service skills, and the meticulous handling of deliveries to ensure quality.",
+      para: "As part of the 2022 Summer cohort, we’ll be working hard over the next couple of weeks to learn everything it takes to serve you and get you your meals even faster ",
+    },
+
+    {
+      heading1: "We’re not perfect, but we promise to always do better",
     },
     {
-      para: [
-        "To further empower our riders and foster a culture of achievement, we've introduced ",
-        <strong key="bold">Rider Games </strong>,
-        ",an engaging performance-based reward system. This innovative program allows riders to earn tangible cash bonuses by consistently meeting and exceeding their delivery targets, directly incentivising efficiency and dedication.",
-      ],
+      newpara:
+        "With every growth stage comes new kinds of challenges. It’ll be dishonest to not acknowledge the times we stepped on your toes by messing up your deliveries. Sincerely, we apologise. There are no excuses, and so we promise to do better.",
     },
     {
-      para: [
-        "Beyond immediate earnings, we are also committed to the long-term financial well-being of our riders. Through our rider loan program, active riders gain access to loans of up to ",
-        <strong key="bold">GH₵ 1,000</strong>,
-        " providing crucial financial flexibility and support.",
-      ],
+      newpara:
+        "Your constant feedback has gotten us this far, but there’s so much more to do.",
     },
     {
-      para: "Importantly, our commitment to development is ongoing; these training programs and support systems are not one-time events but will be implemented periodically to ensure continuous improvement and adaptation.",
+      newpara:
+        "If there are issues you currently experience while using Chowdeck, you can always email us via our contact page. We are constantly improving the experience of our products and your feedback will be critical in helping us get our priorities right.",
     },
     {
-      para: "Our entry into Ghana is not simply a market expansion; it's a commitment to sustained growth alongside the Ghanaian community, upholding high service standards, and generating meaningful economic opportunities. We recognise the dynamic landscape of Ghana, fuelled by rapid urbanisation and a clear consumer appetite for convenience, speed, and reliability.",
+      minipara: "Thank you for being here. ",
     },
-    {
-      heading1: "Come ride with us",
-    },
-    {
-      newpara: [
-        " The ",
-        <strong>Chowdeck app</strong>,
-        " is available for download now on the ",
-        <a className="text-green-800 font-bold underline">Google Play Store</a>,
-        " and ",
-        <a className="text-green-800 font-bold underline">Apple App Store.</a>,
-        " Whether you’re a business looking for better logistics, a rider ready to earn more, or a customer who just wants their food on time — welcome. We’re glad you’re here.",
-      ],
-    },
-    {
-      minipara: "Let’s build this together.",
-    },
-    { end: " With love," },
-    { end1: "Team Chowdeck" },
   ];
 
-  {
-    /*import { useEffect } from "react";
-import { useParams } from "react-router-dom";
-
-const First = () => {
-  const { id } = useParams(); // get blog id from route
-
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' }); // scroll to top on load
-  }, []);
-  
-  const blogId = parseInt(id); // if you need it
-
-  // render content based on blogId here
-  ...
-};
- */
-  }
   return (
     <div>
       <div className="bg-[#0c513f] h-[600px] w-full  overflow-hidden relative z-10">
@@ -154,7 +107,7 @@ const First = () => {
             </div>
             <div className="">
               <p className="text-center text-white text-[18px] uppercase font-bold">
-                Chowdeck is Now in Ghana — Here’s What We Have in Store
+                Chowdeck Joins Y Combinator's S'22 Batch
               </p>
             </div>
           </div>
@@ -220,7 +173,7 @@ const First = () => {
                 <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 ">
                   {item.end}
                 </p>
-                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 -mt-4.5">
+                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 -mt-4.5 md:pb-0 pb-7">
                   {item.end1}
                 </p>
               </div>
@@ -281,4 +234,4 @@ const First = () => {
   );
 };
 
-export default First;
+export default RFirst;

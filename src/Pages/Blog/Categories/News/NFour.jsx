@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import rightcloud from "../../../../assets/svg/rightcloud.svg";
 import bottom from "../../../../assets/images/bottom.png";
-import image7 from "../../../../assets/images/image7.png";
+import image7 from "../../../../assets/images/six.png";
 import { IoArrowBackOutline } from "react-icons/io5";
 import twits from "../../../../assets/svg/twits.svg";
 import linkd from "../../../../assets/svg/linkd.svg";
@@ -12,7 +12,8 @@ import story3 from "../../../../assets/images/rstory3.png";
 import { useNavigate, useParams } from "react-router-dom";
 import BlogPlace from "../../BlogPlace/BlogPlace";
 import Footer from "../../../Footer/Footer";
-const First = () => {
+
+const NFour = () => {
   const data = [
     {
       image: story2,
@@ -48,71 +49,56 @@ const First = () => {
 
   const data1 = [
     {
-      para: [
-        "After months of planning, training, and listening, we’re excited to officially launch ",
-        <strong
-          key="bold
-        "
-        >
-          Chowdeck in Ghana!
-        </strong>,
-        "It’s our first step outside Nigeria and it feels right to begin this new chapter in Accra, a city buzzing with culture, energy, and an appetite for great food delivered fast.",
-      ],
+      para: "We’re thrilled to announce a game-changing collaboration in our world of food delivery! This exciting partnership presents FoodCourt’s diverse and delicious menu offerings with Chowdeck’s efficient and reliable delivery service.",
     },
-
+    { heading: "What’s Cooking? " },
     {
-      para: "We’ve always believed that delivery can be more than just logistics. It’s about creating a seamless bridge between people and the things they love — whether that’s a hot plate of waakye or household essentials delivered just in time.",
+      para0:
+        "Our partnership with FoodCourt introduces culinary delights to the Chowdeck platform. You can now enjoy menu featuring popular FoodCourt outlets:",
+    },
+    {
+      para1: [
+        "1. Chow Asian: Diverse Asian cuisines",
+        <br />,
+        "2. Red Pepper: Authentic Naija flavors",
+        <br />,
+        "3. Wrap City: Your go-to shawarmas and wraps",
+        <br />,
+        "4. Good Greens: Fresh, veggie-packed options",
+        <br />,
+        "5. Jollof & Co: Perfect Jollof and Fried rice",
+        <br />,
+        "6. The Cocktail Club: Cocktails and mocktails",
+      ],
     },
   ];
   const data2 = [
+    { heading2: "Where and How to Order" },
     {
-      heading: "Investing in our riders, building with intention",
+      para: "FoodCourt is now live on Chowdeck in Lagos, serving cities on island, coming soon to the mainland. You can place your order through:",
     },
     {
-      para: "Building upon a successful launch in Nigeria in 2021, where we've already connected with 1.5 million users through a network of over 20,000 riders across 11 cities, our expansion into Ghana signifies a pivotal step towards a larger regional vision.",
-    },
-    {
-      para: "Recognising that exceptional service hinges on a well-equipped rider network, we prioritised comprehensive training initiatives even before our launch in Ghana. This foundational training covers critical areas such as professional conduct, efficient navigation and utilisation of our app, exemplary customer service skills, and the meticulous handling of deliveries to ensure quality.",
-    },
-    {
-      para: [
-        "To further empower our riders and foster a culture of achievement, we've introduced ",
-        <strong key="bold">Rider Games </strong>,
-        ",an engaging performance-based reward system. This innovative program allows riders to earn tangible cash bonuses by consistently meeting and exceeding their delivery targets, directly incentivising efficiency and dedication.",
-      ],
-    },
-    {
-      para: [
-        "Beyond immediate earnings, we are also committed to the long-term financial well-being of our riders. Through our rider loan program, active riders gain access to loans of up to ",
-        <strong key="bold">GH₵ 1,000</strong>,
-        " providing crucial financial flexibility and support.",
-      ],
-    },
-    {
-      para: "Importantly, our commitment to development is ongoing; these training programs and support systems are not one-time events but will be implemented periodically to ensure continuous improvement and adaptation.",
-    },
-    {
-      para: "Our entry into Ghana is not simply a market expansion; it's a commitment to sustained growth alongside the Ghanaian community, upholding high service standards, and generating meaningful economic opportunities. We recognise the dynamic landscape of Ghana, fuelled by rapid urbanisation and a clear consumer appetite for convenience, speed, and reliability.",
-    },
-    {
-      heading1: "Come ride with us",
-    },
-    {
-      newpara: [
-        " The ",
-        <strong>Chowdeck app</strong>,
-        " is available for download now on the ",
-        <a className="text-green-800 font-bold underline">Google Play Store</a>,
+      para3: [
+        "1. Our ",
+        <a className="underline"> Web store</a>,
+        "",
+        <br />,
+        "2. The Chowdeck mobile app (available on both the",
+        <a className=" underline"> App Store</a>,
         " and ",
-        <a className="text-green-800 font-bold underline">Apple App Store.</a>,
-        " Whether you’re a business looking for better logistics, a rider ready to earn more, or a customer who just wants their food on time — welcome. We’re glad you’re here.",
+        <a className=" underline">Google Play Store)</a>,
+        " Whichever method you choose, you’re just a few taps away from a whole new world.",
       ],
     },
     {
-      minipara: "Let’s build this together.",
+      para4:
+        "Try the Chowdeck app today, explore our expanded menu, and treat yourself to the best that we have to offer. Whether you’re in the mood for a spicy shawarma from Wrap City, a refreshing juice from Fresh Press, or a classic Jollof rice from Jollof & Co, we’ve got you covered.",
     },
-    { end: " With love," },
-    { end1: "Team Chowdeck" },
+    {
+      minipara: "Thank you for choosing Chowdeck.",
+    },
+    { end: " Bon appétit!" },
+    { end1: "The Chowdeck Team" },
   ];
 
   {
@@ -198,21 +184,30 @@ const First = () => {
                 <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 md:pt-0 pt-4">
                   {item.para}
                 </p>
+                <p className="sm:text-[24px] text-[18px] font-bold text-black md:px-11 px-5  pt-4">
+                  {item.heading}
+                </p>
+                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 ">
+                  {item.para0}
+                </p>
+                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 ">
+                  {item.para1}
+                </p>
               </div>
             ))}
             {data2.map((item, index) => (
               <div key={index} className="">
-                <h3 className="sm:text-[24px] text-[18px] text-black font-bold pt-5 md:pl-11 pl-4">
-                  {item.heading}
+                <h3 className="sm:text-[24px] text-[18px] text-black font-bold  md:pl-11 pl-4 pt-4">
+                  {item.heading2}
                 </h3>
                 <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 ">
                   {item.para}
                 </p>
-                <p className="sm:text-[24px] text-[18px] text-black font-bold pt-5 md:pl-11 pl-4">
-                  {item.heading1}
-                </p>
                 <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 ">
-                  {item.newpara}
+                  {item.para3}
+                </p>
+                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 pt-4">
+                  {item.para4}
                 </p>
                 <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 ">
                   {item.minipara}
@@ -281,4 +276,4 @@ const First = () => {
   );
 };
 
-export default First;
+export default NFour;

@@ -9,10 +9,13 @@ import { IoArrowBackOutline } from "react-icons/io5";
 import twits from "../../../../assets/svg/twits.svg";
 import linkd from "../../../../assets/svg/linkd.svg";
 import noodles from "../../../../assets/images/noodles.png";
-import story1 from "../../../../assets/images/rstory1.png";
+import story1 from "../../../../assets/images/image16.png";
 import story2 from "../../../../assets/images/rstory2.png";
 import story3 from "../../../../assets/images/rstory3.png";
 import { useNavigate, useParams } from "react-router-dom";
+import BlogPlace from "../../BlogPlace/BlogPlace";
+import Footer from "../../../Footer/Footer";
+
 const Second = () => {
   const data1 = [
     {
@@ -191,12 +194,6 @@ const Second = () => {
   ];
   const data = [
     {
-      image: story1,
-      p1: "Beyond Delivery - Why We acquired Mira",
-      d1: " Chowdeck has acquired Mira, a fast-growing provider of modern point-of-sale (POS) solutions tailored for the food and ho...",
-      btn: "Read More",
-    },
-    {
       image: story2,
       p1: "Chowdeck is Now in Ghana — Here’s What We Have in Store",
       d1: " After months of planning, training, and listening, we’re excited to officially launch Chowdeck in Ghana!",
@@ -208,16 +205,25 @@ const Second = () => {
       d1: "The world flourishes when women lead. For International Women's Day, celebrates  brilliant women.",
       btn: "Read More",
     },
+    {
+      image: story1,
+      p1: "Beyond Delivery - Why We acquired Mira",
+      d1: " Chowdeck has acquired Mira, a fast-growing provider of modern point-of-sale (POS) solutions tailored for the food and ho...",
+      btn: "Read More",
+    },
   ];
-  const { id } = useParams();
+  const { id, category } = useParams();
   const blogId = parseInt(id);
   const navigate = useNavigate();
+
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
+
   const handleClick = (id) => {
     navigate(`/blog/all/${id}`);
   };
+
   return (
     <div>
       <div className="bg-[#0c513f] sm:h-[600px] h-[500px] w-full  overflow-hidden relative z-10">
@@ -228,12 +234,12 @@ const Second = () => {
             className="w-[300px] h-[91px] md:h-[108px] md:w-[420px] top-0 right-6 absolute"
           />
           <div className=" relative z-10 top-28 ">
-            <div className="flex justify-center items-center">
+            <div
+              className="flex justify-center items-center"
+              onClick={() => window.history.back()}
+            >
               <IoArrowBackOutline className="text-white/20 h-4 w-4" />
-              <button
-                className=" text-white/20 text-[20px] uppercase pl-2"
-                onClick={() => window.history.back()}
-              >
+              <button className=" text-white/20 text-[20px] uppercase pl-2">
                 Go Back
               </button>
             </div>
@@ -433,7 +439,7 @@ const Second = () => {
         </div>
       </div>
       {/*stories */}
-      <div className="lg:pt-32 md:pt-12">
+      <div className="lg:pt-32 md:pt-12 pb-60">
         <div className="flex gap-2.5 xl:pl-[200px] pl-[10px]">
           <p className="font-extrabold sm:text-[63px] text-[50px] text-black py-[20.5px]">
             Stories
@@ -442,7 +448,7 @@ const Second = () => {
         </div>
         <div className="flex justify-center px-4 mt-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-[1200px] w-full">
-            {data.map((item) => (
+            {data.map((item, index) => (
               <div
                 key={item.id}
                 className="max-w-full w-[400px] flex justify-center"
@@ -464,7 +470,7 @@ const Second = () => {
                   <div className="pt-5 flex justify-center items-center bg-white mb-3">
                     <button
                       className="font-medium text-[16px] rounded-xl text-[#0C513F] hover:bg-[#0C513F] hover:text-white px-23 py-3 bg-gray-200"
-                      onClick={() => handleClick(item.id)}
+                      onClick={() => handleClick(index)}
                     >
                       {item.btn}
                     </button>
@@ -474,6 +480,12 @@ const Second = () => {
             ))}
           </div>
         </div>
+      </div>
+      <div>
+        <BlogPlace />
+      </div>
+      <div>
+        <Footer />
       </div>
     </div>
   );
