@@ -1,18 +1,56 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import rightcloud from "../../../../assets/svg/rightcloud.svg";
 import bottom from "../../../../assets/images/bottom.png";
-import image7 from "../../../../assets/images/eleven.png";
 import { IoArrowBackOutline } from "react-icons/io5";
 import twits from "../../../../assets/svg/twits.svg";
 import linkd from "../../../../assets/svg/linkd.svg";
 import noodles from "../../../../assets/images/noodles.png";
+import choclate from "../../../../assets/images/love.png";
 import story1 from "../../../../assets/images/image16.png";
 import story2 from "../../../../assets/images/rstory2.png";
 import story3 from "../../../../assets/images/rstory3.png";
 import { useNavigate, useParams } from "react-router-dom";
 import BlogPlace from "../../BlogPlace/BlogPlace";
 import Footer from "../../../Footer/Footer";
-const RFirst = () => {
+
+const PartSecond = () => {
+  const data1 = [
+    {
+      para: [
+        "February is the season of love and devotion. To celebrate and commemorate sweet, sweet devotion, we partnered with Grey to present our campaign,  ",
+        <strong> Love Is In The Grey.</strong>,
+        "",
+      ],
+    },
+    {
+      para1: [
+        "See more on ",
+        <a className="text-[#0c513f] underline font-bold">Instagram</a>,
+        " and ",
+        <a className="text-[#0c513f] underline font-bold">Twitter.</a>,
+        "",
+      ],
+    },
+
+    {
+      para2: [
+        "What is love if not free delivery? We know all about that! In partnership with Chowdeck, Grey presented ",
+
+        <strong className=" underline font-bold">Love Is In The Grey</strong>,
+        " offering our Chowstars, our beloved customers, free delivery on all orders made between February 13th and 15th. ",
+      ],
+    },
+
+    {
+      para2:
+        "Real love is patient, kind, and free and for Valentine’s Day, we showed our workings!",
+    },
+    {
+      para2: "See you soon!",
+    },
+    { end: "With love," },
+    { end1: "Chowdeck" },
+  ];
   const data = [
     {
       image: story2,
@@ -33,8 +71,7 @@ const RFirst = () => {
       btn: "Read More",
     },
   ];
-
-  const { id } = useParams();
+  const { id, category } = useParams();
   const blogId = parseInt(id);
   const navigate = useNavigate();
 
@@ -46,49 +83,9 @@ const RFirst = () => {
     navigate(`/blog/all/${id}`);
   };
 
-  const data1 = [
-    {
-      para: "We're excited to announce that Chowdeck has been accepted to Y Combinator’s Summer Batch 2022, joining a league of extraordinary companies like Stripe, Airbnb, Paystack, and more, who’ve been through the YC process.",
-    },
-
-    {
-      para: "This year, the batch was super selective, with roughly 1.2% of companies accepted out of 19 000; we do not take Chowdeck’s place in this cohort for granted. Over the next couple of weeks, we’ll be learning everything it takes to be better entrepreneurs and to serve our customers better. ",
-    },
-  ];
-  const data2 = [
-    {
-      heading: "Running a business is both hard and rewarding",
-    },
-    {
-      para: "As first-time founders, my co-founders and I are learning to embrace the highs and lows of building a product and are now at a stage where it’s critical for us to get better at being entrepreneurs.",
-    },
-    {
-      para: "As part of the 2022 Summer cohort, we’ll be working hard over the next couple of weeks to learn everything it takes to serve you and get you your meals even faster ",
-    },
-
-    {
-      heading1: "We’re not perfect, but we promise to always do better",
-    },
-    {
-      newpara:
-        "With every growth stage comes new kinds of challenges. It’ll be dishonest to not acknowledge the times we stepped on your toes by messing up your deliveries. Sincerely, we apologise. There are no excuses, and so we promise to do better.",
-    },
-    {
-      newpara:
-        "Your constant feedback has gotten us this far, but there’s so much more to do.",
-    },
-    {
-      newpara:
-        "If there are issues you currently experience while using Chowdeck, you can always email us via our contact page. We are constantly improving the experience of our products and your feedback will be critical in helping us get our priorities right.",
-    },
-    {
-      minipara: "Thank you for being here. ",
-    },
-  ];
-
   return (
     <div className=" text-justify">
-      <div className="bg-[#0c513f] h-[600px] w-full  overflow-hidden relative z-10">
+      <div className="bg-[#0c513f] sm:h-[600px] h-[500px] w-full  overflow-hidden relative z-10">
         <div>
           <img
             src={rightcloud}
@@ -106,8 +103,8 @@ const RFirst = () => {
               </button>
             </div>
             <div className="">
-              <p className="text-center text-white text-[18px] uppercase font-bold">
-                Chowdeck Joins Y Combinator's S'22 Batch
+              <p className="text-center text-white text-[18px] uppercase font-bold pt-4">
+                Love Is In The Grey with Grey
               </p>
             </div>
           </div>
@@ -118,11 +115,11 @@ const RFirst = () => {
         </div>
 
         <div className="flex justify-center items-center">
-          <div className=" absolute bottom-0 z-0 ">
+          <div className=" absolute sm:bottom-0 bottom-16 z-0 ">
             <img
-              src={image7}
-              alt="i7"
-              className="w-[985px] md:h-[375px] px-4"
+              src={choclate}
+              alt="choco"
+              className="w-full md:h-[375px] px-4"
             />
           </div>
         </div>
@@ -147,33 +144,20 @@ const RFirst = () => {
           </div>
           <div>
             {data1.map((item, index) => (
-              <div key={index} className="">
-                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 md:pt-0 pt-4">
+              <div key={index} className=" ">
+                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 md:pt-0 pt-4 ">
                   {item.para}
                 </p>
-              </div>
-            ))}
-            {data2.map((item, index) => (
-              <div key={index} className="">
-                <h3 className="sm:text-[24px] text-[18px] text-black font-bold pt-5 md:pl-11 pl-4">
-                  {item.heading}
-                </h3>
-                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 ">
-                  {item.para}
+                <p className="sm:text-[24px] text-[18px] text-black md:px-11 italic text-center px-5 md:pt-4">
+                  {item.para1}
                 </p>
-                <p className="sm:text-[24px] text-[18px] text-black font-bold pt-5 md:pl-11 pl-4">
-                  {item.heading1}
+                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 md:pt-4">
+                  {item.para2}
                 </p>
-                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 ">
-                  {item.newpara}
-                </p>
-                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 ">
-                  {item.minipara}
-                </p>
-                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 ">
+                <p className="sm:text-[24px] text-[18px]  text-black md:px-11 px-5  ">
                   {item.end}
                 </p>
-                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 -mt-4.5 md:pb-0 pb-7">
+                <p className="sm:text-[24px] text-[18px]  text-black md:px-11 px-5  -mt-1.5">
                   {item.end1}
                 </p>
               </div>
@@ -234,4 +218,4 @@ const RFirst = () => {
   );
 };
 
-export default RFirst;
+export default PartSecond;

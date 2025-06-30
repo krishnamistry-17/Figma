@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Bg from "./Bg";
 import ChowPass from "./ChowPass/ChowPass";
 import Tires from "./Tires/Tires";
@@ -9,6 +9,9 @@ import Footer from "../Footer/Footer";
 import VendorePlace from "./VendorePlace/VendorePlace";
 
 const Vendore = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   return (
     <div data-aos-easing="ease" data-aos-duration="2000" data-aos-delay="0">
       <div>

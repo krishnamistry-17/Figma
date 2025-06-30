@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import rightcloud from "../../../../assets/svg/rightcloud.svg";
 import bottom from "../../../../assets/images/bottom.png";
-import image7 from "../../../../assets/images/eleven.png";
 import { IoArrowBackOutline } from "react-icons/io5";
+import image7 from "../../../../assets/images/eight.png";
 import twits from "../../../../assets/svg/twits.svg";
 import linkd from "../../../../assets/svg/linkd.svg";
 import noodles from "../../../../assets/images/noodles.png";
@@ -12,7 +12,71 @@ import story3 from "../../../../assets/images/rstory3.png";
 import { useNavigate, useParams } from "react-router-dom";
 import BlogPlace from "../../BlogPlace/BlogPlace";
 import Footer from "../../../Footer/Footer";
-const RFirst = () => {
+
+const MSecond = () => {
+  const data1 = [
+    {
+      para: [
+        "",
+        <strong>Lagos, Nigeria — Chowdeck</strong>,
+        "Africa’s fastest growing on-demand online food, grocery, and medication delivery service, announces ",
+        <strong>Shoprite</strong>,
+        " Nigeria’s largest supermarket chain, as its latest grocery partner.",
+      ],
+    },
+
+    {
+      para1:
+        "A landmark partnership, Chowdeck will transform the online supermarket ecosystem by providing quick and easy logistics solutions for on-demand grocery orders from Shoprite through its mobile application and web store.",
+    },
+    {
+      para2:
+        "Already servicing hundreds of thousands of orders successfully each month, Chowdeck’s partnership with Shoprite will provide ease, comfort and convenience, for its customers, particularly disabled and limited-mobility individuals, who may be unable to run errands frequently in their day-to-day lives.",
+    },
+    {
+      para3:
+        "L-R, Vivien Iberi, Operational Excellence Manager at Shoprite; Kennedy Offor, Head of Sales and Partnership at Chowdeck; Tosin Olukoya, Strategy Manager at Shoprite; Hubertus Rick, CEO at Shoprite; Ad (2).jpg L-R: Vivien Iberi, Operations Excellence Manager at Shoprite; Kennedy Offor, Head of Sales and Partnerships at Chowdeck; Tosin Olukoya, Strategy Manager at Shoprite; Hubertus Rick, CEO at Shoprite; and Adaora Obiwulu, Corporate Communications Officer at Shoprite",
+    },
+    {
+      para4: [
+        "",
+        <strong>Kennedy Offor</strong>,
+        " Head of Sales and Partnerships at ",
+        <strong>Chowdeck</strong>,
+        " said, “This partnership represents a significant milestone on our quest to provide unparalleled customer satisfaction, convenience, by elevating the way Nigerians shop for groceries. Our customers can now enjoy the ease of access to Shoprite’s high-quality, expansive product range from the comfort of their homes. We’re incredibly delighted to join hands with Shoprite to bring the best of both worlds – meals and groceries – to our customers,”",
+      ],
+    },
+    {
+      heading: "About Chowdeck",
+    },
+    {
+      para5: [
+        "Chowdeck is Africa’s leading on-demand online food and grocery delivery service. With operations spanning across several cities in Nigeria including ",
+        <strong>Lagos, Abuja, Ibadan, Asaba, Benin City, Abeokuta </strong>,
+        "and ",
+        <strong>Port Harcourt</strong>,
+        " Chowdeck serves thousands of customers monthly, delivering meals, groceries, and medicine with ease, alleviating the burden of long queues and waiting times.",
+      ],
+    },
+    {
+      para6:
+        "Chowdeck was founded in October 2021 by Femi Aluko, Lanre Yusuf, and Olumide Ojo.",
+    },
+    {
+      para7: [
+        "For more information, please visit ",
+        <strong className="text-[#0c513f] font-bold">Chowdeck.com</strong>,
+        " or contact ",
+        <b className=" font-bold text-black">Press</b>,
+        " at",
+        <strong className=" text-[#0c513f] font-bold">
+          {" "}
+          press@chowdeck.com{" "}
+        </strong>,
+        "",
+      ],
+    },
+  ];
   const data = [
     {
       image: story2,
@@ -33,59 +97,16 @@ const RFirst = () => {
       btn: "Read More",
     },
   ];
-
   const { id } = useParams();
   const blogId = parseInt(id);
   const navigate = useNavigate();
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
-  }, []);
-
+  });
   const handleClick = (id) => {
     navigate(`/blog/all/${id}`);
   };
-
-  const data1 = [
-    {
-      para: "We're excited to announce that Chowdeck has been accepted to Y Combinator’s Summer Batch 2022, joining a league of extraordinary companies like Stripe, Airbnb, Paystack, and more, who’ve been through the YC process.",
-    },
-
-    {
-      para: "This year, the batch was super selective, with roughly 1.2% of companies accepted out of 19 000; we do not take Chowdeck’s place in this cohort for granted. Over the next couple of weeks, we’ll be learning everything it takes to be better entrepreneurs and to serve our customers better. ",
-    },
-  ];
-  const data2 = [
-    {
-      heading: "Running a business is both hard and rewarding",
-    },
-    {
-      para: "As first-time founders, my co-founders and I are learning to embrace the highs and lows of building a product and are now at a stage where it’s critical for us to get better at being entrepreneurs.",
-    },
-    {
-      para: "As part of the 2022 Summer cohort, we’ll be working hard over the next couple of weeks to learn everything it takes to serve you and get you your meals even faster ",
-    },
-
-    {
-      heading1: "We’re not perfect, but we promise to always do better",
-    },
-    {
-      newpara:
-        "With every growth stage comes new kinds of challenges. It’ll be dishonest to not acknowledge the times we stepped on your toes by messing up your deliveries. Sincerely, we apologise. There are no excuses, and so we promise to do better.",
-    },
-    {
-      newpara:
-        "Your constant feedback has gotten us this far, but there’s so much more to do.",
-    },
-    {
-      newpara:
-        "If there are issues you currently experience while using Chowdeck, you can always email us via our contact page. We are constantly improving the experience of our products and your feedback will be critical in helping us get our priorities right.",
-    },
-    {
-      minipara: "Thank you for being here. ",
-    },
-  ];
-
   return (
     <div className=" text-justify">
       <div className="bg-[#0c513f] h-[600px] w-full  overflow-hidden relative z-10">
@@ -107,7 +128,9 @@ const RFirst = () => {
             </div>
             <div className="">
               <p className="text-center text-white text-[18px] uppercase font-bold">
-                Chowdeck Joins Y Combinator's S'22 Batch
+                Chowdeck Partners with Shoprite, Nigeria’s Largest Supermarket
+                <br />
+                Chain, to Transform Grocery Logistics Across the Country
               </p>
             </div>
           </div>
@@ -151,30 +174,29 @@ const RFirst = () => {
                 <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 md:pt-0 pt-4">
                   {item.para}
                 </p>
-              </div>
-            ))}
-            {data2.map((item, index) => (
-              <div key={index} className="">
-                <h3 className="sm:text-[24px] text-[18px] text-black font-bold pt-5 md:pl-11 pl-4">
+                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5  md:pt-2">
+                  {item.para1}
+                </p>
+                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5  md:pt-2">
+                  {item.para2}
+                </p>
+                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5  md:pt-2">
+                  {item.para3}
+                </p>
+                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5  md:pt-2">
+                  {item.para4}
+                </p>
+                <p className="sm:text-[24px] text-[18px] text-black font-bold md:px-11 px-5  ">
                   {item.heading}
-                </h3>
-                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 ">
-                  {item.para}
                 </p>
-                <p className="sm:text-[24px] text-[18px] text-black font-bold pt-5 md:pl-11 pl-4">
-                  {item.heading1}
+                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5  ">
+                  {item.para5}
                 </p>
-                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 ">
-                  {item.newpara}
+                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5  ">
+                  {item.para6}
                 </p>
-                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 ">
-                  {item.minipara}
-                </p>
-                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 ">
-                  {item.end}
-                </p>
-                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 -mt-4.5 md:pb-0 pb-7">
-                  {item.end1}
+                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5  ">
+                  {item.para7}
                 </p>
               </div>
             ))}
@@ -234,4 +256,4 @@ const RFirst = () => {
   );
 };
 
-export default RFirst;
+export default MSecond;

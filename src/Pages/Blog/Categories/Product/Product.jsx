@@ -1,16 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import image16 from "../../../../assets/images/image16.png";
+import { useNavigate, useParams } from "react-router-dom";
 
 const Product = () => {
   const data = [
     {
+      id: 18,
       image: image16,
       p1: "Introducing Relay by Chowdeck - A Game Changer for Logistics Nationwide!",
       d1: "We're thrilled to introduce you to Relay, here to help you send and receive packages with",
       btn: "Read More",
     },
   ];
+
+  const [selectBlogId, setSelectBlogId] = useState();
+
+  const id = useParams();
+  const blogId = parseInt(id);
+
+  const navigate = useNavigate();
+  const selectedBlog = data.find((item) => item.id === selectBlogId);
+
+  const handleClick = (id) => {
+    navigate(`/blog/Product/${id}`);
+  };
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
 
   return (
     <div>
@@ -36,7 +54,10 @@ const Product = () => {
                 </p>
 
                 <div className="pt-5 flex justify-center items-center bg-white mb-3">
-                  <button className="font-medium text-[16px] rounded-xl text-[#0C513F] hover:bg-[#0C513F] hover:text-white px-10 py-3 bg-gray-200">
+                  <button
+                    className="font-medium text-[16px] rounded-xl text-[#0C513F] hover:bg-[#0C513F] hover:text-white px-10 py-3 bg-gray-200"
+                    onClick={() => handleClick(item.id)}
+                  >
                     {item.btn}
                   </button>
                 </div>

@@ -57,34 +57,12 @@ const Fifth = () => {
     },
   ];
   const data2 = [
-    {
-      heading: "What This Means for You",
-    },
-    {
-      para: [
-        "1. Enhanced Quality: Our partnership ensures your favorite Chicken Republic meals reach you in prime condition on time. ",
-        <br />,
-        "2. Affordable Delivery: We've optimized our processes to bring down delivery costs for more accessibility.",
-        <br />,
-        "3. More Affordable Meals: Enjoy special deals and offers exclusive to only Chowdeck users.",
-      ],
-    },
     { heading1: "August Special: Refuel Price Don Crash!" },
     {
       para1: [
         "To kick off this partnership, we're offering the popular Refuel Combo for just ",
         <strong>₦1000 </strong>,
         " - that's 50% off the regular price of ₦2000",
-      ],
-    },
-    { heading2: "How to Order" },
-    {
-      para3: [
-        "1. Open your Chowdeck app",
-        <br />,
-        "2. Choose your meals and complete your order",
-        <br />,
-        "3. Sit back and relax while we deliver your food",
       ],
     },
     {
@@ -98,26 +76,9 @@ const Fifth = () => {
     { end1: "Chowdeck" },
   ];
 
-  {
-    /*import { useEffect } from "react";
-import { useParams } from "react-router-dom";
 
-const First = () => {
-  const { id } = useParams(); // get blog id from route
-
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' }); // scroll to top on load
-  }, []);
-  
-  const blogId = parseInt(id); // if you need it
-
-  // render content based on blogId here
-  ...
-};
- */
-  }
   return (
-    <div>
+    <div className="text-justify">
       <div className="bg-[#0c513f] h-[600px] w-full  overflow-hidden relative z-10">
         <div>
           <img
@@ -186,27 +147,48 @@ const First = () => {
                 </p>
               </div>
             ))}
+            <h3 className="sm:text-[24px] text-[18px] text-black font-bold pt-4  md:pl-11 pl-4">
+              What This Means for You
+            </h3>
+            <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 ">
+              <ul className=" list-decimal list-inside sm:text-[24px] text-[18px] text-black ">
+                <li>
+                  <b>Enhanced Quality: </b>Our partnership ensures your favorite
+                  Chicken Republic meals reach you in prime condition on time.
+                </li>
+                <li>
+                  <b>Affordable Delivery </b>We've optimized our processes to
+                  bring down delivery costs for more accessibility.
+                </li>
+                <li>
+                  <b>More Affordable Meals</b>Enjoy special deals and offers
+                  exclusive to only Chowdeck users.
+                </li>
+              </ul>
+            </p>
             {data2.map((item, index) => (
               <div key={index} className="">
-                <h3 className="sm:text-[24px] text-[18px] text-black font-bold pt-4  md:pl-11 pl-4">
-                  {item.heading}
-                </h3>
-                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 ">
-                  {item.para}
-                </p>
                 <h3 className="sm:text-[24px] text-[18px] text-black font-bold pt-4  md:pl-11 pl-4">
                   {item.heading1}
                 </h3>
                 <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 ">
                   {item.para1}
                 </p>
-                <h3 className="sm:text-[24px] text-[18px] text-black font-bold  md:pl-11 pl-4">
-                  {item.heading2}
-                </h3>
-                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 ">
-                  {item.para3}
-                </p>
-                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 ">
+              </div>
+            ))}
+            <h3 className="sm:text-[24px] text-[18px] text-black font-bold  md:pl-11 pl-4">
+              How to Order
+            </h3>
+            <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 ">
+              <ul className="list-decimal list-inside sm:text-[24px] text-[18px] text-black ">
+                <li>Open your Chowdeck app</li>
+                <li>Choose your meals and complete your order</li>
+                <li>Sit back and relax while we deliver your food</li>
+              </ul>
+            </p>
+            {data2.map((item, index) => (
+              <div key={index}>
+                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 md:pt-8 pt-4">
                   {item.para4}
                 </p>
                 <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 ">
@@ -215,7 +197,7 @@ const First = () => {
                 <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 ">
                   {item.end}
                 </p>
-                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 -mt-4.5">
+                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 md:-mt-4.5">
                   {item.end1}
                 </p>
               </div>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import story1 from "../../../../assets/images/st1.png";
 import story2 from "../../../../assets/images/story2.png";
@@ -41,6 +41,10 @@ const Riders = () => {
   const handleClick = (id) => {
     navigate(`/blog/Rider/${id}`);
   };
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   return (
     <div>
       <div className="flex justify-center sm:px-4">

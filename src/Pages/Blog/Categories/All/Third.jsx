@@ -47,7 +47,7 @@ const Third = () => {
   };
 
   return (
-    <div>
+    <div className="text-justify">
       <div className="bg-[#0c513f] h-[600px] w-full  overflow-hidden relative z-10">
         <div>
           <img
@@ -123,20 +123,17 @@ const Third = () => {
             <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 pt-5">
               Relay’s got some cool features too! Check them out:
             </p>
-            <ul>
-              <li className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 pt-5 flex">
-                <p className="w-2 h-2 bg-black rounded-full mr-4 mt-2.5 "></p>
-                <b> Package Protection-</b>Your parcels can be insured against
+            <ul className="list-disc list-inside px-3 sm:px-5 md:px-11 text-black">
+              <li className="sm:text-[24px] text-[18px] pt-5">
+                <b>Package Protection-</b> Your parcels can be insured against
                 any incidents for a small fee!
               </li>
-              <li className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 pt-5 flex">
-                <p className="w-2 h-2 bg-black rounded-full mr-4 mt-2.5 "></p>
-                <b> Delivery Notes -</b>Leave customised delivery instructions
+              <li className="sm:text-[24px] text-[18px] pt-5">
+                <b>Delivery Notes -</b> Leave customised delivery instructions
                 for each rider on their trips!
               </li>
-              <li className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 pt-5 flex">
-                <p className="w-2 h-2 bg-black rounded-full mr-4 mt-2.5 "></p>
-                <b>Delivery Pin-</b>Secure your deliveries with our nifty pin
+              <li className="sm:text-[24px] text-[18px] pt-5">
+                <b>Delivery Pin-</b> Secure your deliveries with our nifty pin
                 feature! Deliveries can only be confirmed when you offer a pin!
               </li>
             </ul>

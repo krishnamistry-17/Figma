@@ -101,26 +101,9 @@ const NFour = () => {
     { end1: "The Chowdeck Team" },
   ];
 
-  {
-    /*import { useEffect } from "react";
-import { useParams } from "react-router-dom";
-
-const First = () => {
-  const { id } = useParams(); // get blog id from route
-
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' }); // scroll to top on load
-  }, []);
-  
-  const blogId = parseInt(id); // if you need it
-
-  // render content based on blogId here
-  ...
-};
- */
-  }
+ 
   return (
-    <div>
+    <div className=" text-justify">
       <div className="bg-[#0c513f] h-[600px] w-full  overflow-hidden relative z-10">
         <div>
           <img

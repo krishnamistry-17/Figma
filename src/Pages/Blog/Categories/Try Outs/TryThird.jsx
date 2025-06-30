@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import rightcloud from "../../../../assets/svg/rightcloud.svg";
 import bottom from "../../../../assets/images/bottom.png";
-import image7 from "../../../../assets/images/eleven.png";
+import relayblog from "../../../../assets/images/relayblog.png";
 import { IoArrowBackOutline } from "react-icons/io5";
 import twits from "../../../../assets/svg/twits.svg";
 import linkd from "../../../../assets/svg/linkd.svg";
@@ -12,7 +12,8 @@ import story3 from "../../../../assets/images/rstory3.png";
 import { useNavigate, useParams } from "react-router-dom";
 import BlogPlace from "../../BlogPlace/BlogPlace";
 import Footer from "../../../Footer/Footer";
-const RFirst = () => {
+
+const TryThird = () => {
   const data = [
     {
       image: story2,
@@ -33,7 +34,6 @@ const RFirst = () => {
       btn: "Read More",
     },
   ];
-
   const { id } = useParams();
   const blogId = parseInt(id);
   const navigate = useNavigate();
@@ -46,48 +46,8 @@ const RFirst = () => {
     navigate(`/blog/all/${id}`);
   };
 
-  const data1 = [
-    {
-      para: "We're excited to announce that Chowdeck has been accepted to Y Combinator’s Summer Batch 2022, joining a league of extraordinary companies like Stripe, Airbnb, Paystack, and more, who’ve been through the YC process.",
-    },
-
-    {
-      para: "This year, the batch was super selective, with roughly 1.2% of companies accepted out of 19 000; we do not take Chowdeck’s place in this cohort for granted. Over the next couple of weeks, we’ll be learning everything it takes to be better entrepreneurs and to serve our customers better. ",
-    },
-  ];
-  const data2 = [
-    {
-      heading: "Running a business is both hard and rewarding",
-    },
-    {
-      para: "As first-time founders, my co-founders and I are learning to embrace the highs and lows of building a product and are now at a stage where it’s critical for us to get better at being entrepreneurs.",
-    },
-    {
-      para: "As part of the 2022 Summer cohort, we’ll be working hard over the next couple of weeks to learn everything it takes to serve you and get you your meals even faster ",
-    },
-
-    {
-      heading1: "We’re not perfect, but we promise to always do better",
-    },
-    {
-      newpara:
-        "With every growth stage comes new kinds of challenges. It’ll be dishonest to not acknowledge the times we stepped on your toes by messing up your deliveries. Sincerely, we apologise. There are no excuses, and so we promise to do better.",
-    },
-    {
-      newpara:
-        "Your constant feedback has gotten us this far, but there’s so much more to do.",
-    },
-    {
-      newpara:
-        "If there are issues you currently experience while using Chowdeck, you can always email us via our contact page. We are constantly improving the experience of our products and your feedback will be critical in helping us get our priorities right.",
-    },
-    {
-      minipara: "Thank you for being here. ",
-    },
-  ];
-
   return (
-    <div className=" text-justify">
+    <div className="text-justify">
       <div className="bg-[#0c513f] h-[600px] w-full  overflow-hidden relative z-10">
         <div>
           <img
@@ -107,7 +67,7 @@ const RFirst = () => {
             </div>
             <div className="">
               <p className="text-center text-white text-[18px] uppercase font-bold">
-                Chowdeck Joins Y Combinator's S'22 Batch
+                Chowdeck is Now in Ghana — Here’s What We Have in Store
               </p>
             </div>
           </div>
@@ -120,7 +80,7 @@ const RFirst = () => {
         <div className="flex justify-center items-center">
           <div className=" absolute bottom-0 z-0 ">
             <img
-              src={image7}
+              src={relayblog}
               alt="i7"
               className="w-[985px] md:h-[375px] px-4"
             />
@@ -146,38 +106,50 @@ const RFirst = () => {
             </div>
           </div>
           <div>
-            {data1.map((item, index) => (
-              <div key={index} className="">
-                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 md:pt-0 pt-4">
-                  {item.para}
-                </p>
-              </div>
-            ))}
-            {data2.map((item, index) => (
-              <div key={index} className="">
-                <h3 className="sm:text-[24px] text-[18px] text-black font-bold pt-5 md:pl-11 pl-4">
-                  {item.heading}
-                </h3>
-                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 ">
-                  {item.para}
-                </p>
-                <p className="sm:text-[24px] text-[18px] text-black font-bold pt-5 md:pl-11 pl-4">
-                  {item.heading1}
-                </p>
-                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 ">
-                  {item.newpara}
-                </p>
-                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 ">
-                  {item.minipara}
-                </p>
-                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 ">
-                  {item.end}
-                </p>
-                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 -mt-4.5 md:pb-0 pb-7">
-                  {item.end1}
-                </p>
-              </div>
-            ))}
+            <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 md:pt-0 pt-6">
+              Dear Chowstars,
+            </p>
+            <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 pt-5">
+              We are beyond thrilled to introduce you to Relay, our on-demand
+              logistics innovation, here to revolutionise package deliveries one
+              at a time!
+            </p>
+            <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 pt-5">
+              We've been working behind the scenes to create something truly
+              special just for you! Relay is not just another logistics
+              solution—it's a game-changer designed to make your life easier and
+              smoother than ever before.
+            </p>
+            <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 pt-5">
+              Relay’s got some cool features too! Check them out:
+            </p>
+            <ul className="list-disc list-inside px-3 sm:px-5 md:px-11 text-black">
+              <li className="sm:text-[24px] text-[18px] pt-5">
+                <b>Package Protection-</b> Your parcels can be insured against
+                any incidents for a small fee!
+              </li>
+              <li className="sm:text-[24px] text-[18px] pt-5">
+                <b>Delivery Notes -</b> Leave customised delivery instructions
+                for each rider on their trips!
+              </li>
+              <li className="sm:text-[24px] text-[18px] pt-5">
+                <b>Delivery Pin-</b> Secure your deliveries with our nifty pin
+                feature! Deliveries can only be confirmed when you offer a pin!
+              </li>
+            </ul>
+            <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 pt-13">
+              To celebrate our launch, we’re offering all Chowstars a special
+              first-time use discount code! Use ‘RELAY’ at checkout to redeem a
+              10% discount on your first package delivery!
+            </p>
+            <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 pt-5">
+              We’re thoroughly excited for our journey ahead! Thank you for
+              staying on track with us!
+            </p>
+            <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 pt-5">
+              With love,
+              <br /> Team Chowdeck
+            </p>
           </div>
         </div>
       </div>
@@ -234,4 +206,4 @@ const RFirst = () => {
   );
 };
 
-export default RFirst;
+export default TryThird;

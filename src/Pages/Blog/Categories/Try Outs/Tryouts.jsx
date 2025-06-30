@@ -1,31 +1,49 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import image7 from "../../../../assets/images/image25.png";
 import image8 from "../../../../assets/images/image26.png";
 import image16 from "../../../../assets/images/image16.png";
+import { useNavigate, useParams } from "react-router-dom";
 
 const Tryouts = () => {
   const data = [
     {
+      id: 25,
       image: image7,
       p1: "Love Is In The Grey with Grey",
       d1: "To celebrate sweet, sweet devotion on Valentine's Day, we partnered with Grey to present Love Is In The Grey.",
       btn: "Read More",
     },
     {
+      id: 26,
       image: image8,
       p1: "Everything’s Better With Love and Chocolates with Chocolate City",
       d1: "To commemorate Valentine’s Day, we partnered with Chocolate City Music to...",
       btn: "Read More",
     },
     {
+      id: 27,
       image: image16,
       p1: "#AcceleratingYou: Celebrating Women-Led Brands in the Chowdeck Ecosystem",
       d1: "The world flourishes when women lead. For International Women's Day, celebrates  brilliant women.",
       btn: "Read More",
     },
   ];
+  const [selectBlogId, setSelectBlogId] = useState();
 
+  const id = useParams();
+  const blogId = parseInt(id);
+
+  const navigate = useNavigate();
+  const selectedBlog = data.find((item) => item.id === selectBlogId);
+
+  const handleClick = (id) => {
+    navigate(`/blog/Try outs/${id}`);
+  };
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   return (
     <div>
       <div className="flex justify-center sm:px-4">
@@ -50,7 +68,10 @@ const Tryouts = () => {
                 </p>
 
                 <div className="pt-5 flex justify-center items-center bg-white mb-3">
-                  <button className="font-medium text-[16px] rounded-xl text-[#0C513F] hover:bg-[#0C513F] hover:text-white px-10 py-3 bg-gray-200">
+                  <button
+                    className="font-medium text-[16px] rounded-xl text-[#0C513F] hover:bg-[#0C513F] hover:text-white px-10 py-3 bg-gray-200"
+                    onClick={() => handleClick(item.id)}
+                  >
                     {item.btn}
                   </button>
                 </div>

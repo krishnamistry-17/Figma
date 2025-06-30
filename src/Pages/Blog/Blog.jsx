@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import BlogBg from "./Bg/BlogBg";
 import Categories from "./Categories/Categories";
 import Press from "./Press/Press";
@@ -6,6 +6,9 @@ import BlogPlace from "./BlogPlace/BlogPlace";
 import Footer from "../Footer/Footer";
 
 const Blog = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   return (
     <div>
       <div>

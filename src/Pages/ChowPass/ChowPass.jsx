@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import chowdot from "../../assets/svg/chowdots.svg";
 import chowdotmob from "../../assets/svg/chowdotmob.svg";
 import hand from "../../assets/svg/hand.svg";
@@ -8,6 +8,9 @@ import Card from "./Card";
 import ChowPassPlace from "./ChowPassPlace";
 
 const ChowPass = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   return (
     <div>
       <div className="relative w-full overflow-hidden bg-[#D1C9F7]">

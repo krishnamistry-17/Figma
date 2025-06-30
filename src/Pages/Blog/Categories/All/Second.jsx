@@ -225,7 +225,7 @@ const Second = () => {
   };
 
   return (
-    <div>
+    <div className="text-justify">
       <div className="bg-[#0c513f] sm:h-[600px] h-[500px] w-full  overflow-hidden relative z-10">
         <div>
           <img

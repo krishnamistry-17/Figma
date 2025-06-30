@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import image7 from "../../../../assets/images/image17.png";
 import image8 from "../../../../assets/images/image18.png";
@@ -8,66 +8,92 @@ import image12 from "../../../../assets/images/image12.png";
 import image13 from "../../../../assets/images/image13.png";
 import image14 from "../../../../assets/images/image14.png";
 import image16 from "../../../../assets/images/image16.png";
+import { useNavigate, useParams } from "react-router-dom";
 
 const Marketing = () => {
   const data = [
     {
+      id: 19,
       image: image8,
       p1: "#AcceleratingYou: Celebrating Women-Led Brands in the Chowdeck Ecosystem",
       d1: "The world flourishes when women lead. For International Women's Day, celebrates  brilliant women.",
       btn: "Read More",
     },
     {
+      id: 20,
       image: image10,
       p1: "#AcceleratingYou: Celebrating Women-Led Brands in the Chowdeck Ecosystem",
       d1: "The world flourishes when women lead. For International Women's Day, celebrates  brilliant women.",
       btn: "Read More",
     },
     {
+      id: 21,
       image: image11,
       p1: "#AcceleratingYou: Celebrating Women-Led Brands in the Chowdeck Ecosystem",
       d1: "The world flourishes when women lead. For International Women's Day, celebrates  brilliant women.",
       btn: "Read More",
     },
-    {
-      image: image13,
-      p1: "Chowdeck is Now in Ghana — Here’s What We Have in Store",
-      d1: " After months of planning, training, and listening, we’re excited to officially launch Chowdeck in Ghana!",
-      btn: "Read More",
-    },
-    {
-      image: image16,
-      p1: "#AcceleratingYou: Celebrating Women-Led Brands in the Chowdeck Ecosystem",
-      d1: "The world flourishes when women lead. For International Women's Day, celebrates  brilliant women.",
-      btn: "Read More",
-    },
-    {
-      image: image7,
-      p1: "Get Free Deliveries and Reduced Service Fees with Chowpass!",
-      d1: " What if we told you there’s a way to save on delivery fees, service charges, and surge fees? It's called Chowpass!",
-      btn: "Read More",
-    },
-    {
-      image: image12,
-      p1: "#AcceleratingYou: Celebrating Women-Led Brands in the Chowdeck Ecosystem",
-      d1: "The world flourishes when women lead. For International Women's Day, celebrates  brilliant women.",
-      btn: "Read More",
-    },
-    {
-      image: image14,
-      p1: "#AcceleratingYou: Celebrating Women-Led Brands in the Chowdeck Ecosystem",
-      d1: "The world flourishes when women lead. For International Women's Day, celebrates  brilliant women.",
-      btn: "Read More",
-    },
-    {
-      image: image16,
-      p1: "Get Free Deliveries and Reduced Service Fees with Chowpass!",
-      d1: " What if we told you there’s a way to save on delivery fees, service charges, and surge fees? It's called Chowpass!",
-      btn: "Read More",
-    },
+    // {
+    //   id: 22,
+    //   image: image13,
+    //   p1: "Chowdeck is Now in Ghana — Here’s What We Have in Store",
+    //   d1: " After months of planning, training, and listening, we’re excited to officially launch Chowdeck in Ghana!",
+    //   btn: "Read More",
+    // },
+    // {
+    //   id: 23,
+    //   image: image16,
+    //   p1: "#AcceleratingYou: Celebrating Women-Led Brands in the Chowdeck Ecosystem",
+    //   d1: "The world flourishes when women lead. For International Women's Day, celebrates  brilliant women.",
+    //   btn: "Read More",
+    // },
+    // {
+    //   id: 24,
+    //   image: image7,
+    //   p1: "Get Free Deliveries and Reduced Service Fees with Chowpass!",
+    //   d1: " What if we told you there’s a way to save on delivery fees, service charges, and surge fees? It's called Chowpass!",
+    //   btn: "Read More",
+    // },
+    // {
+    //   id: 25,
+    //   image: image12,
+    //   p1: "#AcceleratingYou: Celebrating Women-Led Brands in the Chowdeck Ecosystem",
+    //   d1: "The world flourishes when women lead. For International Women's Day, celebrates  brilliant women.",
+    //   btn: "Read More",
+    // },
+    // {
+    //   id: 26,
+    //   image: image14,
+    //   p1: "#AcceleratingYou: Celebrating Women-Led Brands in the Chowdeck Ecosystem",
+    //   d1: "The world flourishes when women lead. For International Women's Day, celebrates  brilliant women.",
+    //   btn: "Read More",
+    // },
+    // {
+    //   id: 27,
+    //   image: image16,
+    //   p1: "Get Free Deliveries and Reduced Service Fees with Chowpass!",
+    //   d1: " What if we told you there’s a way to save on delivery fees, service charges, and surge fees? It's called Chowpass!",
+    //   btn: "Read More",
+    // },
   ];
 
-  return (  
+  const [selectBlogId, setSelectBlogId] = useState();
+
+  const id = useParams();
+  const blogId = parseInt(id);
+
+  const navigate = useNavigate();
+  const selectedBlog = data.find((item) => item.id === selectBlogId);
+
+  const handleClick = (id) => {
+    navigate(`/blog/Marketing/${id}`);
+  };
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
+  return (
     <div>
       <div className="flex justify-center sm:px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-[1200px] w-full">
@@ -91,7 +117,10 @@ const Marketing = () => {
                 </p>
 
                 <div className="pt-5 flex justify-center items-center bg-white mb-3">
-                  <button className="font-medium text-[16px] rounded-xl text-[#0C513F] hover:bg-[#0C513F] hover:text-white px-10 py-3 bg-gray-200">
+                  <button
+                    className="font-medium text-[16px] rounded-xl text-[#0C513F] hover:bg-[#0C513F] hover:text-white px-15 py-3 bg-gray-200"
+                    onClick={() => handleClick(item.id)}
+                  >
                     {item.btn}
                   </button>
                 </div>

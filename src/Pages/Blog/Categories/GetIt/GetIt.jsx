@@ -1,17 +1,32 @@
-import React from "react";
-
+import React, { useEffect, useState } from "react";
 import story2 from "../../../../assets/images/image22.png";
+import { useNavigate, useParams } from "react-router-dom";
 
 const GetIt = () => {
   const data = [
     {
+      id: 28,
       image: story2,
       p1: "Get It Here: Jollof Rice",
       d1: "Craving a particular meal and have no clue what restaurant to order from? In Get It..",
       btn: "Read More",
     },
   ];
+  const [selectBlogId, setSelectBlogId] = useState();
 
+  const id = useParams();
+  const blogId = parseInt(id);
+
+  const navigate = useNavigate();
+  const selectedBlog = data.find((item) => item.id === selectBlogId);
+
+  const handleClick = (id) => {
+    navigate(`/blog/Get It Here/${id}`);
+  };
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   return (
     <div>
       <div className="flex justify-center sm:px-4">
@@ -36,7 +51,10 @@ const GetIt = () => {
                 </p>
 
                 <div className="pt-5 flex justify-center items-center bg-white mb-3">
-                  <button className="font-medium text-[16px] rounded-xl text-[#0C513F] hover:bg-[#0C513F] hover:text-white px-10 py-3 bg-gray-200">
+                  <button
+                    className="font-medium text-[16px] rounded-xl text-[#0C513F] hover:bg-[#0C513F] hover:text-white px-10 py-3 bg-gray-200"
+                    onClick={() => handleClick(item.id)}
+                  >
                     {item.btn}
                   </button>
                 </div>

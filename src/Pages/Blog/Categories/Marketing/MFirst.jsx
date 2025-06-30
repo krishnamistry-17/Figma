@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import rightcloud from "../../../../assets/svg/rightcloud.svg";
 import bottom from "../../../../assets/images/bottom.png";
-import image7 from "../../../../assets/images/eleven.png";
 import { IoArrowBackOutline } from "react-icons/io5";
+import image7 from "../../../../assets/images/seven.png";
 import twits from "../../../../assets/svg/twits.svg";
 import linkd from "../../../../assets/svg/linkd.svg";
 import noodles from "../../../../assets/images/noodles.png";
@@ -12,7 +12,58 @@ import story3 from "../../../../assets/images/rstory3.png";
 import { useNavigate, useParams } from "react-router-dom";
 import BlogPlace from "../../BlogPlace/BlogPlace";
 import Footer from "../../../Footer/Footer";
-const RFirst = () => {
+
+const MFirst = () => {
+  const data1 = [
+    {
+      para: "As we head full swing into the holiday season, we’re prioritising the comfort of our beloved Chowstars. We’ve partnered with Shaaré to bring you sweet discounts on home cleaning sessions all December long!",
+    },
+
+    {
+      para1:
+        "Shaaré is a home cleaning service that prides itself in hassle-free, affordable cleaning. With a wide range of services from the cleaning of showers, baths, and sinks in bathrooms to the wardrobe reorganisation, window cleaning, dish washing, fan cleaning and more, Shaaré’s services prioritise comfort at its finest and most accessible.",
+    },
+    {
+      para2:
+        "Chowstars will get up to 10% off home cleaning sessions, depending on their Chowscore Tier. Here’s how it works with each tier:",
+    },
+    {
+      detail: [
+        " ",
+        <strong>Starter -</strong>,
+        " 10% Off 1 session",
+        <br />,
+        <strong>Next Rated -</strong>,
+        "10% Off 2 sessions.",
+        <br />,
+        <strong>OG -</strong>,
+        "10% Off 3 sessions.",
+        <br />,
+        <strong>Connoisseur - </strong>,
+        "10% Off 4 sessions.",
+        <br />,
+        <strong>Prime Minister - </strong>,
+        "10% Off 5 sessions.",
+      ],
+    },
+  ];
+  const data2 = [
+    {
+      heading:
+        "Rack up Chowscore points by rating our Champion riders, restaurants, and leaving tips.",
+    },
+    {
+      para: [
+        "To redeem your discount, please visit the ‘Profile’ page and follow the prompts on screen. For more information on Shaaré, please visit their store ",
+        <a className=" underline text-[#0c513f] font-semibold"> here.</a>,
+        "",
+      ],
+    },
+
+    {
+      minipara: "Enjoy your comfortable Christmas, Chowstars!",
+    },
+  ];
   const data = [
     {
       image: story2,
@@ -33,59 +84,16 @@ const RFirst = () => {
       btn: "Read More",
     },
   ];
-
   const { id } = useParams();
   const blogId = parseInt(id);
   const navigate = useNavigate();
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
-  }, []);
-
+  });
   const handleClick = (id) => {
     navigate(`/blog/all/${id}`);
   };
-
-  const data1 = [
-    {
-      para: "We're excited to announce that Chowdeck has been accepted to Y Combinator’s Summer Batch 2022, joining a league of extraordinary companies like Stripe, Airbnb, Paystack, and more, who’ve been through the YC process.",
-    },
-
-    {
-      para: "This year, the batch was super selective, with roughly 1.2% of companies accepted out of 19 000; we do not take Chowdeck’s place in this cohort for granted. Over the next couple of weeks, we’ll be learning everything it takes to be better entrepreneurs and to serve our customers better. ",
-    },
-  ];
-  const data2 = [
-    {
-      heading: "Running a business is both hard and rewarding",
-    },
-    {
-      para: "As first-time founders, my co-founders and I are learning to embrace the highs and lows of building a product and are now at a stage where it’s critical for us to get better at being entrepreneurs.",
-    },
-    {
-      para: "As part of the 2022 Summer cohort, we’ll be working hard over the next couple of weeks to learn everything it takes to serve you and get you your meals even faster ",
-    },
-
-    {
-      heading1: "We’re not perfect, but we promise to always do better",
-    },
-    {
-      newpara:
-        "With every growth stage comes new kinds of challenges. It’ll be dishonest to not acknowledge the times we stepped on your toes by messing up your deliveries. Sincerely, we apologise. There are no excuses, and so we promise to do better.",
-    },
-    {
-      newpara:
-        "Your constant feedback has gotten us this far, but there’s so much more to do.",
-    },
-    {
-      newpara:
-        "If there are issues you currently experience while using Chowdeck, you can always email us via our contact page. We are constantly improving the experience of our products and your feedback will be critical in helping us get our priorities right.",
-    },
-    {
-      minipara: "Thank you for being here. ",
-    },
-  ];
-
   return (
     <div className=" text-justify">
       <div className="bg-[#0c513f] h-[600px] w-full  overflow-hidden relative z-10">
@@ -107,7 +115,7 @@ const RFirst = () => {
             </div>
             <div className="">
               <p className="text-center text-white text-[18px] uppercase font-bold">
-                Chowdeck Joins Y Combinator's S'22 Batch
+                Sparkle with Shaaré
               </p>
             </div>
           </div>
@@ -151,30 +159,28 @@ const RFirst = () => {
                 <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 md:pt-0 pt-4">
                   {item.para}
                 </p>
+                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5  md:pt-4">
+                  {item.para1}
+                </p>
+                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5  md:pt-4">
+                  {item.para2}
+                </p>
+                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5  ">
+                  {item.detail}
+                </p>
               </div>
             ))}
             {data2.map((item, index) => (
               <div key={index} className="">
-                <h3 className="sm:text-[24px] text-[18px] text-black font-bold pt-5 md:pl-11 pl-4">
+                <h3 className="sm:text-[24px] text-[18px] text-black  pt-5 md:pl-11 pl-4">
                   {item.heading}
                 </h3>
                 <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 ">
                   {item.para}
                 </p>
-                <p className="sm:text-[24px] text-[18px] text-black font-bold pt-5 md:pl-11 pl-4">
-                  {item.heading1}
-                </p>
-                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 ">
-                  {item.newpara}
-                </p>
+
                 <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 ">
                   {item.minipara}
-                </p>
-                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 ">
-                  {item.end}
-                </p>
-                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 -mt-4.5 md:pb-0 pb-7">
-                  {item.end1}
                 </p>
               </div>
             ))}
@@ -234,4 +240,4 @@ const RFirst = () => {
   );
 };
 
-export default RFirst;
+export default MFirst;

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import image7 from "../../../../assets/images/image7.png";
 import image8 from "../../../../assets/images/image8.png";
@@ -68,6 +68,10 @@ const All = () => {
   const handleClick = (id) => {
     navigate(`/blog/all/${id}`);
   };
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
 
   return (
     <div>

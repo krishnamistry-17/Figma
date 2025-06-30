@@ -1,18 +1,105 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import rightcloud from "../../../../assets/svg/rightcloud.svg";
 import bottom from "../../../../assets/images/bottom.png";
-import image7 from "../../../../assets/images/eleven.png";
 import { IoArrowBackOutline } from "react-icons/io5";
 import twits from "../../../../assets/svg/twits.svg";
 import linkd from "../../../../assets/svg/linkd.svg";
 import noodles from "../../../../assets/images/noodles.png";
+import choclate from "../../../../assets/images/choclate.png";
 import story1 from "../../../../assets/images/image16.png";
 import story2 from "../../../../assets/images/rstory2.png";
 import story3 from "../../../../assets/images/rstory3.png";
 import { useNavigate, useParams } from "react-router-dom";
 import BlogPlace from "../../BlogPlace/BlogPlace";
 import Footer from "../../../Footer/Footer";
-const RFirst = () => {
+
+const TryFirst = () => {
+  const data1 = [
+    {
+      para: [
+        "Valentine’s Day is a celebration of love, warmth, and sweetness between partners, friends, family and loved ones. To commemorate Valentine’s Day, we partnered with Chocolate City Music to present our uniquely sweet campaign, ",
+        <strong> Everything’s Better With Love and Chocolates.</strong>,
+        "",
+      ],
+    },
+    {
+      para1: [
+        " ",
+        <strong className=" font-bold underline text-[#0c513f]">
+          Chocolate City Music{" "}
+        </strong>,
+        "is regarded as one of Africa’s premier urban record labels, presenting phenomenal artists including ",
+        <strong className="font-bold underline text-[#0c513f]">
+          M.I Abaga, Femi Kuti,
+        </strong>,
+        "and ",
+        <strong className="font-bold underline text-[#0c513f]">
+          Blaqbonez
+        </strong>,
+        "and formerly ",
+        <strong className="font-bold underline text-[#0c513f]">
+          Ckay, Dice Ailes, Victoria Kimani,
+        </strong>,
+        "and ",
+        <strong className="font-bold underline text-[#0c513f]">
+          Ice Prince,{" "}
+        </strong>,
+        "amongst others. Working closely with prominent international and regional creative organisations, Chocolate City Music has partnered with affiliates in South Africa, the United States, the United Kingdom, and more recently, ",
+        <strong className="font-bold underline text-[#0c513f]">
+          Chowdeck.
+        </strong>,
+        "",
+      ],
+    },
+    {
+      para1: [
+        " ",
+        <strong>Everything’s Better With Love and Chocolates </strong>,
+        "offered our ",
+        <strong>Chowstars</strong>,
+        " our beloved customers, discounts on every order placed on Valentine’s Day, sweets and chocolates delivered with every order, and a specially curated playlist titled ",
+        <strong className="font-bold underline text-[#0c513f]">
+          Love & Chocolate Vol. 2
+        </strong>,
+        " put together by Chocolate City Music.",
+      ],
+    },
+    {
+      para1: [
+        "And so, our riders took to the streets of Lagos delivering happiness nestled in delicious meals from our diverse, experienced vendors, and chocolates to our precious ",
+        <strong>Chowstars</strong>,
+        " in celebration of love, warmth, and sweetness.",
+      ],
+    },
+    {
+      para1: ["The results? One word. ", <strong>Sweet!</strong>, ""],
+    },
+    {
+      para1: [
+        "A one-day-only campaign, we recorded a remarkable ",
+        <b>57.81%</b>,
+        " increase in orders on that day compared to orders made on the busiest day of the previous week.",
+      ],
+    },
+
+    {
+      para1: [
+        "We reached ",
+        <b>522k+</b>,
+        " accounts and garnered ",
+        <b>1.55 Million</b>,
+        " impressions across our digital media platforms.",
+      ],
+    },
+    {
+      para1: "Truly, everything is better with love and chocolates!",
+    },
+    {
+      para1: "See you soon!",
+    },
+    { end: "With love," },
+    { end1: "Chowdeck" },
+  ];
   const data = [
     {
       image: story2,
@@ -33,8 +120,7 @@ const RFirst = () => {
       btn: "Read More",
     },
   ];
-
-  const { id } = useParams();
+  const { id, category } = useParams();
   const blogId = parseInt(id);
   const navigate = useNavigate();
 
@@ -46,49 +132,9 @@ const RFirst = () => {
     navigate(`/blog/all/${id}`);
   };
 
-  const data1 = [
-    {
-      para: "We're excited to announce that Chowdeck has been accepted to Y Combinator’s Summer Batch 2022, joining a league of extraordinary companies like Stripe, Airbnb, Paystack, and more, who’ve been through the YC process.",
-    },
-
-    {
-      para: "This year, the batch was super selective, with roughly 1.2% of companies accepted out of 19 000; we do not take Chowdeck’s place in this cohort for granted. Over the next couple of weeks, we’ll be learning everything it takes to be better entrepreneurs and to serve our customers better. ",
-    },
-  ];
-  const data2 = [
-    {
-      heading: "Running a business is both hard and rewarding",
-    },
-    {
-      para: "As first-time founders, my co-founders and I are learning to embrace the highs and lows of building a product and are now at a stage where it’s critical for us to get better at being entrepreneurs.",
-    },
-    {
-      para: "As part of the 2022 Summer cohort, we’ll be working hard over the next couple of weeks to learn everything it takes to serve you and get you your meals even faster ",
-    },
-
-    {
-      heading1: "We’re not perfect, but we promise to always do better",
-    },
-    {
-      newpara:
-        "With every growth stage comes new kinds of challenges. It’ll be dishonest to not acknowledge the times we stepped on your toes by messing up your deliveries. Sincerely, we apologise. There are no excuses, and so we promise to do better.",
-    },
-    {
-      newpara:
-        "Your constant feedback has gotten us this far, but there’s so much more to do.",
-    },
-    {
-      newpara:
-        "If there are issues you currently experience while using Chowdeck, you can always email us via our contact page. We are constantly improving the experience of our products and your feedback will be critical in helping us get our priorities right.",
-    },
-    {
-      minipara: "Thank you for being here. ",
-    },
-  ];
-
   return (
     <div className=" text-justify">
-      <div className="bg-[#0c513f] h-[600px] w-full  overflow-hidden relative z-10">
+      <div className="bg-[#0c513f] sm:h-[600px] h-[500px] w-full  overflow-hidden relative z-10">
         <div>
           <img
             src={rightcloud}
@@ -106,8 +152,8 @@ const RFirst = () => {
               </button>
             </div>
             <div className="">
-              <p className="text-center text-white text-[18px] uppercase font-bold">
-                Chowdeck Joins Y Combinator's S'22 Batch
+              <p className="text-center text-white text-[18px] uppercase font-bold pt-4">
+                Everything’s Better With Love and Chocolates with Chocolate City
               </p>
             </div>
           </div>
@@ -118,11 +164,11 @@ const RFirst = () => {
         </div>
 
         <div className="flex justify-center items-center">
-          <div className=" absolute bottom-0 z-0 ">
+          <div className=" absolute sm:bottom-0 bottom-16 z-0 ">
             <img
-              src={image7}
-              alt="i7"
-              className="w-[985px] md:h-[375px] px-4"
+              src={choclate}
+              alt="choco"
+              className="w-full md:h-[375px] px-4"
             />
           </div>
         </div>
@@ -147,33 +193,17 @@ const RFirst = () => {
           </div>
           <div>
             {data1.map((item, index) => (
-              <div key={index} className="">
-                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 md:pt-0 pt-4">
+              <div key={index} className=" ">
+                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 md:pt-0 pt-4 ">
                   {item.para}
                 </p>
-              </div>
-            ))}
-            {data2.map((item, index) => (
-              <div key={index} className="">
-                <h3 className="sm:text-[24px] text-[18px] text-black font-bold pt-5 md:pl-11 pl-4">
-                  {item.heading}
-                </h3>
-                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 ">
-                  {item.para}
+                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 pt-4">
+                  {item.para1}
                 </p>
-                <p className="sm:text-[24px] text-[18px] text-black font-bold pt-5 md:pl-11 pl-4">
-                  {item.heading1}
-                </p>
-                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 ">
-                  {item.newpara}
-                </p>
-                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 ">
-                  {item.minipara}
-                </p>
-                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 ">
+                <p className="sm:text-[24px] text-[18px]  text-black md:px-11 px-5  ">
                   {item.end}
                 </p>
-                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 -mt-4.5 md:pb-0 pb-7">
+                <p className="sm:text-[24px] text-[18px]  text-black md:px-11 px-5  -mt-1.5">
                   {item.end1}
                 </p>
               </div>
@@ -234,4 +264,4 @@ const RFirst = () => {
   );
 };
 
-export default RFirst;
+export default TryFirst;

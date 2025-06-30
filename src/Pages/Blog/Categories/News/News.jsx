@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import image7 from "../../../../assets/images/image17.png";
 import image8 from "../../../../assets/images/image18.png";
@@ -67,6 +67,10 @@ const News = () => {
   const handleClick = (id) => {
     navigate(`/blog/news/${id}`);
   };
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   return (
     <div>
       <div className="flex justify-center sm:px-4">

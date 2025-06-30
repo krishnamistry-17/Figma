@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Bg from "./Bg/Bg";
 import Appcard from "./AppCard/Appcard";
 import Growcard from "./Growcard/Growcard";
@@ -9,6 +9,9 @@ import BlackCard from "./BlackCard/BlackCard";
 import ChoiceButton from "./AppCard/ChoiceButton";
 import Footer from "../Footer/Footer";
 const Home = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   return (
     <div>
       <div>

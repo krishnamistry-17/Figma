@@ -90,7 +90,7 @@ const NFive = () => {
     navigate(`/blog/all/${id}`);
   };
   return (
-    <div>
+    <div className=" text-justify">
       <div className="bg-[#0c513f] h-[600px] w-full  overflow-hidden relative z-10">
         <div>
           <img

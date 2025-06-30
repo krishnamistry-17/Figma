@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import Founder from "./FounderStory/Founder";
 import CoreValues from "./CoreValues/CoreValues";
@@ -9,6 +9,9 @@ import Joinus from "./JoinUs/Joinus";
 import CompanyPlace from "./CompnayPlace/CompnayPlace";
 import Footer from "../Footer/Footer";
 const Company = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   return (
     <>
       <div>

@@ -101,26 +101,8 @@ const Six = () => {
     { end1: "The Chowdeck Team" },
   ];
 
-  {
-    /*import { useEffect } from "react";
-import { useParams } from "react-router-dom";
-
-const First = () => {
-  const { id } = useParams(); // get blog id from route
-
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' }); // scroll to top on load
-  }, []);
-  
-  const blogId = parseInt(id); // if you need it
-
-  // render content based on blogId here
-  ...
-};
- */
-  }
   return (
-    <div>
+    <div className="text-justify">
       <div className="bg-[#0c513f] h-[600px] w-full  overflow-hidden relative z-10">
         <div>
           <img
@@ -184,29 +166,63 @@ const First = () => {
                 <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 md:pt-0 pt-4">
                   {item.para}
                 </p>
-                <p className="sm:text-[24px] text-[18px] font-bold text-black md:px-11 px-5  pt-4">
-                  {item.heading}
-                </p>
-                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 ">
-                  {item.para0}
-                </p>
-                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 ">
-                  {item.para1}
-                </p>
               </div>
             ))}
+            <p className="sm:text-[24px] text-[18px] font-bold text-black md:px-11 px-5  pt-2">
+              What’s Cooking?
+            </p>
+            <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 ">
+              Our partnership with FoodCourt introduces culinary delights to the
+              Chowdeck platform. You can now enjoy menu featuring popular
+              FoodCourt outlets:
+            </p>
+            <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 pb-4">
+              <ul className="list-decimal list-inside sm:text-[24px] text-[18px] text-black">
+                <li>
+                  <b>Chow Asian:</b>Diverse Asian cuisines
+                </li>
+                <li>
+                  <b>Red Pepper:</b>Authentic Naija flavors
+                </li>
+                <li>
+                  <b>Wrap City:</b>Your go-to shawarmas and wraps
+                </li>
+                <li>
+                  <b>Good Greens:</b> Fresh, veggie-packed options
+                </li>
+                <li>
+                  <b>GJollof & Co:</b> Perfect Jollof and Fried rice
+                </li>
+                <li>
+                  <b>The Cocktail Club:</b>Cocktails and mocktails
+                </li>
+              </ul>
+            </p>
             {data2.map((item, index) => (
               <div key={index} className="">
-                <h3 className="sm:text-[24px] text-[18px] text-black font-bold  md:pl-11 pl-4 pt-4">
+                <h3 className="sm:text-[24px] text-[18px] text-black font-bold  md:pl-11 pl-4 ">
                   {item.heading2}
                 </h3>
                 <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 ">
                   {item.para}
                 </p>
-                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 ">
-                  {item.para3}
-                </p>
-                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 pt-4">
+              </div>
+            ))}
+            <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 ">
+              <ul className="list-disc list-inside sm:text-[24px] text-[18px] text-black pt-0">
+                <li>
+                  Our <a className="underline">Web store</a>
+                </li>
+                <li>
+                  The Chowdeck mobile app (available on both the{" "}
+                  <a className="underline">App Store</a> and{" "}
+                  <a className=" underline">Google Play Store</a>)
+                </li>
+              </ul>
+            </p>
+            {data2.map((item, index) => (
+              <div key={index}>
+                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 pt-2">
                   {item.para4}
                 </p>
                 <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 ">
@@ -215,7 +231,7 @@ const First = () => {
                 <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 ">
                   {item.end}
                 </p>
-                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 -mt-4.5">
+                <p className="sm:text-[24px] text-[18px] text-black md:px-11 px-5 ">
                   {item.end1}
                 </p>
               </div>
