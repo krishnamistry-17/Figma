@@ -54,7 +54,7 @@ const Teams = () => {
                     <li className="md:text-[25px] text-[18px] md:pt-8 pt-4 font-bold ">
                       {item.num}
                     </li>
-                    <li className="md:text-[65px] text-[40px] font-bold md:pl-8 pl-4">
+                    <li className="lg:text-[65px] text-[45px] font-bold md:pl-8 pl-4">
                       {item.team}
                     </li>
                   </div>

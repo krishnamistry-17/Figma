@@ -205,7 +205,7 @@ const Categories = () => {
             />
           </div>
           <div className="sm:flex justify-between items-center">
-            <div className="flex gap-2 pl-3 pb-3">
+            <div className="flex gap-2  pb-3">
               <img
                 src={slides[currentSlide].location}
                 alt="lcn"

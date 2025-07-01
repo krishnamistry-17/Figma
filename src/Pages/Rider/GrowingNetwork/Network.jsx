@@ -1,15 +1,16 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import arrow from "../../../assets/svg/downarrow.svg";
 import pstar from "../../../assets/svg/pstar.svg";
-import star from "../../../assets/svg/star.svg";
 import half from "../../../assets/svg/half.svg";
 import rightarrow from "../../../assets/svg/rightarrow.svg";
 import image6 from "../../../assets/images/image6.png";
-import lemon from "../../../assets/images/lemon.png";
+import box from "../../../assets/images/box.png";
 import cartoon from "../../../assets/images/cartoon.png";
 import blocation from "../../../assets/svg/blocation.svg";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useNavigate } from "react-router-dom";
+
 const Network = () => {
   useEffect(() => {
     AOS.init({
@@ -18,17 +19,35 @@ const Network = () => {
     });
     AOS.refresh();
   }, []);
+
+  const navigate = useNavigate();
+
+  const handleVendore = () => {
+    navigate("/vendores");
+  };
+
+  const handleRider = () => {
+    navigate("/riders");
+  };
+
+  const handleCompany = () => {
+    navigate("/company");
+  };
+
   return (
-    <div className=" pt-[650px]">
-      <div className=" flex justify-center items-center gap-0.5 pt-3.5">
-        <p className="md:text-[64px] sm:text-[40px] text-[30px] text-gray-300 text-center">
+    <div className="pt-[650px]">
+      <div className="flex justify-center items-center gap-0.5">
+        <p
+          className="md:text-[64px] sm:text-[40px] text-[33px] text-center pt-[32px]"
+          style={{ color: "#D1D5DB" }}
+        >
           Join our growing network
         </p>
-        <img src={arrow} alt="arow" />
+        <img src={arrow} alt="dr" className="md:pt-[47px]" />
       </div>
       <div
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 place-items-center 
-            lg:px-auto px-[10px] gap-2 pt-[40px] pb-[58px]"
+      lg:px-auto px-[10px] gap-2 pt-[40px] pb-[58px]"
       >
         {/*grid1 */}
         <div data-aos="fade-up" data-aos-delay="0">
@@ -42,7 +61,11 @@ const Network = () => {
               chop life ? Get started and allow us deliver happiness to your
               door step.
             </p>
-            <button className="font-extrabold text-[14px]  text-black pt-[35px] pl-[24px] pb-[44px] flex">
+            {/* <p className="text-[16px] text-black pt-[20px] pl-[24px]"></p> */}
+            <button
+              className="font-extrabold text-[14px]  text-black pt-[35px] pl-[24px] pb-[44px] flex hover:underline"
+              onClick={handleVendore}
+            >
               SEE MORE
               <img src={rightarrow} alt="ra" className="pl-[2px]" />
             </button>
@@ -54,21 +77,28 @@ const Network = () => {
         {/*grid2 */}
         <div data-aos="fade-up" data-aos-delay="300">
           <div className="border-4 rounded-2xl border-black max-w-[402.66px] max-h-auto">
-            <img src={star} alt="st" className="pt-[28px] pl-[24px]" />
+            <img src={half} alt="st" className="pt-[28px] pl-[24px]" />
             <h2 className="font-extrabold text-[27px] text-black pt-[19px] pl-[24px]">
-              Start selling
+              Deliver happiness
             </h2>
             <p className="text-[16px] text-black pt-[20px] pl-[24px]">
-              Are you a restaurant owner looking to grow your business? Reach
-              new customers when you join our network.
+              Join our elite league of delivery riders delivering happiness to
+              customers and earn to achieve your dreams while at it.
             </p>
 
-            <button className="font-extrabold text-[14px]  text-black pt-[35px] pl-[24px] pb-[44px] flex">
+            <button
+              className="font-extrabold text-[14px]  text-black pt-[35px] pl-[24px] pb-[44px] flex hover:underline"
+              onClick={handleRider}
+            >
               SEE MORE
               <img src={rightarrow} alt="ra" className="pl-[2px]" />
             </button>
             <div>
-              <img src={lemon} alt="lm" />
+              <img
+                src={box}
+                alt="lm"
+                className="rounded-br-[12px] rounded-bl-[12px]"
+              />
             </div>
           </div>
         </div>
@@ -84,7 +114,10 @@ const Network = () => {
               meals seamlessly, come join the team.
             </p>
 
-            <button className="font-extrabold text-[14px]  text-black pt-[35px] pl-[24px] pb-[44px] flex">
+            <button
+              className="font-extrabold text-[14px]  text-black pt-[35px] pl-[24px] pb-[44px] flex hover:underline"
+              onClick={handleCompany}
+            >
               SEE MORE
               <img src={rightarrow} alt="ra" className="pl-[2px]" />
             </button>

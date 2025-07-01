@@ -107,7 +107,7 @@ const BlogAccord = () => {
                 </div>
               </div>
             </div>
-            <div className=" md:hidden">
+            <div className=" lg:hidden">
               <h2 className="font-extrabold text-[63px] text-[#0C513F]">
                 FAQs.
               </h2>

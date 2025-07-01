@@ -9,6 +9,7 @@ import cartoon from "../../../assets/images/cartoon.png";
 import blocation from "../../../assets/svg/blocation.svg";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useNavigate } from "react-router-dom";
 
 const Growcard = () => {
   useEffect(() => {
@@ -18,6 +19,20 @@ const Growcard = () => {
     });
     AOS.refresh();
   }, []);
+
+  const navigate = useNavigate();
+
+  const handleVendore = () => {
+    navigate("/vendores");
+  };
+
+  const handleRider = () => {
+    navigate("/riders");
+  };
+
+  const handleCompany = () => {
+    navigate("/company");
+  };
 
   return (
     <div>
@@ -47,7 +62,10 @@ const Growcard = () => {
               door step.
             </p>
             {/* <p className="text-[16px] text-black pt-[20px] pl-[24px]"></p> */}
-            <button className="font-extrabold text-[14px]  text-black pt-[35px] pl-[24px] pb-[44px] flex">
+            <button
+              className="font-extrabold text-[14px]  text-black pt-[35px] pl-[24px] pb-[44px] flex hover:underline"
+              onClick={handleVendore}
+            >
               SEE MORE
               <img src={rightarrow} alt="ra" className="pl-[2px]" />
             </button>
@@ -68,7 +86,10 @@ const Growcard = () => {
               customers and earn to achieve your dreams while at it.
             </p>
 
-            <button className="font-extrabold text-[14px]  text-black pt-[35px] pl-[24px] pb-[44px] flex">
+            <button
+              className="font-extrabold text-[14px]  text-black pt-[35px] pl-[24px] pb-[44px] flex hover:underline"
+              onClick={handleRider}
+            >
               SEE MORE
               <img src={rightarrow} alt="ra" className="pl-[2px]" />
             </button>
@@ -93,7 +114,10 @@ const Growcard = () => {
               meals seamlessly, come join the team.
             </p>
 
-            <button className="font-extrabold text-[14px]  text-black pt-[35px] pl-[24px] pb-[44px] flex">
+            <button
+              className="font-extrabold text-[14px]  text-black pt-[35px] pl-[24px] pb-[44px] flex hover:underline"
+              onClick={handleCompany}
+            >
               SEE MORE
               <img src={rightarrow} alt="ra" className="pl-[2px]" />
             </button>

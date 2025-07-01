@@ -1,17 +1,21 @@
 import React, { useEffect, useRef, useState } from "react";
 import noodles from "../../assets/images/noodles.png";
-import story1 from "../../assets/images/rstory1.png";
+import story1 from "../../assets/images/image16.png";
 import story2 from "../../assets/images/rstory2.png";
 import story3 from "../../assets/images/rstory3.png";
+import { useNavigate } from "react-router-dom";
 
 const Stories = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const [openIndexes, setOpenIndexes] = useState({});
+
+  const [readmore, setReadMore] = useState(false);
+  const navigate = useNavigate();
+  const ref = useRef();
+  const refpara = useRef(null);
+
   const data = [
-    {
-      image: story1,
-      p1: "Beyond Delivery - Why We acquired Mira",
-      d1: " Chowdeck has acquired Mira, a fast-growing provider of modern point-of-sale (POS) solutions tailored for the food and ho...",
-      btn: "Read More",
-    },
     {
       image: story2,
       p1: "Chowdeck is Now in Ghana — Here’s What We Have in Store",
@@ -24,44 +28,69 @@ const Stories = () => {
       d1: "The world flourishes when women lead. For International Women's Day, celebrates  brilliant women.",
       btn: "Read More",
     },
+    {
+      image: story1,
+      p1: "Beyond Delivery - Why We acquired Mira",
+      d1: " Chowdeck has acquired Mira, a fast-growing provider of modern point-of-sale (POS) solutions tailored for the food and ho...",
+      btn: "Read More",
+    },
   ];
+
+  const limit = 50;
+
+  useEffect(() => {
+    if (refpara.current) {
+      const isOverflowing =
+        refpara.current.scrollHeight > refpara.current.clientHeight;
+      setReadMore(isOverflowing);
+    }
+  }, []);
+
+  const handleClick = (id) => {
+    navigate(`/blog/all/${id}`);
+  };
   return (
-    <div className="pb-72">
-      <div className="flex gap-2.5 xl:pl-[96px] pl-[10px]">
-        <p className="font-extrabold sm:text-[63px] text-[50px] text-black py-[20.5px]">
-          Stories
-        </p>
-        <img src={noodles} alt="ndls" />
-      </div>
-      <div className="flex justify-center px-4 mt-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-[1200px] w-full">
-          {data.map((item, index) => (
-            <div
-              key={index}
-              className="max-w-full w-[400px] flex justify-center"
-            >
-              <div className="border-4 rounded-xl border-black overflow-hidden max-w-[400px] w-full">
-                <img
-                  src={item.image}
-                  alt="s1"
-                  className="w-full h-auto object-cover"
-                />
-                <p className="text-[14px] font-extrabold text-black pt-4 px-5 bg-white uppercase">
-                  {item.p1}
-                </p>
+    <div className="pt-[40px] pb-[144px]" ref={ref}>
+      <div className="lg:pt-32 md:pt-12 pb-60">
+        <div className="flex gap-2.5 xl:pl-[200px] pl-[10px]">
+          <p className="font-extrabold sm:text-[63px] text-[50px] text-black py-[20.5px]">
+            Stories
+          </p>
+          <img src={noodles} alt="ndls" />
+        </div>
+        <div className="flex justify-center px-4 mt-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-[1200px] w-full">
+            {data.map((item, index) => (
+              <div
+                key={item.id}
+                className="max-w-full w-[400px] flex justify-center"
+              >
+                <div className="border-4 rounded-xl border-black overflow-hidden max-w-[400px] w-full">
+                  <img
+                    src={item.image}
+                    alt="s1"
+                    className="w-full h-auto object-cover"
+                  />
+                  <p className="text-[14px] font-extrabold text-black pt-4 px-5 bg-white uppercase">
+                    {item.p1}
+                  </p>
 
-                <p className="font-medium text-[18px] text-black pt-5 text-center px-3 bg-white">
-                  {item.d1}
-                </p>
+                  <p className="font-medium text-[18px] text-black pt-5 text-center px-3 bg-white">
+                    {item.d1}
+                  </p>
 
-                <div className="pt-5 flex justify-center items-center bg-white mb-3">
-                  <button className="font-medium text-[16px] rounded-xl text-[#0C513F] hover:bg-[#0C513F] hover:text-white px-23 py-3 bg-gray-200">
-                    {item.btn}
-                  </button>
+                  <div className="pt-5 flex justify-center items-center bg-white mb-3">
+                    <button
+                      className="font-medium text-[16px] rounded-xl text-[#0C513F] hover:bg-[#0C513F] hover:text-white px-23 py-3 bg-gray-200"
+                      onClick={() => handleClick(index)}
+                    >
+                      {item.btn}
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </div>

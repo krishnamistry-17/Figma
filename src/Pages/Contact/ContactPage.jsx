@@ -103,14 +103,14 @@ const ContactPage = () => {
     rounded-xl bg-black py-4 sm:px-10 px-4 cursor-pointer max-w-2xl w-full flex-wrap gap-y-2"
           onClick={handleToggle}
         >
-          {/* Dot */}
-          <span className="h-3 w-3 bg-[#ffc201] rounded-full" />
-
-          {/* Category Text */}
-          <p className=" text-[13px] sm:text-[16px] truncate max-w-[60%]">
-            {data[activeIndex].head}
-          </p>
-
+          <div className="flex">
+            {/* Dot */}
+            <p className="h-3 w-3 p-1 bg-[#ffc201]  rounded-full mt-1 mr-2" />
+            {/* Category Text */}
+            <p className=" text-[13px] sm:text-[16px] truncate md:max-w-full max-w-[60%]">
+              {data[activeIndex].head}
+            </p>
+          </div>
           {/* Right-side SELECT + arrow */}
           <div className="flex items-center pl-3 sm:pl-16">
             <p className="uppercase text-[13px] sm:text-[16px] font-bold">
@@ -122,7 +122,7 @@ const ContactPage = () => {
 
         {isMenuOpen && (
           <div className="mt-0.5">
-            <div className=" bg-black text-white w-full py-5 px-10 rounded-lg">
+            <div className=" bg-black text-white w-full py-5 px-10 rounded-lg max-w-2xl">
               {data.map((item, index) => (
                 <div
                   key={index}

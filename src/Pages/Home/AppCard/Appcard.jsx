@@ -28,7 +28,12 @@ const Appcard = () => {
         <img src={mobile} alt="phn" className="w-4/5 sm:w-auto" />
 
         {/* Pastry */}
-        <div className="absolute top-0 sm:right-[3%] right-[8%] sm:top-3.5 md:right-[7.33%] lg:right-[10.33%] z-50">
+        <div
+          className="absolute 
+          top-0 sm:top-3.5  z-50
+        md:right-[7.33%] lg:right-[10.33%] sm:right-[3%] right-[8%] 
+        "
+        >
           <img src={pastry} alt="pt" className="w-20 sm:w-auto" />
         </div>
       </div>

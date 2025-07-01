@@ -45,7 +45,7 @@ const Categories = () => {
         <div className="py-20">
           <div
             className="flex items-center justify-between text-white 
-    rounded-xl bg-black py-4 sm:px-10 px-4 cursor-pointer max-w-2xl w-full flex-wrap gap-y-2"
+    rounded-xl bg-black py-4 sm:px-10 px-4 cursor-pointer md:max-w-4xl max-w-2xl w-full flex-wrap gap-y-2"
             onClick={handleToggle}
           >
             <span className="h-3 w-3 bg-[#ffc201] rounded-full" />
@@ -67,7 +67,7 @@ const Categories = () => {
           </div>
 
           {isMenuOpen && (
-            <div className="block bg-black text-white mt-5 p-5 rounded-md max-w-2xl">
+            <div className="block bg-black text-white mt-5 p-5 rounded-md max-w-4xl md:max-w-2xl">
               {categories.map((item, index) => (
                 <div
                   key={index}

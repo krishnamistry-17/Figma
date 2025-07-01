@@ -21,7 +21,7 @@ const GFirst = () => {
       para1: [
         "In ",
         <strong className=" font-bold ">Get It Here</strong>,
-        "we'll highlight restaurants serving your favourite meals, all available to be delivered straight to you on ",
+        " we'll highlight restaurants serving your favourite meals, all available to be delivered straight to you on ",
         <strong className=" font-bold text-[#0c513f] underline">
           Chowdeck
         </strong>,

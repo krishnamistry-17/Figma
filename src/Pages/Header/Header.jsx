@@ -1,6 +1,15 @@
 import logo from "../../assets/svg/applogo.svg";
 import dropdown from "../../assets/svg/dropdown.svg";
 import cart from "../../assets/svg/cart.svg";
+import company from "../../assets/svg/compnay.svg";
+import relayicon from "../../assets/svg/relayicon.svg";
+import blog from "../../assets/svg/blog.svg";
+import chowpass from "../../assets/svg/chowpass.svg";
+import contacts from "../../assets/svg/contacts.svg";
+import customers from "../../assets/svg/customers.svg";
+import vendores from "../../assets/svg/vendores.svg";
+import riders from "../../assets/svg/riders.svg";
+import instagram from "../../assets/svg/instagram.svg";
 import { useState } from "react";
 import { SlOptionsVertical } from "react-icons/sl";
 import { Link, useLocation, useNavigate } from "react-router-dom";
@@ -91,23 +100,10 @@ const Header = () => {
             <img
               src={logo}
               alt="App Logo"
-              className="h-8 sm:h-10"
+              className="h-8 sm:h-10 md:block hidden"
               onClick={handleHome}
             />
           </div>
-
-          {/* Desktop Nav */}
-          {/* <nav className="hidden md:flex items-center gap-6">
-          {["Company", "FAQs", "Blog", "Contact"].map((label) => (
-            <a
-              key={label}
-              href={`/${label.toLowerCase()}`}
-              className="text-black text-[16px] font-medium hover:text-green-bg transition"
-            >
-              {label}
-            </a>
-          ))}
-        </nav> */}
 
           <nav className="hidden md:flex items-center gap-6">
             <div className=" relative flex items-center">
@@ -177,14 +173,14 @@ const Header = () => {
           <div className="relative flex items-center">
             <button
               onClick={handleOption}
-              className="text-black text-[16px] sm:pl-0 pl-[5px] flex font-semibold"
+              className="text-black text-[16px] sm:pl-0 pl-[5px] md:flex hidden font-semibold"
             >
               {selectedMenu}
               <img src={dropdown} alt="dropdown" className="pl-[5px]" />
             </button>
 
             {isopen && (
-              <div className="absolute top-12 right-0 bg-white rounded-lg shadow-md mt-2 flex flex-col z-50">
+              <div className="absolute top-12 right-0 bg-white rounded-lg shadow-md mt-2 md:flex hidden flex-col z-50">
                 {selectedMenu !== "Vendores" && (
                   <button
                     onClick={handleVendores}
@@ -212,68 +208,161 @@ const Header = () => {
               </div>
             )}
           </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-white bg-[#0c513f] rounded-full p-[13px]"
-            onClick={toggleMenu}
-            aria-label="Toggle menu"
-          >
-            <IoMenu />
-          </button>
+        </div>
+        {/* Mobile Menu Button */}
+        <div className=" md:hidden flex justify-between items-center">
+          {/* Logo */}
+          <div>
+            <img
+              src={logo}
+              alt="App Logo"
+              className="h-8 sm:h-10"
+              onClick={handleHome}
+            />
+          </div>
+          <div className="flex gap-2">
+            <img src={cart} alt="cart" className="md:hidden text-white " />
+            <button
+              className="md:hidden text-white bg-[#0c513f] rounded-full p-[16px]"
+              onClick={toggleMenu}
+              aria-label="Toggle menu"
+            >
+              <IoMenu />
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden fixed top-0 left-0 w-full h-full bg-black z-[1000]">
-            <div className="flex flex-col h-full">
-              {/* Close Icon */}
-              <div className="flex justify-end p-4">
+          <div className="md:hidden fixed top-0 left-0 w-full h-full  bg-black z-[1000] overflow-y-auto">
+            <div
+              className="flex flex-col h-full "
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <div className="flex justify-end space-x-2 p-4 sticky top-0 w-full ">
+                <img src={cart} alt="cart" />
                 <MdCancel
-                  className="text-white text-3xl cursor-pointer"
+                  className="text-white text-5xl cursor-pointer"
                   onClick={() => setIsMenuOpen(false)}
                 />
               </div>
-
-              {/* Navigation  */}
-              <nav className="flex-1 overflow-y-auto px-4 space-y-2">
+              <nav className="flex-1 overflow-y-auto  px-8 space-y-6 ">
+                <p className="border-white/20 border-b-2"></p>
                 <Link
-                  to="/company"
-                  className="text-white text-sm font-medium hover:text-green-bg block p-2"
+                  to="/"
+                  className="text-white text-[20px] font-medium hover:text-green-bg
+                   border-white/20 border-b-2 hover:bg-[#0c513f] p-4 flex gap-4"
                 >
-                  Company
-                </Link>
-                <a
-                  className="text-white text-sm font-medium hover:text-green-bg block p-2"
-                  onClick={handleFaqClick}
-                >
-                  FAQs
-                </a>
-                <Link
-                  to="/blog/"
-                  className="text-white text-sm font-medium hover:text-green-bg block p-2"
-                >
-                  Blog
-                </Link>
-                <Link
-                  to="/contact"
-                  className="text-white text-sm font-medium hover:text-green-bg block p-2"
-                >
-                  Contact
+                  <span>
+                    <img src={customers} alt="cm" />
+                  </span>
+                  Customers
                 </Link>
                 <Link
                   to="/chowpass"
-                  className="text-white text-sm font-medium hover:text-green-bg block p-2"
+                  className="text-white text-[20px] font-medium hover:text-green-bg 
+                  border-white/20 border-b-2 hover:bg-[#0c513f] p-4 flex gap-4"
                 >
+                  <span>
+                    <img src={chowpass} alt="pass" />
+                  </span>
                   ChowPass
                 </Link>
                 <Link
                   to="/relay"
-                  className="text-white text-sm font-medium hover:text-green-bg block p-2"
+                  className="text-white text-[20px] font-medium hover:text-green-bg 
+                  border-white/20 border-b-2 hover:bg-[#0c513f] p-4 flex gap-4"
                 >
+                  <span>
+                    <img src={relayicon} alt="rely" />
+                  </span>
                   Relay
                 </Link>
+                <Link
+                  to="/vendores"
+                  className="text-white text-[20px] font-medium hover:text-green-bg 
+                  border-white/20 border-b-2 hover:bg-[#0c513f] p-4 flex gap-4"
+                >
+                  <span>
+                    <img src={vendores} alt="vs" />
+                  </span>
+                  Vendores
+                </Link>
+                <Link
+                  to="/riders"
+                  className="text-white text-[20px] font-medium hover:text-green-bg 
+                  border-white/20 border-b-2 hover:bg-[#0c513f] p-4 flex gap-4"
+                >
+                  <span>
+                    <img src={riders} alt="rs" />
+                  </span>
+                  Riders
+                </Link>
+                <Link
+                  to="/company"
+                  className="text-white text-[20px] font-medium hover:text-green-bg 
+                  border-white/20 border-b-2 hover:bg-[#0c513f] p-4 flex gap-4"
+                >
+                  <span>
+                    <img src={company} alt="cm" />
+                  </span>
+                  Company
+                </Link>
+                <Link
+                  to="/blog/"
+                  className="text-white text-[20px] font-medium hover:text-green-bg 
+                  border-white/20 border-b-2 hover:bg-[#0c513f] p-4 flex gap-4"
+                >
+                  <span>
+                    <img src={blog} alt="blog" />
+                  </span>
+                  Blog
+                </Link>
+                <Link
+                  to="/contact"
+                  className="text-white text-[20px] font-medium hover:text-green-bg 
+                  border-white/20 border-b-2 hover:bg-[#0c513f] p-4 flex gap-4"
+                >
+                  <span>
+                    <img src={contacts} alt="cs" />
+                  </span>
+                  Contact
+                </Link>
+                <a
+                  href="https://x.com/chowdeck"
+                  className="text-white text-[20px] font-medium hover:text-green-bg 
+                  border-white/20 border-b-2 hover:bg-[#0c513f] p-4 flex gap-4"
+                >
+                  <span>
+                    <svg
+                      width="24"
+                      height="24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12 0s-.5 10.394-12 12c0 0 9.872.19 12 12 0 0 .678-10.21 12-12 0 0-10.758-1.514-12-12Z"
+                        fill="#99C8FF"
+                      ></path>
+                    </svg>
+                  </span>
+                  Twitter
+                </a>
+                <a
+                  href="https://www.instagram.com/chowdeck/#"
+                  className="text-white text-[20px] font-medium hover:text-green-bg 
+                  border-white/20 border-b-2 hover:bg-[#0c513f] p-4 flex gap-4"
+                >
+                  <span>
+                    <img src={instagram} alt="insta" />
+                  </span>
+                  Instagram
+                </a>
               </nav>
+              <p className=" text-white/20 text-center text-[14px] py-6">
+                {" "}
+                © All Rights Reserved. 2022, Chowdeck Logistics Inc.
+              </p>
             </div>
           </div>
         )}

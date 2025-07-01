@@ -1,0 +1,39 @@
+<svg
+                      width="24"
+                      height="24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="m8.84 5.054 3.177 4.16 3.139-4.16 2.42 1.74-3.14 4.16 4.69 1.589-.909 2.837-4.727-1.551v5.107h-2.989v-5.107l-4.727 1.55-.909-2.836 4.69-1.588-3.139-4.16 2.42-1.741h.005Z"
+                        fill="url(#ChowpassIcon_svg__a)"
+                      ></path>
+                      <path
+                        d="M11.999 24C5.384 24 0 18.616 0 12.001S5.384 0 11.999 0s11.998 5.384 11.998 11.999S18.614 23.997 12 23.997V24Zm0-21.598c-5.294 0-9.6 4.305-9.6 9.6 0 5.293 4.306 9.598 9.6 9.598s9.599-4.305 9.599-9.599c0-5.294-4.305-9.599-9.6-9.599Z"
+                        fill="url(#ChowpassIcon_svg__b)"
+                      ></path>
+                      <defs>
+                        <linearGradient
+                          id="ChowpassIcon_svg__a"
+                          x1="11.981"
+                          y1="4.728"
+                          x2="12.009"
+                          y2="18.608"
+                          gradientUnits="userSpaceOnUse"
+                        >
+                          <stop stop-color="#9076F4"></stop>
+                          <stop offset="1" stop-color="#5A34EC"></stop>
+                        </linearGradient>
+                        <linearGradient
+                          id="ChowpassIcon_svg__b"
+                          x1="11.974"
+                          y1="-0.564"
+                          x2="12.024"
+                          y2="23.433"
+                          gradientUnits="userSpaceOnUse"
+                        >
+                          <stop stop-color="#9076F4"></stop>
+                          <stop offset="1" stop-color="#5A34EC"></stop>
+                        </linearGradient>
+                      </defs>
+                    </svg>
